@@ -350,7 +350,7 @@ body::before {
    HERO — Fullscreen Cinematic Background
    ═══════════════════════════════════════════════ */
 .hero {
-  min-height: 100vh;
+  min-height: clamp(600px, 100vh, 1000px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -503,7 +503,9 @@ body::before {
   animation: marqueeScroll 42s linear infinite;
   padding: 20px 0;
 }
-.marquee-track:hover { animation-play-state: paused; }
+@media (hover: hover) and (pointer: fine) {
+  .marquee-track:hover { animation-play-state: paused; }
+}
 
 .marquee-item {
   display: flex; align-items: center; gap: 48px;
@@ -527,15 +529,19 @@ body::before {
   transition: transform 0.4s var(--ease);
   cursor: default;
 }
-.marquee-brand-logo:hover {
-  transform: scale(1.08);
+@media (hover: hover) and (pointer: fine) {
+  .marquee-brand-logo:hover {
+    transform: scale(1.08);
+  }
 }
 
 .marquee-brand-name {
   font-size: 0.88rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
   transition: opacity 0.3s, transform 0.3s; cursor: default; white-space: nowrap;
 }
-.marquee-brand-name:hover { opacity: 0.75; transform: scale(1.06); }
+@media (hover: hover) and (pointer: fine) {
+  .marquee-brand-name:hover { opacity: 0.75; transform: scale(1.06); }
+}
 .marquee-sep { color: var(--gold); font-size: 0.45rem; }
 
 /* Brand colors */
