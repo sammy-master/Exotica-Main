@@ -1141,12 +1141,24 @@ body::before {
   .hero-taglines { font-size: 0.9rem; }
   .hero-stat-num { font-size: clamp(1.5rem, 7vw, 2rem); }
 
-  .products-grid { grid-template-columns: 1fr; gap: 14px; }
+  .products-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
 
   .category-filters { gap: 4px; }
   .cat-filter-btn { padding: 6px 10px; font-size: 0.56rem; }
 
   .testimonial-card { width: calc(100vw - 60px); min-width: 240px; max-width: 320px; }
+
+  /* Scale down product card internals for 2-col grid */
+  .product-card-body { padding: 12px; }
+  .product-card-category { font-size: 0.45rem; margin-bottom: 4px; letter-spacing: 0.2em; }
+  .product-card-name { font-size: 0.75rem; margin-bottom: 8px; }
+  .product-price { font-size: 0.95rem; }
+  .add-to-cart-btn { padding: 8px; font-size: 0.5rem; letter-spacing: 0.15em; margin-top: 8px; }
+  .qty-btn { width: 22px; height: 22px; font-size: 0.75rem; }
+  .qty-display { font-size: 0.7rem; min-width: 14px; }
+  .product-card-badge { font-size: 0.4rem; padding: 3px 6px; letter-spacing: 0.15em; }
+  .product-card-country { font-size: 0.45rem; padding: 2px 4px; }
+  .product-card-country img { width: 12px; height: 12px; }
 
   .contact-item { gap: 10px; }
   .contact-item-body { font-size: 0.88rem; }
