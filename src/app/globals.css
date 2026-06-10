@@ -422,8 +422,7 @@ body::before {
   background-clip: text;
   animation: shimmer 6s ease-in-out infinite;
   text-shadow: 0 10px 40px rgba(0,0,0,0.8);
-  width: 100%;
-  text-align: center;
+  white-space: nowrap;
 }
 
 .hero-taglines {
@@ -1050,6 +1049,15 @@ body::before {
   .nav-cart-btn span { display: none; }
   .hamburger { display: flex; }
   .nav-container { padding: 0 20px; gap: 16px; }
+  
+  /* Hide top-left EXOTICA logo on mobile until scrolled */
+  .nav-logo-wrap {
+    opacity: 0; transform: translateY(-10px); pointer-events: none;
+    transition: opacity 0.3s var(--ease), transform 0.3s var(--ease);
+  }
+  .navbar.scrolled .nav-logo-wrap {
+    opacity: 1; transform: translateY(0); pointer-events: all;
+  }
 
   /* ── Global: centre all section headings ── */
   .section-label { justify-content: center; }
