@@ -1,14 +1,17 @@
-import Cursor       from '@/components/Cursor'
-import Loader        from '@/components/Loader'
-import Navbar        from '@/components/Navbar'
-import Hero          from '@/components/Hero'
-import Marquee       from '@/components/Marquee'
-import Products      from '@/components/Products'
-import Testimonials  from '@/components/Testimonials'
-import Contact       from '@/components/Contact'
-import Footer        from '@/components/Footer'
-import Cart          from '@/components/Cart'
-import BackToTop     from '@/components/BackToTop'
+import Cursor          from '@/components/Cursor'
+import Loader           from '@/components/Loader'
+import Navbar           from '@/components/Navbar'
+import Hero             from '@/components/Hero'
+import Marquee          from '@/components/Marquee'
+import TrustBar         from '@/components/TrustBar'
+import Products         from '@/components/Products'
+import GiftingSection   from '@/components/GiftingSection'
+import Testimonials     from '@/components/Testimonials'
+import ExoticaLife      from '@/components/ExoticaLife'
+import Contact          from '@/components/Contact'
+import Footer           from '@/components/Footer'
+import Cart             from '@/components/Cart'
+import BackToTop        from '@/components/BackToTop'
 
 export default function Home() {
   return (
@@ -27,10 +30,28 @@ export default function Home() {
 
       {/* Page content */}
       <main id="main-content" role="main">
+        {/* 1. Hero */}
         <Hero />
+
+        {/* 2. Brand scroll marquee */}
         <Marquee />
+
+        {/* 3. Trust badges — builds instant confidence */}
+        <TrustBar />
+
+        {/* 4. Shop */}
         <Products />
+
+        {/* 5. Gifting & Hampers — upsell / brand story */}
+        <GiftingSection />
+
+        {/* 6. Testimonials */}
         <Testimonials />
+
+        {/* 7. Exotica Life — visual / social proof */}
+        <ExoticaLife />
+
+        {/* 8. Contact & Map */}
         <Contact />
       </main>
 

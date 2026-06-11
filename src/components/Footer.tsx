@@ -21,8 +21,9 @@ export default function Footer() {
       <div className="footer-glow" aria-hidden="true" />
       <div className="footer-inner">
         <div className="footer-top">
-          {/* Brand */}
-          <div>
+
+          {/* ── Brand ── */}
+          <div className="footer-brand">
             <span className="footer-brand-name">EXOTICA</span>
             <span className="footer-brand-sub">PCMC · Pune, India</span>
             <p className="footer-brand-desc">
@@ -38,41 +39,47 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Navigate */}
-          <div className="footer-col">
-            <h4>Navigate</h4>
-            <ul>
-              {navLinks.map(l => (
-                <li key={l.href}>
-                  <a href={l.href} id={`footer-nav-${l.label.toLowerCase()}`}>{l.label}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* ── Columns wrapper for 2-col on mobile ── */}
+          <div className="footer-cols-grid">
 
-          {/* Collections */}
-          <div className="footer-col">
-            <h4>Collections</h4>
-            <ul>
-              {collections.map(l => (
-                <li key={l.label}>
-                  <a href={l.href}>{l.label}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
+            {/* Navigate */}
+            <div className="footer-col">
+              <h4>Navigate</h4>
+              <ul>
+                {navLinks.map(l => (
+                  <li key={l.href + l.label}>
+                    <a href={l.href} id={`footer-nav-${l.label.toLowerCase().replace(' ', '-')}`}>{l.label}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          {/* Contact */}
-          <div className="footer-col">
-            <h4>Visit Us</h4>
-            <ul>
-              <li><a href="https://wa.me/919296909095" target="_blank" rel="noopener noreferrer" id="footer-order">Order on WhatsApp</a></li>
-              <li><a href="https://www.instagram.com/exotica.pcmc/" target="_blank" rel="noopener noreferrer" id="footer-dm">DM on Instagram</a></li>
-              <li><a href="https://maps.google.com/?q=Shakuntal+Commercia+Dehu+Alandi+Pune" target="_blank" rel="noopener noreferrer" id="footer-dir">Get Directions</a></li>
-              <li><a href="tel:+919296909095" id="footer-call">+91 92969 09095</a></li>
-              <li style={{ color: 'var(--text-faint)', fontSize: '0.75rem', lineHeight: 1.7 }}>Mon – Sun: 10AM – 9PM</li>
-            </ul>
-          </div>
+            {/* Collections */}
+            <div className="footer-col">
+              <h4>Collections</h4>
+              <ul>
+                {collections.map(l => (
+                  <li key={l.label}>
+                    <a href={l.href}>{l.label}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Visit Us */}
+            <div className="footer-col footer-col-visit">
+              <h4>Visit Us</h4>
+              <ul>
+                <li><a href="https://wa.me/919296909095" target="_blank" rel="noopener noreferrer" id="footer-order">Order on WhatsApp</a></li>
+                <li><a href="https://www.instagram.com/exotica.pcmc/" target="_blank" rel="noopener noreferrer" id="footer-dm">DM on Instagram</a></li>
+                <li><a href="https://maps.google.com/?q=Shakuntal+Commercia+Dehu+Alandi+Pune" target="_blank" rel="noopener noreferrer" id="footer-dir">Get Directions</a></li>
+                <li><a href="tel:+919296909095" id="footer-call">+91 92969 09095</a></li>
+                <li className="footer-hours">Mon – Sun: 10AM – 9PM</li>
+              </ul>
+            </div>
+
+          </div>{/* end footer-cols-grid */}
+
         </div>
 
         <div className="footer-bottom">

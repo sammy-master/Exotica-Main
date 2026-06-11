@@ -37,13 +37,14 @@ interface ProductCardProps {
 }
 
 function ProductCard({ product, index }: ProductCardProps) {
-  const { addItem, items } = useCart()
+  const { addItem, items, openCart } = useCart()
   const [qty, setQty]         = useState(1)
   const [added, setAdded]     = useState(false)
   const cardRef               = useRef<HTMLDivElement>(null)
   const [tilt, setTilt]       = useState('')
 
   const inCart = items.find(i => i.id === product.id)
+  const inCartQty = inCart?.quantity ?? 0
 
   const onMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const rect = cardRef.current!.getBoundingClientRect()
@@ -59,7 +60,13 @@ function ProductCard({ product, index }: ProductCardProps) {
     setTimeout(() => setAdded(false), 1800)
   }
 
+  const handleViewCart = (e: React.MouseEvent) => {
+    e.stopPropagation()
+    openCart()
+  }
+
   const isLimited = product.category === 'Limited'
+  const totalForQty = product.price * qty
 
   return (
     <div
@@ -79,12 +86,17 @@ function ProductCard({ product, index }: ProductCardProps) {
           loading="lazy"
         />
         <div className="product-card-overlay" />
-        {isLimited && <span className="product-card-badge">Limited</span>}
-        {inCart && (
-          <span className="product-card-badge" style={{ background: 'var(--teal)', top: isLimited ? 38 : 12 }}>
-            In Cart ✓
-          </span>
-        )}
+
+        {/* Badges */}
+        <div className="product-card-badges">
+          {isLimited && <span className="product-card-badge badge-limited">Limited</span>}
+          {inCartQty > 0 && (
+            <span className="product-card-badge badge-incart" onClick={handleViewCart}>
+              <i className="fas fa-check" aria-hidden="true" /> In Cart ({inCartQty})
+            </span>
+          )}
+        </div>
+
         <span className="product-card-country">{product.country}</span>
       </div>
 
@@ -93,13 +105,24 @@ function ProductCard({ product, index }: ProductCardProps) {
         <h3 className="product-card-name">{product.name}</h3>
 
         <div className="product-card-footer">
-          <span className="product-price">₹{product.price}</span>
+          <div>
+            <span className="product-price">₹{product.price}</span>
+            <span className="product-per-unit"> / unit</span>
+          </div>
           <div className="product-qty-wrap">
             <button className="qty-btn" onClick={() => setQty(q => Math.max(1, q - 1))} aria-label="Decrease quantity">−</button>
             <span className="qty-display">{qty}</span>
-            <button className="qty-btn" onClick={() => setQty(q => q + 1)} aria-label="Increase quantity">+</button>
+            <button className="qty-btn" onClick={() => setQty(q => Math.min(q + 1, 99))} aria-label="Increase quantity">+</button>
           </div>
         </div>
+
+        {/* Real-time total for selected qty */}
+        {qty > 1 && (
+          <div className="product-qty-total">
+            <i className="fas fa-calculator" aria-hidden="true" />
+            Total for {qty}: <strong>₹{totalForQty.toLocaleString('en-IN')}</strong>
+          </div>
+        )}
 
         <button
           className={`add-to-cart-btn${added ? ' added' : ''}`}
@@ -108,7 +131,9 @@ function ProductCard({ product, index }: ProductCardProps) {
           aria-label={`Add ${product.name} to cart`}
         >
           {added ? (
-            <><i className="fas fa-check" aria-hidden="true" /> Added to Cart</>
+            <><i className="fas fa-check" aria-hidden="true" /> Added to Cart!</>
+          ) : inCartQty > 0 ? (
+            <><i className="fas fa-shopping-bag" aria-hidden="true" /> Add More</>
           ) : (
             <><i className="fas fa-shopping-bag" aria-hidden="true" /> Add to Cart</>
           )}
@@ -120,6 +145,7 @@ function ProductCard({ product, index }: ProductCardProps) {
 
 export default function Products() {
   const [activeCat, setActiveCat] = useState('All')
+  const { totalItems, totalPrice, openCart } = useCart()
   const sectionRef = useRef<HTMLElement>(null)
 
   const filtered = activeCat === 'All'
@@ -170,6 +196,24 @@ export default function Products() {
           <ProductCard key={p.id} product={p} index={i} />
         ))}
       </div>
+
+      {/* Sticky cart bar when items in cart */}
+      {totalItems > 0 && (
+        <div className="products-cart-bar" id="products-cart-bar">
+          <div className="products-cart-bar-inner">
+            <div className="products-cart-bar-info">
+              <i className="fas fa-shopping-bag" aria-hidden="true" />
+              <span><strong>{totalItems}</strong> item{totalItems !== 1 ? 's' : ''} in cart</span>
+            </div>
+            <div className="products-cart-bar-right">
+              <span className="products-cart-bar-total">₹{totalPrice.toLocaleString('en-IN')}</span>
+              <button className="products-cart-bar-btn" onClick={openCart} id="products-view-cart-btn">
+                View Cart <i className="fas fa-arrow-right" aria-hidden="true" />
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   )
 }
