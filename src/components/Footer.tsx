@@ -73,8 +73,8 @@ export default function Footer() {
                 <li><a href="https://wa.me/919296909095" target="_blank" rel="noopener noreferrer" id="footer-order">Order on WhatsApp</a></li>
                 <li><a href="https://www.instagram.com/exotica.pcmc/" target="_blank" rel="noopener noreferrer" id="footer-dm">DM on Instagram</a></li>
                 <li><a href="https://maps.google.com/?q=Shakuntal+Commercia+Dehu+Alandi+Pune" target="_blank" rel="noopener noreferrer" id="footer-dir">Get Directions</a></li>
-                <li><a href="tel:+919296909095" id="footer-call">+91 92969 09095</a></li>
-                <li className="footer-hours">Mon – Sun: 10AM – 9PM</li>
+                <li><a href="tel:+919296909095" id="footer-call">+91 92969 09095</a> / <a href="tel:+919296909094">+91 92969 09094</a></li>
+                <li className="footer-hours">Mon - Sun: 10AM - 9PM</li>
               </ul>
             </div>
 

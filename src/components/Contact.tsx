@@ -19,7 +19,7 @@ const contactItems = [
     id: 'contact-phone',
     icon: 'fab fa-whatsapp',
     title: 'WhatsApp / Call',
-    body: '+91 92969 09095',
+    body: '+91 92969 09095\n+91 92969 09094',
     href: `https://wa.me/${WA_NUMBER}`,
   },
   {
