@@ -2140,8 +2140,9 @@ img.brand-redbull {
 
   /* ── Mobile Cart FAB ── */
   .mobile-cart-fab { display: flex; }
-  /* Push WA fab up so it doesn't overlap mobile cart FAB */
+  /* Push WA fab and back-to-top up so they don't overlap */
   .fab-whatsapp { bottom: 90px; right: 16px; }
+  .back-to-top { bottom: 160px; right: 16px; }
 }
 
 /* ═══════════════════════════════════════════════
@@ -2232,6 +2233,7 @@ img.brand-redbull {
 
   /* Make WhatsApp FAB smaller to not cover content */
   .fab-whatsapp { width: 46px; height: 46px; font-size: 1.1rem; bottom: 86px; right: 12px; }
+  .back-to-top { width: 36px; height: 36px; bottom: 145px; right: 12px; font-size: 0.9rem; }
 }
 
 /* Live Site Marquee Styles */
