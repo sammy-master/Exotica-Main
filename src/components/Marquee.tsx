@@ -4,6 +4,12 @@
  * Brand marquee — single scrolling row with all brand logos.
  * Logos are in /public/logos/*.svg
  * The track is doubled for seamless infinite scroll.
+ *
+ * iOS Safari fix notes:
+ *  - Images use loading="eager" to prevent lazy-load causing disappear on scroll
+ *  - draggable="false" prevents iOS treating logos as draggable elements
+ *  - The CSS uses translateZ(0) + will-change for GPU compositing
+ *  - @-webkit-keyframes added for full Safari compat
  */
 
 const brands = [
@@ -23,7 +29,7 @@ const brands = [
   { name: 'Rani Float', logo: '/logos/rani.png?v=3',  className: 'brand-rani',     hideText: true },
 ]
 
-// Double for seamless loop
+// Double for seamless loop (CSS keyframe scrolls exactly -50%)
 const doubled = [...brands, ...brands]
 
 export default function Marquee() {
@@ -36,9 +42,9 @@ export default function Marquee() {
       <div className="marquee-track-outer">
         <div className="marquee-track" aria-hidden="true">
           {doubled.map((brand, i) => (
-            <button 
-              key={i} 
-              className="marquee-item" 
+            <button
+              key={i}
+              className="marquee-item"
               title={`View ${brand.name} products`}
               onClick={() => handleBrandClick(brand.search || brand.name)}
               style={{ background: 'transparent', border: 'none', cursor: 'pointer' }}
@@ -50,7 +56,8 @@ export default function Marquee() {
                   src={brand.logo}
                   alt={`${brand.name} logo`}
                   className={`marquee-brand-logo ${brand.className}`}
-                  loading="lazy"
+                  loading="eager"
+                  draggable={false}
                 />
                 {!brand.hideText && (
                   <span className={`marquee-brand-name ${brand.className}`}>{brand.name}</span>

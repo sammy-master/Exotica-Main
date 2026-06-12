@@ -500,23 +500,66 @@ body::before {
   border-bottom: 1px solid var(--border-gold);
   background: linear-gradient(135deg, #060616 0%, #04040A 100%);
 }
+
+/*
+  iOS/Safari Fix: -webkit-mask-image on an animated child causes logos to vanish.
+  Solution: use a positioned wrapper with ::before/::after pseudo-element fade overlays
+  instead of mask-image on the scrolling container.
+*/
 .marquee-track-outer {
   overflow: hidden;
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
-  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  position: relative; /* needed for pseudo-element fade overlays */
 }
+/* Fade edges via pseudo-elements — Safari-safe alternative to mask-image */
+.marquee-track-outer::before,
+.marquee-track-outer::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 80px;
+  z-index: 2;
+  pointer-events: none;
+}
+.marquee-track-outer::before {
+  left: 0;
+  background: linear-gradient(to right, #060616 0%, transparent 100%);
+}
+.marquee-track-outer::after {
+  right: 0;
+  background: linear-gradient(to left, #060616 0%, transparent 100%);
+}
+
 .marquee-track {
-  display: flex; align-items: center; width: max-content;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  /* Safari needs explicit pixel width OR translateZ to GPU-composite correctly.
+     width: max-content works on Chrome/FF; on Safari we rely on the flex layout. */
+  width: max-content;
+  /* translateZ(0) forces GPU compositing layer — prevents iOS mid-scroll disappear */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
+  -webkit-animation: marqueeScroll 42s linear infinite;
   animation: marqueeScroll 42s linear infinite;
   padding: 20px 0;
+  /* Prevent touch events from interfering with animation on iOS */
+  -webkit-tap-highlight-color: transparent;
 }
 @media (hover: hover) and (pointer: fine) {
   .marquee-track:hover { animation-play-state: paused; }
 }
 
 .marquee-item {
-  display: flex; align-items: center; gap: 40px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  gap: 40px;
   padding: 0 40px; height: 90px;
+  /* Prevent iOS tap highlight flashing on buttons */
+  -webkit-tap-highlight-color: transparent;
 }
 
 .marquee-brand-logo {
@@ -524,8 +567,13 @@ body::before {
   width: auto;
   max-width: 160px;
   object-fit: contain;
+  /* Prevent iOS from treating images as draggable during scroll */
+  -webkit-user-drag: none;
+  user-select: none;
   transition: transform 0.4s var(--ease);
   cursor: default;
+  /* Ensure images render sharply on retina screens */
+  image-rendering: -webkit-optimize-contrast;
 }
 @media (hover: hover) and (pointer: fine) {
   .marquee-brand-logo:hover { transform: scale(1.06); }
@@ -536,13 +584,17 @@ body::before {
 /* Second row — scrolls right */
 .marquee-row2 { border-top: 1px solid var(--border-gold); }
 .marquee-track-reverse {
+  -webkit-animation: marqueeScrollReverse 52s linear infinite;
   animation: marqueeScrollReverse 52s linear infinite;
 }
 @media (hover: hover) and (pointer: fine) {
   .marquee-track-reverse:hover { animation-play-state: paused; }
 }
 
-/* ── Marquee mobile ── */
+/* ── Marquee responsive ── */
+@media (max-width: 1024px) {
+  .marquee-item { gap: 32px; padding: 0 32px; }
+}
 @media (max-width: 768px) {
   .marquee-item { gap: 24px; padding: 0 24px; height: 70px; }
   .marquee-brand-logo { height: 32px; max-width: 110px; }
@@ -1427,18 +1479,33 @@ img.brand-redbull {
   right: 0; background: linear-gradient(to left, rgba(4,4,10,1), transparent);
 }
 .testimonials-marquee-track {
-  display: flex; gap: 20px; width: max-content;
+  display: -webkit-flex;
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
+  -webkit-animation: scroll-testimonials 30s linear infinite;
   animation: scroll-testimonials 30s linear infinite;
-  padding: 20px 10px; /* room for box-shadow */
+  padding: 20px 10px;
 }
 .testimonials-marquee-track:hover {
+  -webkit-animation-play-state: paused;
   animation-play-state: paused;
 }
 .testimonials-marquee-track.reverse {
+  -webkit-animation-direction: reverse;
   animation-direction: reverse;
 }
+/* Fixed: exact -50% for seamless loop. The -10px offset broke iOS Safari loop point. */
+@-webkit-keyframes scroll-testimonials {
+  from { -webkit-transform: translateX(0); }
+  to   { -webkit-transform: translateX(-50%); }
+}
 @keyframes scroll-testimonials {
-  to { transform: translateX(calc(-50% - 10px)); }
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }
 
 .testimonial-card {
@@ -1971,7 +2038,10 @@ img.brand-redbull {
 @keyframes fadeIn        { to { opacity: 1; } }
 @keyframes slideUp       { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes shimmer       { 0%,100% { filter: brightness(1); } 50% { filter: brightness(1.18); } }
+/* Safari requires -webkit- prefix for keyframes used with -webkit-animation */
+@-webkit-keyframes marqueeScroll { from { -webkit-transform: translateX(0); } to { -webkit-transform: translateX(-50%); } }
 @keyframes marqueeScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@-webkit-keyframes marqueeScrollReverse { from { -webkit-transform: translateX(-50%); } to { -webkit-transform: translateX(0); } }
 @keyframes marqueeScrollReverse { from { transform: translateX(-50%); } to { transform: translateX(0); } }
 @keyframes orbFloat      { 0%,100% { transform: translate(0,0) scale(1); } 33% { transform: translate(25px,-18px) scale(1.04); } 66% { transform: translate(-18px,12px) scale(0.97); } }
 @keyframes particleFloat { 0%,100% { transform:translateY(0); opacity:0; } 50% { transform:translateY(-30px); opacity:var(--max-opacity, 0.8); } }
