@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80">
+  <defs>
+    <linearGradient id="pepsiGlobe" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#004B93"/>
+      <stop offset="50%" stop-color="#EE1D23"/>
+      <stop offset="100%" stop-color="#004B93"/>
+    </linearGradient>
+  </defs>
+  <!-- Globe icon -->
+  <circle cx="35" cy="40" r="28" fill="#004B93"/>
+  <path d="M7,40 Q35,12 63,40" fill="#EE1D23"/>
+  <path d="M7,40 Q35,68 63,40" fill="white"/>
+  <circle cx="35" cy="40" r="28" fill="none" stroke="#0077b6" stroke-width="1"/>
+  <!-- Wordmark -->
+  <text x="72" y="52" font-family="Arial Black, Arial" font-weight="900" font-size="30" fill="#004B93" letter-spacing="-1">Pepsi</text>
+</svg>

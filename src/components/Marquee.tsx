@@ -1,51 +1,63 @@
 'use client'
 
+/**
+ * Brand marquee — single scrolling row with all brand logos.
+ * Logos are in /public/logos/*.svg
+ * The track is doubled for seamless infinite scroll.
+ */
+
 const brands = [
-  { name: 'Kinder',         cls: 'brand-kinder',    logo: '/logos/kinder.svg' },
-  { name: 'KitKat',         cls: 'brand-kitkat',    logo: '/logos/kitkat.svg' },
-  { name: 'Lindt',          cls: 'brand-lindt',     logo: '/logos/lindt.svg' },
-  { name: 'Ferrero Rocher', cls: 'brand-ferrero',   logo: '/logos/ferrero.svg' },
-  { name: 'Nestlé',         cls: 'brand-nestle',    logo: '/logos/nestle.svg' },
-  { name: 'Nescafé',        cls: 'brand-nescafe',   logo: '/logos/nescafe.svg' },
-  { name: 'Monster',        cls: 'brand-monster',   logo: '/logos/monster.svg' },
-  { name: 'Red Bull',       cls: 'brand-redbull',   logo: '/logos/redbull.svg' },
-  { name: 'Prime',          cls: 'brand-prime',     logo: '/logos/prime.svg' },
-  { name: 'Toblerone',      cls: 'brand-toblerone', logo: '/logos/toblerone.svg' },
-  { name: 'Haribo',         cls: 'brand-haribo',    logo: '/logos/haribo.svg' },
-  { name: 'Pringles',       cls: 'brand-pringles',  logo: '/logos/pringles.svg' },
-  { name: 'Lotus Biscoff',  cls: 'brand-biscoff',   logo: '/logos/biscoff.svg' },
-  { name: 'Godiva',         cls: 'brand-godiva',    logo: '/logos/godiva.svg' },
-  { name: 'Snickers',       cls: 'brand-snickers',  logo: '/logos/snickers.svg' },
-  { name: 'Twix',           cls: 'brand-twix',      logo: '/logos/twix.svg' },
-  { name: 'Skittles',       cls: 'brand-skittles',  logo: '/logos/skittles.svg' },
+  { name: 'Monster',    logo: '/logos/monster.svg',   className: 'brand-monster',  hideText: true },
+  { name: 'Red Bull',   search: 'RedBull', logo: '/logos/redbull.svg',   className: 'brand-redbull',  hideText: true },
+  { name: 'Coca-Cola',  logo: '/logos/cocacola.svg',  className: 'brand-cocacola', hideText: true },
+  { name: 'Pepsi',      logo: '/logos/pepsi.png?v=3', className: 'brand-pepsi',    hideText: true },
+  { name: 'Fanta',      logo: '/logos/fanta.png?v=3', className: 'brand-fanta',    hideText: true },
+  { name: 'Prime',      logo: '/logos/prime.png',     className: 'brand-prime',    hideText: true },
+  { name: 'Nescafé',    search: 'Nescafe', logo: '/logos/nescafe.png',   className: 'brand-nescafe',  hideText: true },
+  { name: 'Lindt',      logo: '/logos/lindt.png',     className: 'brand-lindt',    hideText: true },
+  { name: 'Starbucks',  logo: '/logos/starbucks.png?v=3', className: 'brand-starbucks', hideText: true },
+  { name: 'Mirinda',    logo: '/logos/mirinda.png',   className: 'brand-mirinda',  hideText: true },
+  { name: 'Dr Pepper',  logo: '/logos/drpepper.png',  className: 'brand-drpepper', hideText: true },
+  { name: 'Kinza',      logo: '/logos/kinza.png',     className: 'brand-kinza',    hideText: true },
+  { name: 'Vinut',      logo: '/logos/vinut.png',     className: 'brand-vinut',    hideText: true },
+  { name: 'Rani Float', logo: '/logos/rani.png?v=3',  className: 'brand-rani',     hideText: true },
 ]
 
 // Double for seamless loop
 const doubled = [...brands, ...brands]
 
 export default function Marquee() {
+  const handleBrandClick = (brandSearch: string) => {
+    window.dispatchEvent(new CustomEvent('filterBrand', { detail: brandSearch }))
+  }
+
   return (
     <section className="marquee-section" aria-label="Brands we carry" id="brands">
       <div className="marquee-track-outer">
         <div className="marquee-track" aria-hidden="true">
           {doubled.map((brand, i) => (
-            <div key={i} className="marquee-item">
+            <button 
+              key={i} 
+              className="marquee-item" 
+              title={`View ${brand.name} products`}
+              onClick={() => handleBrandClick(brand.search || brand.name)}
+              style={{ background: 'transparent', border: 'none', cursor: 'pointer' }}
+              aria-label={`View ${brand.name} products`}
+            >
               <div className="marquee-brand-group">
-                <img 
-                  src={`${brand.logo}?v=2`} 
-                  alt={`${brand.name} logo`} 
-                  className="marquee-brand-logo"
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={brand.logo}
+                  alt={`${brand.name} logo`}
+                  className={`marquee-brand-logo ${brand.className}`}
                   loading="lazy"
-                  onError={(e) => {
-                    e.currentTarget.style.display = 'none';
-                  }}
                 />
-                <span className={`marquee-brand-name ${brand.cls}`}>
-                  {brand.name}
-                </span>
+                {!brand.hideText && (
+                  <span className={`marquee-brand-name ${brand.className}`}>{brand.name}</span>
+                )}
               </div>
               <span className="marquee-sep" aria-hidden="true">◆</span>
-            </div>
+            </button>
           ))}
         </div>
       </div>

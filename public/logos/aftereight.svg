@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 80">
+  <!-- Clock showing 8 o'clock -->
+  <circle cx="24" cy="40" r="20" fill="#1B4D3E" stroke="#C8972A" stroke-width="2"/>
+  <!-- Clock inner -->
+  <circle cx="24" cy="40" r="16" fill="none" stroke="#C8972A" stroke-width="0.8" opacity="0.5"/>
+  <!-- Clock center -->
+  <circle cx="24" cy="40" r="2" fill="#C8972A"/>
+  <!-- Hour hand pointing to 8 (240 degrees from top = pointing lower left) -->
+  <line x1="24" y1="40" x2="17" y2="50" stroke="#C8972A" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Minute hand pointing to 12 -->
+  <line x1="24" y1="40" x2="24" y2="26" stroke="#C8972A" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- Clock hour markers -->
+  <line x1="24" y1="22" x2="24" y2="25" stroke="#C8972A" stroke-width="1.5"/>
+  <line x1="38" y1="40" x2="35" y2="40" stroke="#C8972A" stroke-width="1.5"/>
+  <line x1="24" y1="58" x2="24" y2="55" stroke="#C8972A" stroke-width="1.5"/>
+  <line x1="10" y1="40" x2="13" y2="40" stroke="#C8972A" stroke-width="1.5"/>
+  <!-- Thin mint box shape -->
+  <rect x="52" y="20" width="200" height="40" rx="4" fill="#1B4D3E" stroke="#C8972A" stroke-width="2"/>
+  <!-- Inner highlight on box -->
+  <rect x="56" y="24" width="192" height="8" rx="2" fill="#2a6b55" opacity="0.4"/>
+  <!-- After Eight script text -->
+  <text x="152" y="48" font-family="Georgia, 'Times New Roman', serif" font-size="22" font-style="italic" font-weight="bold" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">After Eight</text>
+  <!-- Gold border detail lines -->
+  <line x1="60" y1="26" x2="244" y2="26" stroke="#C8972A" stroke-width="0.8" opacity="0.5"/>
+  <line x1="60" y1="54" x2="244" y2="54" stroke="#C8972A" stroke-width="0.8" opacity="0.5"/>
+</svg>

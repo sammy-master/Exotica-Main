@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 70">
+  <rect rx="14" ry="14" width="220" height="70" fill="#8B0000"/>
+  <!-- Shield accent -->
+  <polygon points="20,10 35,10 40,35 35,60 20,60 15,35" fill="#A00000"/>
+  <text x="125" y="33" font-family="Georgia, Times New Roman, serif" font-weight="700" font-size="22" fill="white" text-anchor="middle">Dr</text>
+  <text x="125" y="58" font-family="Georgia, Times New Roman, serif" font-weight="700" font-size="22" fill="white" text-anchor="middle">Pepper</text>
+</svg>

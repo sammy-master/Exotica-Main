@@ -1,0 +1,922 @@
+[
+  {
+    "id": "r2_2",
+    "name": "FROSTER CLARKS JUICE POWDER",
+    "price": 700,
+    "image": "/products/rack2_p002.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_3",
+    "name": "LIPO COOKIES",
+    "price": 155,
+    "image": "/products/rack2_p003.jpg",
+    "category": "Biscuits",
+    "country": ""
+  },
+  {
+    "id": "r2_4",
+    "name": "LIPO COOKIES",
+    "price": 155,
+    "image": "/products/rack2_p004.jpg",
+    "category": "Biscuits",
+    "country": ""
+  },
+  {
+    "id": "r2_5",
+    "name": "FROSTER CLARKS JAM",
+    "price": 500,
+    "image": "/products/rack2_p005.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_6",
+    "name": "ZAZIO JAM",
+    "price": 175,
+    "image": "/products/rack2_p006.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_7",
+    "name": "DAIM POUCH",
+    "price": 800,
+    "image": "/products/rack2_p007.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_8",
+    "name": "OYA CHOCO ROLLS",
+    "price": 370,
+    "image": "/products/rack2_p008.jpg",
+    "category": "Chocolates",
+    "country": ""
+  },
+  {
+    "id": "r2_9",
+    "name": "OYA CHOCO ROLLS",
+    "price": 370,
+    "image": "/products/rack2_p009.jpg",
+    "category": "Chocolates",
+    "country": ""
+  },
+  {
+    "id": "r2_10",
+    "name": "MINIS 28 PIECES",
+    "price": 999,
+    "image": "/products/rack2_p010.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_11",
+    "name": "MINIATURES",
+    "price": 600,
+    "image": "/products/rack2_p011.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_12",
+    "name": "QUALITY STREET",
+    "price": 900,
+    "image": "/products/rack2_p012.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_13",
+    "name": "LINDT POUCH",
+    "price": 900,
+    "image": "/products/rack2_p013.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_14",
+    "name": "KISSES MODAK",
+    "price": 400,
+    "image": "/products/rack2_p014.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_15",
+    "name": "KISSES MODAK",
+    "price": 400,
+    "image": "/products/rack2_p015.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_16",
+    "name": "LEKKERS MINIS",
+    "price": 750,
+    "image": "/products/rack2_p016.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_17",
+    "name": "LEKKERS MINIS",
+    "price": 750,
+    "image": "/products/rack2_p017.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_18",
+    "name": "LEKKERS MINIS",
+    "price": 750,
+    "image": "/products/rack2_p018.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_19",
+    "name": "ALFRADO NO SUGAR",
+    "price": 600,
+    "image": "/products/rack2_p019.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_20",
+    "name": "MILKA BARS",
+    "price": 280,
+    "image": "/products/rack2_p020.jpg",
+    "category": "Chocolates",
+    "country": ""
+  },
+  {
+    "id": "r2_21",
+    "name": "DAIRY MILK 130G IMP",
+    "price": 400,
+    "image": "/products/rack2_p021.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_22",
+    "name": "FIDGI BAR",
+    "price": 300,
+    "image": "/products/rack2_p022.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_23",
+    "name": "GODIVA BLOOD ORANGE",
+    "price": 450,
+    "image": "/products/rack2_p023.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_24",
+    "name": "GODIVA SEA SAKT",
+    "price": 450,
+    "image": "/products/rack2_p024.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_25",
+    "name": "GODIVA MILK CHOCOLATE",
+    "price": 450,
+    "image": "/products/rack2_p025.jpg",
+    "category": "Chocolates",
+    "country": ""
+  },
+  {
+    "id": "r2_26",
+    "name": "GODIVA SALTED CARAMEL",
+    "price": 450,
+    "image": "/products/rack2_p026.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_27",
+    "name": "LINDT VANILLA",
+    "price": 700,
+    "image": "/products/rack2_p027.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_28",
+    "name": "LINDT RASPBERRY",
+    "price": 700,
+    "image": "/products/rack2_p028.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_29",
+    "name": "LINDT CHILI",
+    "price": 600,
+    "image": "/products/rack2_p029.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_30",
+    "name": "LINDT EXTRA CREAM",
+    "price": 700,
+    "image": "/products/rack2_p030.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_31",
+    "name": "LINDT 78% COCOA",
+    "price": 600,
+    "image": "/products/rack2_p031.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_32",
+    "name": "LINDT SEA SALT",
+    "price": 600,
+    "image": "/products/rack2_p032.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_33",
+    "name": "LINDT 90% COCOA",
+    "price": 600,
+    "image": "/products/rack2_p033.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_34",
+    "name": "LINDT 85% COCOA",
+    "price": 600,
+    "image": "/products/rack2_p034.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_35",
+    "name": "LINDT 99% COCOA",
+    "price": 700,
+    "image": "/products/rack2_p035.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_36",
+    "name": "LINDT 70% COCOA",
+    "price": 600,
+    "image": "/products/rack2_p036.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_37",
+    "name": "LINDT ORANGE INTENSE",
+    "price": 600,
+    "image": "/products/rack2_p037.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_38",
+    "name": "LINDT CARAMEL HAZELNUT",
+    "price": 600,
+    "image": "/products/rack2_p038.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_39",
+    "name": "LINDT SEA SALT CARAMEL",
+    "price": 600,
+    "image": "/products/rack2_p039.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_40",
+    "name": "LINDT 70% COCOA",
+    "price": 600,
+    "image": "/products/rack2_p040.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_41",
+    "name": "LINDT CRISPY NEW",
+    "price": 600,
+    "image": "/products/rack2_p041.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_42",
+    "name": "LINDT LINDOR BOX",
+    "price": 1000,
+    "image": "/products/rack2_p042.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_43",
+    "name": "LINDT LINDOR MILK",
+    "price": 550,
+    "image": "/products/rack2_p043.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_44",
+    "name": "LINDT LINDOR HAZELNUT",
+    "price": 550,
+    "image": "/products/rack2_p044.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_45",
+    "name": "LINDT SWISS CLASSIC",
+    "price": 550,
+    "image": "/products/rack2_p045.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_46",
+    "name": "LINDT RECETA ORIGNAL",
+    "price": 699,
+    "image": "/products/rack2_p046.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_47",
+    "name": "LINDT RECETA ORIGNAL",
+    "price": 699,
+    "image": "/products/rack2_p047.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_48",
+    "name": "LINDT SWISS CLASSIC",
+    "price": 550,
+    "image": "/products/rack2_p048.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_49",
+    "name": "LINDT SWISS CLASSIC",
+    "price": 550,
+    "image": "/products/rack2_p049.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_50",
+    "name": "LINDT RECETA ORIGNAL",
+    "price": 699,
+    "image": "/products/rack2_p050.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_51",
+    "name": "LINDT PISTACHO",
+    "price": 550,
+    "image": "/products/rack2_p051.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_52",
+    "name": "LINDT WHITE",
+    "price": 550,
+    "image": "/products/rack2_p052.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_53",
+    "name": "LINDT 60% COCOA",
+    "price": 550,
+    "image": "/products/rack2_p053.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_54",
+    "name": "LINDT 300G BAR",
+    "price": 1399,
+    "image": "/products/rack2_p054.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_55",
+    "name": "DAVIDOFF COFFEE",
+    "price": 800,
+    "image": "/products/rack2_p055.jpg",
+    "category": "Drinks",
+    "country": ""
+  },
+  {
+    "id": "r2_56",
+    "name": "DAVIDOFF COFFEE  CREAM INTENCE",
+    "price": 850,
+    "image": "/products/rack2_p056.jpg",
+    "category": "Drinks",
+    "country": ""
+  },
+  {
+    "id": "r2_57",
+    "name": "DAVIDOFF COFFEE  COLOMBIA / BRAZIL",
+    "price": 999,
+    "image": "/products/rack2_p057.jpg",
+    "category": "Drinks",
+    "country": ""
+  },
+  {
+    "id": "r2_58",
+    "name": "DAVIDOFF CHEW",
+    "price": 400,
+    "image": "/products/rack2_p058.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_59",
+    "name": "NESCAFE GOLD COFFEE  SMALL PRICE 750 RS / BIG",
+    "price": 1200,
+    "image": "/products/rack2_p059.jpg",
+    "category": "Drinks",
+    "country": ""
+  },
+  {
+    "id": "r2_60",
+    "name": "PRIME X",
+    "price": 240,
+    "image": "/products/rack2_p060.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_61",
+    "name": "PRIME",
+    "price": 240,
+    "image": "/products/rack2_p061.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_62",
+    "name": "STARBUCKS FRAPPUCCINO",
+    "price": 300,
+    "image": "/products/rack2_p062.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_63",
+    "name": "NESCAFE COFFE",
+    "price": 110,
+    "image": "/products/rack2_p063.jpg",
+    "category": "Drinks",
+    "country": ""
+  },
+  {
+    "id": "r2_64",
+    "name": "MONSTER ENERGY ULTRA",
+    "price": 250,
+    "image": "/products/rack2_p064.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_65",
+    "name": "MONSTER FULL THROTTLE",
+    "price": 250,
+    "image": "/products/rack2_p065.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_66",
+    "name": "MONSTER BAD APPLE",
+    "price": 250,
+    "image": "/products/rack2_p066.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_67",
+    "name": "MONSTER COSMIC PEACH",
+    "price": 250,
+    "image": "/products/rack2_p067.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_68",
+    "name": "MONSTER MANGO ULTRA",
+    "price": 250,
+    "image": "/products/rack2_p068.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_69",
+    "name": "MONSTER ENERGY",
+    "price": 250,
+    "image": "/products/rack2_p069.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_70",
+    "name": "MONSTER PIPELINE PUNCH",
+    "price": 250,
+    "image": "/products/rack2_p070.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_71",
+    "name": "MONSTER LANDO NORRIS",
+    "price": 250,
+    "image": "/products/rack2_p071.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_72",
+    "name": "RED BULL",
+    "price": 125,
+    "image": "/products/rack2_p072.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_73",
+    "name": "RANI PEACH",
+    "price": 60,
+    "image": "/products/rack2_p073.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_74",
+    "name": "FANTA STRAWBERRY",
+    "price": 150,
+    "image": "/products/rack2_p074.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_75",
+    "name": "FANTA ANGUR",
+    "price": 150,
+    "image": "/products/rack2_p075.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_76",
+    "name": "FANTA LITCHI",
+    "price": 150,
+    "image": "/products/rack2_p076.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_77",
+    "name": "COKE VANILLA",
+    "price": 150,
+    "image": "/products/rack2_p077.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_78",
+    "name": "OYA KUNAFA BOX",
+    "price": 775,
+    "image": "/products/rack2_p078.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_79",
+    "name": "OYA KUNAFA BOX",
+    "price": 775,
+    "image": "/products/rack2_p079.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_80",
+    "name": "COCORUSH KUNAFA",
+    "price": 500,
+    "image": "/products/rack2_p080.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_81",
+    "name": "KUNAFA GOLD BAR",
+    "price": 250,
+    "image": "/products/rack2_p081.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_82",
+    "name": "DUBAI KUNAFA BAR",
+    "price": 500,
+    "image": "/products/rack2_p082.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_83",
+    "name": "DUBAI KUNAFA BAR",
+    "price": 500,
+    "image": "/products/rack2_p083.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_84",
+    "name": "DUBAI KUNAFA BAR",
+    "price": 500,
+    "image": "/products/rack2_p084.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_85",
+    "name": "DUBAI KUNAFA BAR",
+    "price": 500,
+    "image": "/products/rack2_p085.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_86",
+    "name": "DUBAI KUNAFA BAR",
+    "price": 500,
+    "image": "/products/rack2_p086.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_87",
+    "name": "DUBAI KUNAFA BAR",
+    "price": 500,
+    "image": "/products/rack2_p087.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_88",
+    "name": "BULDAK CARBONARA",
+    "price": 150,
+    "image": "/products/rack2_p088.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_89",
+    "name": "TAKIS",
+    "price": 250,
+    "image": "/products/rack2_p089.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_90",
+    "name": "SHIN SUPER SPICY",
+    "price": 140,
+    "image": "/products/rack2_p090.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_91",
+    "name": "SHIN STIR FRY",
+    "price": 170,
+    "image": "/products/rack2_p091.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_92",
+    "name": "SHIN KIMCHI",
+    "price": 140,
+    "image": "/products/rack2_p092.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_93",
+    "name": "BULDAK CREAM",
+    "price": 150,
+    "image": "/products/rack2_p093.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_94",
+    "name": "BULDAK 3X SPICY",
+    "price": 150,
+    "image": "/products/rack2_p094.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_95",
+    "name": "BULDAK HOT CHICKEN",
+    "price": 150,
+    "image": "/products/rack2_p095.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_96",
+    "name": "SHIN TOOMBA",
+    "price": 170,
+    "image": "/products/rack2_p096.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_97",
+    "name": "SHIN RAMYUN",
+    "price": 140,
+    "image": "/products/rack2_p097.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_98",
+    "name": "RITZ SMALL PRICE 150 RS / BIG",
+    "price": 200,
+    "image": "/products/rack2_p098.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_99",
+    "name": "LOTUS BISCOFF",
+    "price": 250,
+    "image": "/products/rack2_p099.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_100",
+    "name": "GINGER NUTS",
+    "price": 399,
+    "image": "/products/rack2_p100.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_101",
+    "name": "RAFAELO WAFERS",
+    "price": 80,
+    "image": "/products/rack2_p101.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_102",
+    "name": "KITKAT F1",
+    "price": 500,
+    "image": "/products/rack2_p102.jpg",
+    "category": "Chocolates",
+    "country": ""
+  },
+  {
+    "id": "r2_103",
+    "name": "FOX MINTS",
+    "price": 80,
+    "image": "/products/rack2_p103.jpg",
+    "category": "Candy",
+    "country": ""
+  },
+  {
+    "id": "r2_104",
+    "name": "ALFREDO POUCH",
+    "price": 200,
+    "image": "/products/rack2_p104.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_105",
+    "name": "LOACKERS SMALL POUCH",
+    "price": 109,
+    "image": "/products/rack2_p105.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_106",
+    "name": "OREO WAFERS",
+    "price": 110,
+    "image": "/products/rack2_p106.jpg",
+    "category": "Biscuits",
+    "country": ""
+  },
+  {
+    "id": "r2_107",
+    "name": "OREO MINIS",
+    "price": 150,
+    "image": "/products/rack2_p107.jpg",
+    "category": "Biscuits",
+    "country": ""
+  },
+  {
+    "id": "r2_108",
+    "name": "OREO WAFER ROLL",
+    "price": 150,
+    "image": "/products/rack2_p108.jpg",
+    "category": "Biscuits",
+    "country": ""
+  },
+  {
+    "id": "r2_109",
+    "name": "OREO CAKE",
+    "price": 30,
+    "image": "/products/rack2_p109.jpg",
+    "category": "Biscuits",
+    "country": ""
+  },
+  {
+    "id": "r2_110",
+    "name": "KITKAT PEANUT BUTTER",
+    "price": 300,
+    "image": "/products/rack2_p110.jpg",
+    "category": "Chocolates",
+    "country": ""
+  },
+  {
+    "id": "r2_111",
+    "name": "KITKAT CHUNKY",
+    "price": 300,
+    "image": "/products/rack2_p111.jpg",
+    "category": "Chocolates",
+    "country": ""
+  },
+  {
+    "id": "r2_112",
+    "name": "TOBLERONE TINY",
+    "price": 430,
+    "image": "/products/rack2_p112.jpg",
+    "category": "Chocolates",
+    "country": ""
+  },
+  {
+    "id": "r2_113",
+    "name": "AFTER EIGHT BOX",
+    "price": 1100,
+    "image": "/products/rack2_p113.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_114",
+    "name": "AFTER EIGHT SMALL BOX",
+    "price": 460,
+    "image": "/products/rack2_p114.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r2_115",
+    "name": "HERSHEYS BAR",
+    "price": 150,
+    "image": "/products/rack2_p115.jpg",
+    "category": "Chocolates",
+    "country": ""
+  },
+  {
+    "id": "r2_116",
+    "name": "ALFREDO BAR",
+    "price": 300,
+    "image": "/products/rack2_p116.jpg",
+    "category": "Other",
+    "country": ""
+  }
+]

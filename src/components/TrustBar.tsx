@@ -10,15 +10,15 @@ const BADGES = [
     color: '#D4A843',
   },
   {
-    icon: 'fas fa-snowflake',
-    title: 'Fresh Delivery',
-    desc: 'Temperature-safe packaging on every order',
+    icon: 'fas fa-shield-alt',
+    title: 'FSSAI Licensed',
+    desc: 'Reg. No. 21526038001776 — Govt. of Maharashtra',
     color: '#4FC3F7',
   },
   {
     icon: 'fas fa-globe-asia',
-    title: '50+ Countries',
-    desc: 'Curated treats from around the world',
+    title: '15+ Countries',
+    desc: 'Curated treats from Switzerland, Belgium, Japan & more',
     color: '#A78BFA',
   },
   {

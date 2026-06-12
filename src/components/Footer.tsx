@@ -85,7 +85,10 @@ export default function Footer() {
         <div className="footer-bottom">
           <p>&copy; {new Date().getFullYear()} Exotica PCMC. All rights reserved.</p>
           <p style={{ fontSize: '0.65rem', color: 'var(--text-faint)', letterSpacing: '0.12em' }}>
-            B-24, Shakuntal Commercia · Dehu-Alandi Road · Pimpri-Chinchwad, Pune 411062
+            Shop No. 24B, Ground Floor, Shakuntal Commercia · Dehu-Alandi Road · Chikhali, Pimpri-Chinchwad, Pune 411062
+          </p>
+          <p style={{ fontSize: '0.6rem', color: 'var(--text-faint)', letterSpacing: '0.1em', marginTop: 4 }}>
+            FSSAI Reg. No. 21526038001776 &nbsp;·&nbsp; GST: 27AAMFE9994K1ZE &nbsp;·&nbsp; Wholesaler &amp; Retailer
           </p>
         </div>
       </div>

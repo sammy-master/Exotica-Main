@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 const HAMPER_TYPES = [
   {
@@ -29,59 +29,14 @@ const HAMPER_TYPES = [
   },
 ]
 
-// ─── Float products — x/y are % inside gifting-float-zone only ───────────────
-// Zone is ~260px tall × full width. Centre icon sits at ~50%, 50%.
-// Images are placed in corners and mid-edges, clear of centre icon.
-const FLOAT_PRODUCTS = [
-  // top-left (KitKat)
-  { src: '/floats/kitkat.png',    alt: 'KitKat',         size: 66, x: '8%',  y: '12%', delay: 0,    duration: 6  },
-  // top-right (Ferrero)
-  { src: '/floats/ferrero.png',   alt: 'Ferrero Rocher', size: 70, x: '75%', y: '12%', delay: -1.8, duration: 7  },
-  // bottom-right (Lindt)
-  { src: '/floats/lindt.png',     alt: 'Lindt Lindor',   size: 62, x: '80%', y: '65%', delay: -3.2, duration: 8  },
-  // bottom-left (Toblerone)
-  { src: '/floats/toblerone.png', alt: 'Toblerone',      size: 58, x: '10%', y: '65%', delay: -2,   duration: 9  },
-  // top-centre (Godiva)
-  { src: '/floats/godiva.png',    alt: 'Godiva',         size: 56, x: '42%', y: '2%',  delay: -4.5, duration: 7  },
-]
-
-// Sparkles — all within float zone
-const SPARKLES = [
-  { x: '22%', y: '30%', size: 14, delay: 0,    dur: 2.6 },
-  { x: '78%', y: '28%', size: 11, delay: -0.9, dur: 3.2 },
-  { x: '70%', y: '72%', size: 13, delay: -1.7, dur: 2.8 },
-  { x: '30%', y: '68%', size: 10, delay: -2.3, dur: 3.6 },
-  { x: '50%', y: '22%', size: 16, delay: -0.4, dur: 2.3 },
-  { x: '16%', y: '55%', size: 9,  delay: -3.1, dur: 3.0 },
-]
+// Float products and Sparkles have been removed as per user request.
 
 const WA_GIFTING = 'https://wa.me/919296909095?text=Hello%20Exotica!%20I%27m%20interested%20in%20a%20custom%20gift%20hamper.%20Please%20help%20me%20create%20one!'
 
-function Sparkle({ x, y, size, delay, dur }: { x: string; y: string; size: number; delay: number; dur: number }) {
-  const s = size, h = s / 2, q = s / 4
-  const path = `M${h},0 L${h + q * 0.35},${h - q * 0.35} L${s},${h} L${h + q * 0.35},${h + q * 0.35} L${h},${s} L${h - q * 0.35},${h + q * 0.35} L0,${h} L${h - q * 0.35},${h - q * 0.35} Z`
-  return (
-    <svg
-      className="gifting-sparkle"
-      width={s} height={s}
-      viewBox={`0 0 ${s} ${s}`}
-      style={{ position: 'absolute', left: x, top: y, transform: 'translate(-50%,-50%)', animationDelay: `${delay}s`, animationDuration: `${dur}s` }}
-      aria-hidden="true"
-    >
-      <defs>
-        <radialGradient id={`sg-${delay}`} cx="50%" cy="50%" r="50%">
-          <stop offset="0%"   stopColor="#FBF0D5" stopOpacity="1" />
-          <stop offset="55%"  stopColor="#D4A843" stopOpacity="0.85" />
-          <stop offset="100%" stopColor="#9A7420" stopOpacity="0" />
-        </radialGradient>
-      </defs>
-      <path d={path} fill={`url(#sg-${delay})`} />
-    </svg>
-  )
-}
-
 export default function GiftingSection() {
   const ref = useRef<HTMLElement>(null)
+  const visualRef = useRef<HTMLDivElement>(null)
+  const [tilt, setTilt] = useState('')
 
   useEffect(() => {
     const el = ref.current
@@ -96,12 +51,22 @@ export default function GiftingSection() {
     return () => obs.disconnect()
   }, [])
 
+  const onMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const el = visualRef.current
+    if (!el) return
+    const rect = el.getBoundingClientRect()
+    const x = (e.clientX - rect.left) / rect.width - 0.5
+    const y = (e.clientY - rect.top) / rect.height - 0.5
+    setTilt(`perspective(1000px) rotateY(${x * 12}deg) rotateX(${-y * 12}deg) scale3d(1.03, 1.03, 1.03)`)
+  }
+  const onMouseLeave = () => setTilt('')
+
   return (
     <section className="gifting-section" id="gifting" aria-label="Gift hampers" ref={ref}>
       <div className="gifting-glow" aria-hidden="true" />
 
       <div className="gifting-inner">
-        {/* ── Left: Content ── */}
+        {/* ─── Left: Content ─── */}
         <div className="gifting-content reveal-left">
           <div className="section-label">
             <span className="gold-line" aria-hidden="true" />
@@ -156,9 +121,19 @@ export default function GiftingSection() {
           </div>
         </div>
 
-        {/* ── Right: Visual panel ── */}
+        {/* ─── Right: Visual panel ─── */}
         <div className="gifting-visual reveal-right">
-          <div className="gifting-visual-inner">
+          <div 
+            ref={visualRef}
+            className="gifting-visual-inner"
+            onMouseMove={onMouseMove}
+            onMouseLeave={onMouseLeave}
+            style={{ 
+              transform: tilt, 
+              transition: tilt ? 'transform 0.1s linear, box-shadow 0.4s' : 'transform 0.6s var(--ease), box-shadow 0.4s',
+              boxShadow: tilt ? '0 30px 60px rgba(0,0,0,0.8), 0 0 40px rgba(212, 168, 67, 0.15)' : 'none'
+            }}
+          >
 
             {/* Gold corner frame */}
             <div className="gifting-frame" aria-hidden="true">
@@ -168,38 +143,21 @@ export default function GiftingSection() {
               <span className="gifting-frame-corner gifting-frame-br" />
             </div>
 
-            {/* ═══ FLOAT ZONE — contains ALL floats, clips at boundary ═══ */}
-            <div className="gifting-float-zone" aria-hidden="true">
+            {/* ═══ FLOAT ZONE — contains central icon and advanced animations ═══ */}
+            <div className="gifting-float-zone" aria-hidden="true" style={{ position: 'relative', height: '260px' }}>
 
-              {/* SVG sparkles */}
-              {SPARKLES.map((sp, i) => (
-                <Sparkle key={i} {...sp} />
-              ))}
+              {/* Advanced animated rings */}
+              <div className="gifting-rings">
+                <div className="gifting-ring gifting-ring-1" />
+                <div className="gifting-ring gifting-ring-2" />
+                <div className="gifting-ring gifting-ring-3" />
+              </div>
 
-              {/* Floating chocolate product images */}
-              {FLOAT_PRODUCTS.map((p) => (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  key={p.src}
-                  src={p.src}
-                  alt={p.alt}
-                  width={p.size}
-                  height={p.size}
-                  className="gifting-float-img"
-                  style={{
-                    left: p.x,
-                    top: p.y,
-                    width: p.size,
-                    height: p.size,
-                    animationDelay: `${p.delay}s`,
-                    animationDuration: `${p.duration}s`,
-                  }}
-                  loading="lazy"
-                />
-              ))}
+              {/* Glowing Orb */}
+              <div className="gifting-glow-orb" />
 
-              {/* Central gift icon — inside zone so floats frame it */}
-              <div className="gifting-icon-display" aria-label="Premium gift hamper">
+              {/* Central gift icon */}
+              <div className="gifting-icon-display" aria-label="Premium gift hamper" style={{ position: 'relative', zIndex: 10 }}>
                 <div className="gifting-icon-box">
                   <span className="gifting-pulse-ring gifting-pulse-ring-1" />
                   <span className="gifting-pulse-ring gifting-pulse-ring-2" />

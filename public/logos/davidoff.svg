@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 80">
+  <!-- Diamond/shield shape gold outline -->
+  <path d="M38 6 L58 20 L58 52 L38 70 L18 52 L18 20 Z" fill="none" stroke="#C8972A" stroke-width="2.5"/>
+  <!-- Inner diamond subtle fill -->
+  <path d="M38 12 L54 24 L54 50 L38 64 L22 50 L22 24 Z" fill="#C8972A" opacity="0.08"/>
+  <!-- D letter inside diamond -->
+  <text x="38" y="45" font-family="Georgia, 'Times New Roman', serif" font-size="28" font-weight="bold" fill="#C8972A" text-anchor="middle">D</text>
+  <!-- Decorative dots at diamond corners -->
+  <circle cx="38" cy="6" r="2" fill="#C8972A"/>
+  <circle cx="58" cy="20" r="2" fill="#C8972A"/>
+  <circle cx="58" cy="52" r="2" fill="#C8972A"/>
+  <circle cx="38" cy="70" r="2" fill="#C8972A"/>
+  <circle cx="18" cy="52" r="2" fill="#C8972A"/>
+  <circle cx="18" cy="20" r="2" fill="#C8972A"/>
+  <!-- DAVIDOFF text -->
+  <text x="78" y="45" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="bold" fill="#C8972A" letter-spacing="3">DAVIDOFF</text>
+  <!-- FINE AROMA subtext -->
+  <text x="78" y="62" font-family="Georgia, 'Times New Roman', serif" font-size="12" fill="#C8972A" letter-spacing="5" opacity="0.85">FINE AROMA</text>
+  <!-- Decorative gold lines -->
+  <line x1="78" y1="50" x2="252" y2="50" stroke="#C8972A" stroke-width="1" opacity="0.4"/>
+</svg>

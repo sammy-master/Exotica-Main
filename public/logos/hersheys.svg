@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 80">
+  <!-- Hershey Kiss body teardrop -->
+  <path d="M38 72 Q14 50 22 28 Q30 10 38 6 Q46 10 54 28 Q62 50 38 72 Z" fill="#5C1A00"/>
+  <!-- Kiss highlight -->
+  <path d="M38 72 Q20 52 26 32 Q31 16 38 10 Q34 22 35 40 Q36 58 38 72 Z" fill="#8B3000" opacity="0.5"/>
+  <!-- Paper curl/flag at top -->
+  <rect x="35" y="2" width="6" height="12" rx="2" fill="#C0C0C0"/>
+  <path d="M35 6 Q32 4 30 2 M41 6 Q44 4 46 2" stroke="#C0C0C0" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <!-- HERSHEY'S text -->
+  <text x="75" y="43" font-family="Arial Black, Impact, sans-serif" font-size="26" font-weight="900" fill="#5C1A00" letter-spacing="2">HERSHEY'S</text>
+  <!-- Silver underline -->
+  <line x1="75" y1="50" x2="252" y2="50" stroke="#C0C0C0" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Subtext -->
+  <text x="75" y="64" font-family="Arial, sans-serif" font-size="11" fill="#C0C0C0" letter-spacing="3" font-weight="bold">CHOCOLATE</text>
+</svg>

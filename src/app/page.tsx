@@ -2,10 +2,11 @@ import Cursor          from '@/components/Cursor'
 import Loader           from '@/components/Loader'
 import Navbar           from '@/components/Navbar'
 import Hero             from '@/components/Hero'
-import Marquee          from '@/components/Marquee'
+import Marquee         from '@/components/Marquee'
 import TrustBar         from '@/components/TrustBar'
 import Products         from '@/components/Products'
 import GiftingSection   from '@/components/GiftingSection'
+import About            from '@/components/About'
 import Testimonials     from '@/components/Testimonials'
 import ExoticaLife      from '@/components/ExoticaLife'
 import Contact          from '@/components/Contact'
@@ -45,7 +46,10 @@ export default function Home() {
         {/* 5. Gifting & Hampers — upsell / brand story */}
         <GiftingSection />
 
-        {/* 6. Testimonials */}
+        {/* 6. About Us — brand story, pillars, stats */}
+        <About />
+
+        {/* 7. Testimonials */}
         <Testimonials />
 
         {/* 7. Exotica Life — visual / social proof */}

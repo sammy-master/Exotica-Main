@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 70">
+  <defs>
+    <linearGradient id="raniGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF6B00"/>
+      <stop offset="100%" stop-color="#FF9500"/>
+    </linearGradient>
+  </defs>
+  <rect rx="12" ry="12" width="160" height="70" fill="url(#raniGrad)"/>
+  <text x="80" y="42" font-family="Arial Black, Arial" font-weight="900" font-size="30" fill="white" text-anchor="middle" letter-spacing="2">RANI</text>
+  <text x="80" y="60" font-family="Arial, sans-serif" font-weight="400" font-size="13" fill="rgba(255,255,255,0.85)" text-anchor="middle" letter-spacing="3">FLOAT</text>
+</svg>

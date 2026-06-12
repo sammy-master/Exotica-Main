@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 80">
+  <!-- Cow body -->
+  <ellipse cx="48" cy="46" rx="28" ry="18" fill="#7B2D8B"/>
+  <!-- Cow head -->
+  <ellipse cx="78" cy="36" rx="14" ry="12" fill="#7B2D8B"/>
+  <!-- Ear left -->
+  <ellipse cx="70" cy="26" rx="5" ry="7" fill="#C69BDB"/>
+  <!-- Ear right -->
+  <ellipse cx="85" cy="24" rx="5" ry="7" fill="#C69BDB"/>
+  <!-- Inner ear left -->
+  <ellipse cx="70" cy="26" rx="3" ry="4.5" fill="#7B2D8B"/>
+  <!-- Inner ear right -->
+  <ellipse cx="85" cy="24" rx="3" ry="4.5" fill="#7B2D8B"/>
+  <!-- Eye -->
+  <circle cx="82" cy="33" r="2.5" fill="#fff"/>
+  <circle cx="82" cy="33" r="1.2" fill="#1a1a1a"/>
+  <!-- Nose -->
+  <ellipse cx="88" cy="40" rx="5" ry="3.5" fill="#C69BDB"/>
+  <circle cx="86.5" cy="40" r="1" fill="#7B2D8B"/>
+  <circle cx="89.5" cy="40" r="1" fill="#7B2D8B"/>
+  <!-- Legs -->
+  <rect x="24" y="61" width="7" height="14" rx="3" fill="#7B2D8B"/>
+  <rect x="36" y="61" width="7" height="14" rx="3" fill="#7B2D8B"/>
+  <rect x="50" y="61" width="7" height="14" rx="3" fill="#7B2D8B"/>
+  <rect x="62" y="61" width="7" height="14" rx="3" fill="#7B2D8B"/>
+  <!-- Tail -->
+  <path d="M20 42 Q10 35 14 28" stroke="#7B2D8B" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <circle cx="14" cy="27" r="3" fill="#C69BDB"/>
+  <!-- Cow spots -->
+  <ellipse cx="42" cy="42" rx="8" ry="6" fill="#C69BDB" opacity="0.5"/>
+  <ellipse cx="58" cy="50" rx="6" ry="5" fill="#C69BDB" opacity="0.5"/>
+  <!-- Milka text -->
+  <text x="108" y="52" font-family="Georgia, 'Times New Roman', serif" font-size="36" font-style="italic" font-weight="bold" fill="#7B2D8B" letter-spacing="1">Milka</text>
+  <!-- Lilac underline -->
+  <line x1="108" y1="58" x2="250" y2="58" stroke="#C69BDB" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

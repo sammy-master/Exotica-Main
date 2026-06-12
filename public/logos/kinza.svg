@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 70">
+  <defs>
+    <linearGradient id="kinzaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0057A8"/>
+      <stop offset="100%" stop-color="#00A0DC"/>
+    </linearGradient>
+  </defs>
+  <rect rx="12" ry="12" width="180" height="70" fill="url(#kinzaGrad)"/>
+  <text x="90" y="50" font-family="Arial Black, Arial" font-weight="900" font-size="32" fill="white" text-anchor="middle" letter-spacing="2">KINZA</text>
+</svg>

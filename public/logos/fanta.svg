@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 70">
+  <defs>
+    <linearGradient id="fantaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F57C00"/>
+      <stop offset="100%" stop-color="#FF8F00"/>
+    </linearGradient>
+  </defs>
+  <rect rx="14" ry="14" width="180" height="70" fill="url(#fantaGrad)"/>
+  <text x="90" y="51" font-family="Arial Rounded MT Bold, Arial Black, Arial" font-weight="900" font-size="38" fill="white" text-anchor="middle" letter-spacing="1">Fanta</text>
+</svg>

@@ -1,0 +1,1738 @@
+[
+  {
+    "id": "r1_0",
+    "name": "TOMMY FRUITY",
+    "price": 40,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_1",
+    "name": "LIPS STRAWBERRY",
+    "price": 50,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_2",
+    "name": "MELODY POPS",
+    "price": 75,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_3",
+    "name": "MAGIC POPS",
+    "price": 10,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_4",
+    "name": "NUTELLA MINI",
+    "price": 99,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_5",
+    "name": "NESTLE SMARTIES",
+    "price": 130,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_6",
+    "name": "FUSEN GUM",
+    "price": 25,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_7",
+    "name": "IMPACT MINTS",
+    "price": 150,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_8",
+    "name": "COCO COINS",
+    "price": 150,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_9",
+    "name": "ALPENLIEBE",
+    "price": 100,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_10",
+    "name": "RICOLA",
+    "price": 200,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_11",
+    "name": "DR MINTS",
+    "price": 450,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_12",
+    "name": "MENTOS GRAPE",
+    "price": 50,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_13",
+    "name": "MENTOS BERRYGOOD",
+    "price": 100,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_14",
+    "name": "MENTOS MINT",
+    "price": 50,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_15",
+    "name": "MENTOS BUAH",
+    "price": 50,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_16",
+    "name": "MENTOS RAINBOW",
+    "price": 50,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_17",
+    "name": "FRUIT-TELLA ORANGE",
+    "price": 100,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_18",
+    "name": "FRUIT-TELLA B.CURRENT",
+    "price": 100,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_19",
+    "name": "FRUIT-TELLA STRAWBERRY",
+    "price": 100,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_20",
+    "name": "BATOOK ORANGE",
+    "price": 20,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_21",
+    "name": "BATOOK BANANA",
+    "price": 20,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_22",
+    "name": "BATOOK CARDAMOM",
+    "price": 20,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_23",
+    "name": "TRIDENT GUM",
+    "price": 120,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_24",
+    "name": "COOLMINT",
+    "price": 20,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_25",
+    "name": "ICE BREAKERS DIA",
+    "price": 30,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_26",
+    "name": "ICE BREAKERS ROUND",
+    "price": 250,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_27",
+    "name": "ICE BREAKERS ROUND",
+    "price": 250,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_28",
+    "name": "HUBBA BUBBA",
+    "price": 200,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_29",
+    "name": "SOUR PUNK",
+    "price": 40,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_30",
+    "name": "ICE BREAKERS COOL",
+    "price": 50,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_31",
+    "name": "MENTOS PURE",
+    "price": 150,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_32",
+    "name": "AMIRA CANDY",
+    "price": 150,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_33",
+    "name": "COCON PACK OF 3",
+    "price": 100,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_34",
+    "name": "ZAZZY MINI",
+    "price": 20,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_35",
+    "name": "NESCAFE LATTE",
+    "price": 400,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_36",
+    "name": "NESCAFE CAPPUCCINO",
+    "price": 400,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_37",
+    "name": "NESCAFE CARAMEL LATTE",
+    "price": 400,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_38",
+    "name": "NESCAFE VANILLA LATTE",
+    "price": 400,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_39",
+    "name": "NESCAFE IRISH LATTE",
+    "price": 400,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_40",
+    "name": "ZAZIO DATE SYRUP",
+    "price": 399,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_41",
+    "name": "ZAZIO DATTY NUTTY",
+    "price": 649,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_42",
+    "name": "CADBURY HOT CHOCO",
+    "price": 500,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_43",
+    "name": "MILO IMP",
+    "price": 550,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_44",
+    "name": "GALAXY MOCHA",
+    "price": 900,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_45",
+    "name": "GALAXY CAREMAL",
+    "price": 900,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_46",
+    "name": "GALAXY CHOCOLATE",
+    "price": 900,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_47",
+    "name": "NESCAFE 3 IN 1",
+    "price": 700,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_48",
+    "name": "CHIKEN STOCK",
+    "price": 810,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_49",
+    "name": "VEG STOCK",
+    "price": 700,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_50",
+    "name": "WEETABIX",
+    "price": 430,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_51",
+    "name": "REGGIA LASAGNE",
+    "price": 350,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_52",
+    "name": "TESCO YEAST",
+    "price": 400,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_53",
+    "name": "TACO SEASON",
+    "price": 200,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_54",
+    "name": "STARBUST DRINK",
+    "price": 320,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_55",
+    "name": "QUAKE OATS",
+    "price": 349,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_56",
+    "name": "JOLLY RANCHER DRINK",
+    "price": 320,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_57",
+    "name": "WELCH DRINK",
+    "price": 320,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_58",
+    "name": "MARETTI BRUSCHETTA",
+    "price": 100,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_59",
+    "name": "MARETTI BRUSCHETTA",
+    "price": 100,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_60",
+    "name": "MARETTI BRUSCHETTA",
+    "price": 100,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_61",
+    "name": "TAJIN",
+    "price": 80,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_62",
+    "name": "YOKOSO NOODLES",
+    "price": 200,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_63",
+    "name": "SPLENDA SWEETNER",
+    "price": 400,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_64",
+    "name": "TABASCO JALAPENO",
+    "price": 310,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_65",
+    "name": "ZAZIO HOTSAUCE",
+    "price": 79,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_66",
+    "name": "FILIPPO PESTO",
+    "price": 79,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_67",
+    "name": "FILIPPO PESTO",
+    "price": 79,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_68",
+    "name": "HELLMANNS",
+    "price": 450,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_69",
+    "name": "BULDAK",
+    "price": 440,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_70",
+    "name": "ALMARAI",
+    "price": 450,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_71",
+    "name": "PUCK STICKS",
+    "price": 550,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_72",
+    "name": "FRESHO CREAM",
+    "price": 275,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_73",
+    "name": "KRAFT CHEDDAR",
+    "price": 400,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_74",
+    "name": "FRESHOS DIJON MUSTARD",
+    "price": 299,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_75",
+    "name": "US MUSTARD",
+    "price": 240,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_76",
+    "name": "KARA CREAM",
+    "price": 210,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_77",
+    "name": "KARA COCONUT MILK",
+    "price": 190,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_78",
+    "name": "NUTELLA BIG",
+    "price": 399,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_79",
+    "name": "MOMENTS CREAM",
+    "price": 600,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_80",
+    "name": "HERSHEYS SYRUP",
+    "price": 300,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_81",
+    "name": "NERDS SMALL",
+    "price": 200,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_82",
+    "name": "NERDS BIG",
+    "price": 350,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_83",
+    "name": "HAPPY HIPPO",
+    "price": 400,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_84",
+    "name": "RAFFAELLO WHITE",
+    "price": 110,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_85",
+    "name": "FERRERO ROCHER",
+    "price": 169,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_86",
+    "name": "MILKA LEO",
+    "price": 125,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_87",
+    "name": "MR BEAST FEASTABLES",
+    "price": 499,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_88",
+    "name": "MILKA LEO",
+    "price": 125,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_89",
+    "name": "KITKAT BIG HAZELNUT",
+    "price": 400,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_90",
+    "name": "GANDOUR SAFARI RICH",
+    "price": 10,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_91",
+    "name": "BOUNTY",
+    "price": 100,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_92",
+    "name": "KITKAT COCOA",
+    "price": 150,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_93",
+    "name": "KITKAT WHITE",
+    "price": 150,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_94",
+    "name": "SNICKERS NORMAL",
+    "price": 20,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_95",
+    "name": "SNICKERS IMP",
+    "price": 100,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_96",
+    "name": "KITKAT NORMAL",
+    "price": 70,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_97",
+    "name": "MARS BIG",
+    "price": 780,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_98",
+    "name": "TWIX IMP",
+    "price": 100,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_99",
+    "name": "MARS IMP",
+    "price": 100,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_100",
+    "name": "KINDER BUENO",
+    "price": 120,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r1_101",
+    "name": "M&M CHOCOLATE",
+    "price": 100,
+    "image": "/products/placeholder.png",
+    "category": "Rack 1 (Left)",
+    "country": ""
+  },
+  {
+    "id": "r2_102",
+    "name": "FROSTER CLARKS JUICE POWDER",
+    "price": 700,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_103",
+    "name": "LIPO COOKIES",
+    "price": 155,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_104",
+    "name": "LIPO COOKIES",
+    "price": 155,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_105",
+    "name": "FROSTER CLARKS JAM",
+    "price": 500,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_106",
+    "name": "ZAZIO JAM",
+    "price": 175,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_107",
+    "name": "DAIM POUCH",
+    "price": 800,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_108",
+    "name": "OYA CHOCO ROLLS",
+    "price": 370,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_109",
+    "name": "OYA CHOCO ROLLS",
+    "price": 370,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_110",
+    "name": "MINIS 28 PIECES",
+    "price": 999,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_111",
+    "name": "MINIATURES",
+    "price": 600,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_112",
+    "name": "QUALITY STREET",
+    "price": 900,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_113",
+    "name": "LINDT POUCH",
+    "price": 900,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_114",
+    "name": "KISSES MODAK",
+    "price": 400,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_115",
+    "name": "KISSES MODAK",
+    "price": 400,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_116",
+    "name": "LEKKERS MINIS",
+    "price": 750,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_117",
+    "name": "LEKKERS MINIS",
+    "price": 750,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_118",
+    "name": "LEKKERS MINIS",
+    "price": 750,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_119",
+    "name": "ALFRADO NO SUGAR",
+    "price": 600,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_120",
+    "name": "MILKA BARS",
+    "price": 280,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_121",
+    "name": "DAIRY MILK 130G IMP",
+    "price": 400,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_122",
+    "name": "FIDGI BAR",
+    "price": 300,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_123",
+    "name": "GODIVA BLOOD ORANGE",
+    "price": 450,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_124",
+    "name": "GODIVA SEA SAKT",
+    "price": 450,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_125",
+    "name": "GODIVA MILK CHOCOLATE",
+    "price": 450,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_126",
+    "name": "GODIVA SALTED CARAMEL",
+    "price": 450,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_127",
+    "name": "LINDT VANILLA",
+    "price": 700,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_128",
+    "name": "LINDT RASPBERRY",
+    "price": 700,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_129",
+    "name": "LINDT CHILI",
+    "price": 600,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_130",
+    "name": "LINDT EXTRA CREAM",
+    "price": 700,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_131",
+    "name": "LINDT 78% COCOA",
+    "price": 600,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_132",
+    "name": "LINDT SEA SALT",
+    "price": 600,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_133",
+    "name": "LINDT 90% COCOA",
+    "price": 600,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_134",
+    "name": "LINDT 85% COCOA",
+    "price": 600,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_135",
+    "name": "LINDT 99% COCOA",
+    "price": 700,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_136",
+    "name": "LINDT 70% COCOA",
+    "price": 600,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_137",
+    "name": "LINDT ORANGE INTENSE",
+    "price": 600,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_138",
+    "name": "LINDT CARAMEL HAZELNUT",
+    "price": 600,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_139",
+    "name": "LINDT SEA SALT CARAMEL",
+    "price": 600,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_140",
+    "name": "LINDT 70% COCOA",
+    "price": 600,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_141",
+    "name": "LINDT CRISPY NEW",
+    "price": 600,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_142",
+    "name": "LINDT LINDOR BOX",
+    "price": 1000,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_143",
+    "name": "LINDT LINDOR MILK",
+    "price": 550,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_144",
+    "name": "LINDT LINDOR HAZELNUT",
+    "price": 550,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_145",
+    "name": "LINDT SWISS CLASSIC",
+    "price": 550,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_146",
+    "name": "LINDT RECETA ORIGNAL",
+    "price": 699,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_147",
+    "name": "LINDT RECETA ORIGNAL",
+    "price": 699,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_148",
+    "name": "LINDT SWISS CLASSIC",
+    "price": 550,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_149",
+    "name": "LINDT SWISS CLASSIC",
+    "price": 550,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_150",
+    "name": "LINDT RECETA ORIGNAL",
+    "price": 699,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_151",
+    "name": "LINDT PISTACHO",
+    "price": 550,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_152",
+    "name": "LINDT WHITE",
+    "price": 550,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_153",
+    "name": "LINDT 60% COCOA",
+    "price": 550,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_154",
+    "name": "LINDT 300G BAR",
+    "price": 1399,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_155",
+    "name": "DAVIDOFF COFFEE",
+    "price": 800,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_156",
+    "name": "DAVIDOFF COFFEE CREAM INTENCE",
+    "price": 850,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_157",
+    "name": "DAVIDOFF COFFEE COLOMBIA / BRAZIL",
+    "price": 999,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_158",
+    "name": "DAVIDOFF CHEW",
+    "price": 400,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_159",
+    "name": "NESCAFE GOLD COFFEE SMALL",
+    "price": 750,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_160",
+    "name": "PRIME X",
+    "price": 240,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_161",
+    "name": "PRIME",
+    "price": 240,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_162",
+    "name": "STARBUCKS FRAPPUCCINO",
+    "price": 300,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_163",
+    "name": "NESCAFE COFFE",
+    "price": 110,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_164",
+    "name": "MONSTER ENERGY ULTRA",
+    "price": 250,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_165",
+    "name": "MONSTER FULL THROTTLE",
+    "price": 250,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_166",
+    "name": "MONSTER BAD APPLE",
+    "price": 250,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_167",
+    "name": "MONSTER COSMIC PEACH",
+    "price": 250,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_168",
+    "name": "MONSTER MANGO ULTRA",
+    "price": 250,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_169",
+    "name": "MONSTER ENERGY",
+    "price": 250,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_170",
+    "name": "MONSTER PIPELINE PUNCH",
+    "price": 250,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_171",
+    "name": "MONSTER LANDO NORRIS",
+    "price": 250,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_172",
+    "name": "RED BULL",
+    "price": 125,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_173",
+    "name": "RANI PEACH",
+    "price": 60,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_174",
+    "name": "FANTA STRAWBERRY",
+    "price": 150,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_175",
+    "name": "FANTA ANGUR",
+    "price": 150,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_176",
+    "name": "FANTA LITCHI",
+    "price": 150,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_177",
+    "name": "COKE VANILLA",
+    "price": 150,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_178",
+    "name": "OYA KUNAFA BOX",
+    "price": 775,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_179",
+    "name": "OYA KUNAFA BOX",
+    "price": 775,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_180",
+    "name": "COCORUSH KUNAFA",
+    "price": 500,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_181",
+    "name": "KUNAFA GOLD BAR",
+    "price": 250,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_182",
+    "name": "DUBAI KUNAFA BAR",
+    "price": 500,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_183",
+    "name": "DUBAI KUNAFA BAR",
+    "price": 500,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_184",
+    "name": "DUBAI KUNAFA BAR",
+    "price": 500,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_185",
+    "name": "DUBAI KUNAFA BAR",
+    "price": 500,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_186",
+    "name": "DUBAI KUNAFA BAR",
+    "price": 500,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_187",
+    "name": "DUBAI KUNAFA BAR",
+    "price": 500,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_188",
+    "name": "BULDAK CARBONARA",
+    "price": 150,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_189",
+    "name": "TAKIS",
+    "price": 250,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_190",
+    "name": "SHIN SUPER SPICY",
+    "price": 140,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_191",
+    "name": "SHIN STIR FRY",
+    "price": 170,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_192",
+    "name": "SHIN KIMCHI",
+    "price": 140,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_193",
+    "name": "BULDAK CREAM",
+    "price": 150,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_194",
+    "name": "BULDAK 3X SPICY",
+    "price": 150,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_195",
+    "name": "BULDAK HOT CHICKEN",
+    "price": 150,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_196",
+    "name": "SHIN TOOMBA",
+    "price": 170,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_197",
+    "name": "SHIN RAMYUN",
+    "price": 140,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_198",
+    "name": "RITZ SMALL",
+    "price": 150,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_199",
+    "name": "LOTUS BISCOFF",
+    "price": 250,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_200",
+    "name": "GINGER NUTS",
+    "price": 399,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_201",
+    "name": "RAFAELO WAFERS",
+    "price": 80,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_202",
+    "name": "KITKAT F1",
+    "price": 500,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_203",
+    "name": "FOX MINTS",
+    "price": 80,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_204",
+    "name": "ALFREDO POUCH",
+    "price": 200,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_205",
+    "name": "LOACKERS SMALL POUCH",
+    "price": 109,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_206",
+    "name": "OREO WAFERS",
+    "price": 110,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_207",
+    "name": "OREO MINIS",
+    "price": 150,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_208",
+    "name": "OREO WAFER ROLL",
+    "price": 150,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_209",
+    "name": "OREO CAKE",
+    "price": 30,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_210",
+    "name": "KITKAT PEANUT BUTTER",
+    "price": 300,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_211",
+    "name": "KITKAT CHUNKY",
+    "price": 300,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_212",
+    "name": "TOBLERONE TINY",
+    "price": 430,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_213",
+    "name": "AFTER EIGHT BOX",
+    "price": 1100,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_214",
+    "name": "AFTER EIGHT SMALL BOX",
+    "price": 460,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_215",
+    "name": "HERSHEYS BAR",
+    "price": 150,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  },
+  {
+    "id": "r2_216",
+    "name": "ALFREDO BAR",
+    "price": 300,
+    "image": "/products/placeholder.png",
+    "category": "Rack 2 (Right)",
+    "country": ""
+  }
+]

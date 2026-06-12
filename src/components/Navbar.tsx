@@ -4,16 +4,19 @@ import { useState, useEffect } from 'react'
 import { useCart } from '@/context/CartContext'
 
 const navLinks = [
-  { href: '#hero',      label: 'Home'       },
-  { href: '#products',  label: 'Shop'       },
-  { href: '#contact',   label: 'Contact'    },
+  { href: '#hero',         label: 'Home'      },
+  { href: '#products',     label: 'Shop'      },
+  { href: '#gifting',      label: 'Gifting'   },
+  { href: '#about',        label: 'About'     },
+  { href: '#exotica-life', label: 'Lifestyle' },
+  { href: '#contact',      label: 'Contact'   },
 ]
 
 export default function Navbar() {
   const [scrolled,  setScrolled]  = useState(false)
   const [menuOpen,  setMenuOpen]  = useState(false)
   const [badgePop,  setBadgePop]  = useState(false)
-  const { totalItems, toggleCart, openCart } = useCart()
+  const { totalItems, totalPrice, toggleCart, openCart } = useCart()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60)
@@ -54,10 +57,28 @@ export default function Navbar() {
             className="nav-cart-btn"
             onClick={toggleCart}
             id="nav-cart-btn"
-            aria-label={`Cart — ${totalItems} items`}
+            aria-label={`Cart - ${totalItems} items`}
+            style={{ flexDirection: 'column', alignItems: 'center', gap: '4px' }}
           >
-            <i className="fas fa-shopping-bag" aria-hidden="true" />
-            <span>Cart</span>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <i className="fas fa-shopping-bag" aria-hidden="true" />
+              <span>Cart</span>
+            </div>
+            {totalItems > 0 && (
+              <span className="nav-cart-total" style={{
+                fontFamily: 'var(--font-serif)',
+                background: 'var(--grad-gold-text)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+                fontSize: '1.25rem',
+                fontWeight: 500,
+                letterSpacing: '0.02em',
+                lineHeight: 1
+              }}>
+                ₹{totalPrice.toLocaleString('en-IN')}
+              </span>
+            )}
             {totalItems > 0 && (
               <span className={`cart-badge${badgePop ? ' pop' : ''}`} aria-live="polite">
                 {totalItems > 99 ? '99+' : totalItems}

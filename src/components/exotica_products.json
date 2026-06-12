@@ -1,0 +1,594 @@
+[
+  {
+    "id": "ex_001",
+    "name": "Monster Ultra Roza",
+    "price": 200,
+    "image": "/products/exotica/exotica_003.jpg",
+    "category": "Drinks",
+    "country": "USA"
+  },
+  {
+    "id": "ex_002",
+    "name": "Monster Ultra Peachy Keen",
+    "price": 200,
+    "image": "/products/exotica/exotica_001.jpg",
+    "category": "Drinks",
+    "country": "USA"
+  },
+  {
+    "id": "ex_003",
+    "name": "Monster Ultra Strawberry Dreams",
+    "price": 220,
+    "image": "/products/exotica/exotica_002.jpg",
+    "category": "Drinks",
+    "country": "USA"
+  },
+  {
+    "id": "ex_004",
+    "name": "Monster Punch MIXXD Energy",
+    "price": 180,
+    "image": "/products/exotica/exotica_004.jpg",
+    "category": "Drinks",
+    "country": "USA"
+  },
+  {
+    "id": "ex_005",
+    "name": "Monster Pinepine Punch",
+    "price": 180,
+    "image": "/products/exotica/exotica_019.jpg",
+    "category": "Drinks",
+    "country": "USA"
+  },
+  {
+    "id": "ex_006",
+    "name": "Monster Aussie Lemonade",
+    "price": 180,
+    "image": "/products/exotica/exotica_005.jpg",
+    "category": "Drinks",
+    "country": "USA"
+  },
+  {
+    "id": "ex_007",
+    "name": "Monster Rio Punch",
+    "price": 180,
+    "image": "/products/exotica/exotica_011.jpg",
+    "category": "Drinks",
+    "country": "USA"
+  },
+  {
+    "id": "ex_008",
+    "name": "Monster Mango Loco",
+    "price": 200,
+    "image": "/products/exotica/exotica_012.jpg",
+    "category": "Drinks",
+    "country": "USA"
+  },
+  {
+    "id": "ex_009",
+    "name": "Monster Mariposa",
+    "price": 220,
+    "image": "/products/exotica/exotica_013.jpg",
+    "category": "Drinks",
+    "country": "USA"
+  },
+  {
+    "id": "ex_010",
+    "name": "Monster Ultra Watermelon",
+    "price": 220,
+    "image": "/products/exotica/exotica_014.jpg",
+    "category": "Drinks",
+    "country": "USA"
+  },
+  {
+    "id": "ex_011",
+    "name": "Monster Pacific Punch",
+    "price": 180,
+    "image": "/products/exotica/exotica_015.jpg",
+    "category": "Drinks",
+    "country": "USA"
+  },
+  {
+    "id": "ex_012",
+    "name": "Monster Cosmic Peach",
+    "price": 180,
+    "image": "/products/exotica/exotica_016.jpg",
+    "category": "Drinks",
+    "country": "USA"
+  },
+  {
+    "id": "ex_013",
+    "name": "Monster Energy White",
+    "price": 180,
+    "image": "/products/exotica/exotica_017.jpg",
+    "category": "Drinks",
+    "country": "USA"
+  },
+  {
+    "id": "ex_014",
+    "name": "Monster Energy Original (Sugar-less)",
+    "price": 200,
+    "image": "/products/exotica/exotica_018.jpg",
+    "category": "Drinks",
+    "country": "USA"
+  },
+  {
+    "id": "ex_015",
+    "name": "Monster Energy Nitro Super Dry",
+    "price": 180,
+    "image": "/products/exotica/exotica_006.jpg",
+    "category": "Drinks",
+    "country": "USA"
+  },
+  {
+    "id": "ex_016",
+    "name": "Monster Khaotic Energy",
+    "price": 200,
+    "image": "/products/exotica/exotica_007.jpg",
+    "category": "Drinks",
+    "country": "USA"
+  },
+  {
+    "id": "ex_017",
+    "name": "Monster Full Throttle Energy",
+    "price": 200,
+    "image": "/products/exotica/exotica_008.jpg",
+    "category": "Drinks",
+    "country": "USA"
+  },
+  {
+    "id": "ex_018",
+    "name": "Monster VR46",
+    "price": 180,
+    "image": "/products/exotica/exotica_009.jpg",
+    "category": "Drinks",
+    "country": "USA"
+  },
+  {
+    "id": "ex_019",
+    "name": "Monster Lando Norris",
+    "price": 180,
+    "image": "/products/exotica/exotica_010.jpg",
+    "category": "Drinks",
+    "country": "USA"
+  },
+  {
+    "id": "ex_020",
+    "name": "Monster Ripper Energy",
+    "price": 250,
+    "image": "/products/exotica/exotica_036.jpg",
+    "category": "Drinks",
+    "country": "USA"
+  },
+  {
+    "id": "ex_021",
+    "name": "Monster Ultra Fiesta Mango",
+    "price": 250,
+    "image": "/products/exotica/exotica_020.jpg",
+    "category": "Drinks",
+    "country": "USA"
+  },
+  {
+    "id": "ex_022",
+    "name": "Monster Bad Apple",
+    "price": 280,
+    "image": "/products/exotica/exotica_028.jpg",
+    "category": "Drinks",
+    "country": "USA"
+  },
+  {
+    "id": "ex_023",
+    "name": "RedBull Kratingdaeng",
+    "price": 250,
+    "image": "/products/exotica/exotica_029.jpg",
+    "category": "Drinks",
+    "country": "USA"
+  },
+  {
+    "id": "ex_024",
+    "name": "RedBull Original",
+    "price": 280,
+    "image": "/products/exotica/exotica_030.jpg",
+    "category": "Drinks",
+    "country": "USA"
+  },
+  {
+    "id": "ex_025",
+    "name": "RedBull Apple Muscat Grape",
+    "price": 250,
+    "image": "/products/exotica/exotica_031.jpg",
+    "category": "Drinks",
+    "country": "USA"
+  },
+  {
+    "id": "ex_026",
+    "name": "RedBull Blueberry & Blackcurrant",
+    "price": 250,
+    "image": "/products/exotica/exotica_032.jpg",
+    "category": "Drinks",
+    "country": "USA"
+  },
+  {
+    "id": "ex_027",
+    "name": "RedBull Summer Berry",
+    "price": 220,
+    "image": "/products/exotica/exotica_033.jpg",
+    "category": "Drinks",
+    "country": "USA"
+  },
+  {
+    "id": "ex_028",
+    "name": "Milaf Cola",
+    "price": 220,
+    "image": "/products/exotica/exotica_034.jpg",
+    "category": "Drinks",
+    "country": "USA"
+  },
+  {
+    "id": "ex_029",
+    "name": "Pepsi Zero Sugar Lime",
+    "price": 220,
+    "image": "/products/exotica/exotica_035.jpg",
+    "category": "Drinks",
+    "country": "USA"
+  },
+  {
+    "id": "ex_031",
+    "name": "Coca-Cola Vanilla",
+    "price": 220,
+    "image": "/products/exotica/exotica_022.jpg",
+    "category": "Drinks",
+    "country": "USA"
+  },
+  {
+    "id": "ex_032",
+    "name": "Fanta Grape",
+    "price": 150,
+    "image": "/products/exotica/exotica_023.jpg",
+    "category": "Drinks",
+    "country": "Vietnam"
+  },
+  {
+    "id": "ex_033",
+    "name": "Fanta Lychee",
+    "price": 150,
+    "image": "/products/exotica/exotica_024.jpg",
+    "category": "Drinks",
+    "country": "Vietnam"
+  },
+  {
+    "id": "ex_034",
+    "name": "Fanta Strawberry",
+    "price": 150,
+    "image": "/products/exotica/exotica_025.jpg",
+    "category": "Drinks",
+    "country": "Vietnam"
+  },
+  {
+    "id": "ex_035",
+    "name": "Mirinda Sarsaparilla",
+    "price": 120,
+    "image": "/products/exotica/exotica_026.jpg",
+    "category": "Drinks",
+    "country": "Vietnam"
+  },
+  {
+    "id": "ex_036",
+    "name": "Mirinda Orange",
+    "price": 120,
+    "image": "/products/exotica/exotica_027.jpg",
+    "category": "Drinks",
+    "country": "Vietnam"
+  },
+  {
+    "id": "ex_037",
+    "name": "Mirinda Pineapple",
+    "price": 120,
+    "image": "/products/exotica/exotica_058.jpg",
+    "category": "Drinks",
+    "country": "Vietnam"
+  },
+  {
+    "id": "ex_038",
+    "name": "Mirinda Cream Soda",
+    "price": 120,
+    "image": "/products/exotica/exotica_037.jpg",
+    "category": "Drinks",
+    "country": "Vietnam"
+  },
+  {
+    "id": "ex_039",
+    "name": "Dr Pepper & Cream Soda",
+    "price": 280,
+    "image": "/products/exotica/exotica_048.jpg",
+    "category": "Drinks",
+    "country": "USA"
+  },
+  {
+    "id": "ex_040",
+    "name": "Glinter Sparkling Blueberry",
+    "price": 130,
+    "image": "/products/exotica/exotica_051.jpg",
+    "category": "Drinks",
+    "country": "Thailand"
+  },
+  {
+    "id": "ex_041",
+    "name": "Vinut Popping Boba Strawberry",
+    "price": 150,
+    "image": "/products/exotica/exotica_052.jpg",
+    "category": "Drinks",
+    "country": "Vietnam"
+  },
+  {
+    "id": "ex_042",
+    "name": "Vinut Popping Boba Mango",
+    "price": 150,
+    "image": "/products/exotica/exotica_053.jpg",
+    "category": "Drinks",
+    "country": "Vietnam"
+  },
+  {
+    "id": "ex_043",
+    "name": "Kinza Cola",
+    "price": 130,
+    "image": "/products/exotica/exotica_054.jpg",
+    "category": "Drinks",
+    "country": "Saudi Arabia"
+  },
+  {
+    "id": "ex_044",
+    "name": "Kinza Citrus",
+    "price": 130,
+    "image": "/products/exotica/exotica_055.jpg",
+    "category": "Drinks",
+    "country": "Saudi Arabia"
+  },
+  {
+    "id": "ex_045",
+    "name": "Kinza Pomegranate",
+    "price": 130,
+    "image": "/products/exotica/exotica_056.jpg",
+    "category": "Drinks",
+    "country": "Saudi Arabia"
+  },
+  {
+    "id": "ex_046",
+    "name": "Kinza Blackcurrant",
+    "price": 130,
+    "image": "/products/exotica/exotica_057.jpg",
+    "category": "Drinks",
+    "country": "Saudi Arabia"
+  },
+  {
+    "id": "ex_047",
+    "name": "Kinza Lemon",
+    "price": 130,
+    "image": "/products/exotica/exotica_038.jpg",
+    "category": "Drinks",
+    "country": "Saudi Arabia"
+  },
+  {
+    "id": "ex_048",
+    "name": "Kinza Orange",
+    "price": 130,
+    "image": "/products/exotica/exotica_039.jpg",
+    "category": "Drinks",
+    "country": "Saudi Arabia"
+  },
+  {
+    "id": "ex_049",
+    "name": "Mabu Coco Orange Juice",
+    "price": 100,
+    "image": "/products/exotica/exotica_040.jpg",
+    "category": "Drinks",
+    "country": "Thailand"
+  },
+  {
+    "id": "ex_050",
+    "name": "Mabu Coco Pineapple Juice",
+    "price": 100,
+    "image": "/products/exotica/exotica_041.jpg",
+    "category": "Drinks",
+    "country": "Thailand"
+  },
+  {
+    "id": "ex_051",
+    "name": "Mabu Coco Strawberry Juice",
+    "price": 100,
+    "image": "/products/exotica/exotica_042.jpg",
+    "category": "Drinks",
+    "country": "Thailand"
+  },
+  {
+    "id": "ex_052",
+    "name": "Mabu Coco Lychee Juice",
+    "price": 100,
+    "image": "/products/exotica/exotica_043.jpg",
+    "category": "Drinks",
+    "country": "Thailand"
+  },
+  {
+    "id": "ex_053",
+    "name": "Prime Hydration",
+    "price": 400,
+    "image": "/products/exotica/exotica_044.jpg",
+    "category": "Drinks",
+    "country": "USA"
+  },
+  {
+    "id": "ex_054",
+    "name": "Nescafé Latte Can",
+    "price": 200,
+    "image": "/products/exotica/exotica_045.jpg",
+    "category": "Drinks",
+    "country": "Thailand"
+  },
+  {
+    "id": "ex_055",
+    "name": "Starbucks Frappuccino Caramel",
+    "price": 350,
+    "image": "/products/exotica/exotica_046.jpg",
+    "category": "Drinks",
+    "country": "USA"
+  },
+  {
+    "id": "ex_056",
+    "name": "Nescafé Cappuccino Can",
+    "price": 200,
+    "image": "/products/exotica/exotica_047.jpg",
+    "category": "Drinks",
+    "country": "Thailand"
+  },
+  {
+    "id": "ex_057",
+    "name": "Rani Float Pineapple",
+    "price": 150,
+    "image": "/products/exotica/exotica_049.jpg",
+    "category": "Drinks",
+    "country": "UAE"
+  },
+  {
+    "id": "ex_058",
+    "name": "Rani Float Peach",
+    "price": 150,
+    "image": "/products/exotica/exotica_050.jpg",
+    "category": "Drinks",
+    "country": "UAE"
+  },
+  {
+    "id": "ex_059",
+    "name": "Lindt Excellence Chili Dark",
+    "price": 550,
+    "image": "/products/exotica/exotica_061.jpg",
+    "category": "Chocolates",
+    "country": "Switzerland"
+  },
+  {
+    "id": "ex_060",
+    "name": "Lindt Excellence Raspberry Intense",
+    "price": 550,
+    "image": "/products/exotica/exotica_059.jpg",
+    "category": "Chocolates",
+    "country": "Switzerland"
+  },
+  {
+    "id": "ex_061",
+    "name": "Lindt Excellence Caramel Sea Salt",
+    "price": 550,
+    "image": "/products/exotica/exotica_060.jpg",
+    "category": "Chocolates",
+    "country": "Switzerland"
+  },
+  {
+    "id": "ex_062",
+    "name": "Lindt Lindor Milk Chocolate Bar",
+    "price": 950,
+    "image": "/products/exotica/exotica_073.jpg",
+    "category": "Chocolates",
+    "country": "Switzerland"
+  },
+  {
+    "id": "ex_063",
+    "name": "Lindt Lindor Hazelnut Milk Bar",
+    "price": 950,
+    "image": "/products/exotica/exotica_062.jpg",
+    "category": "Chocolates",
+    "country": "Switzerland"
+  },
+  {
+    "id": "ex_064",
+    "name": "Lindt Lindor 60% Dark Truffles Box",
+    "price": 799,
+    "image": "/products/exotica/exotica_065.jpg",
+    "category": "Chocolates",
+    "country": "Switzerland"
+  },
+  {
+    "id": "ex_065",
+    "name": "Lindt Receta Original Dark 52%",
+    "price": 450,
+    "image": "/products/exotica/exotica_066.jpg",
+    "category": "Chocolates",
+    "country": "Spain"
+  },
+  {
+    "id": "ex_066",
+    "name": "Lindt Swiss Classic Fruit & Nut",
+    "price": 499,
+    "image": "/products/exotica/exotica_067.jpg",
+    "category": "Chocolates",
+    "country": "Switzerland"
+  },
+  {
+    "id": "ex_067",
+    "name": "Lindt Swiss Classic Hazelnuts",
+    "price": 499,
+    "image": "/products/exotica/exotica_068.jpg",
+    "category": "Chocolates",
+    "country": "Switzerland"
+  },
+  {
+    "id": "ex_068",
+    "name": "Lindt Swiss Classic Almond Hazelnut",
+    "price": 499,
+    "image": "/products/exotica/exotica_069.jpg",
+    "category": "Chocolates",
+    "country": "Switzerland"
+  },
+  {
+    "id": "ex_069",
+    "name": "Lindt Receta Original Milk",
+    "price": 420,
+    "image": "/products/exotica/exotica_070.jpg",
+    "category": "Chocolates",
+    "country": "Spain"
+  },
+  {
+    "id": "ex_070",
+    "name": "Lindt Receta Original Hazelnut",
+    "price": 450,
+    "image": "/products/exotica/exotica_071.jpg",
+    "category": "Chocolates",
+    "country": "Spain"
+  },
+  {
+    "id": "ex_071",
+    "name": "Lindt Receta Hazelnut Milk (Large)",
+    "price": 699,
+    "image": "/products/exotica/exotica_072.jpg",
+    "category": "Chocolates",
+    "country": "Spain"
+  },
+  {
+    "id": "ex_072",
+    "name": "Lindt Lindor Assorted Truffles Box",
+    "price": 999,
+    "image": "/products/exotica/exotica_063.jpg",
+    "category": "Chocolates",
+    "country": "Switzerland"
+  },
+  {
+    "id": "ex_073",
+    "name": "Lindt Lindor 70% Dark Truffles Box",
+    "price": 899,
+    "image": "/products/exotica/exotica_064.jpg",
+    "category": "Chocolates",
+    "country": "Switzerland"
+  },
+  {
+    "id": "ex_074",
+    "name": "Lindt Lindor Milk Chocolate Box",
+    "price": 899,
+    "image": "/products/exotica/exotica_075.jpg",
+    "category": "Chocolates",
+    "country": "Switzerland"
+  },
+  {
+    "id": "ex_075",
+    "name": "Lindt Sensation Blueberry Acai",
+    "price": 650,
+    "image": "/products/exotica/exotica_074.jpg",
+    "category": "Chocolates",
+    "country": "Switzerland"
+  }
+]

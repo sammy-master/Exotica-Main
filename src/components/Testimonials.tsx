@@ -13,45 +13,13 @@ const reviews = [
 ]
 
 export default function Testimonials() {
-  const trackRef = useRef<HTMLDivElement>(null)
-  const [canScrollLeft, setCanScrollLeft] = useState(false)
-  const [canScrollRight, setCanScrollRight] = useState(true)
-  const [activeIndex, setActiveIndex] = useState(0)
+  const row1 = [...reviews, ...reviews]
+  const row2 = [...[...reviews].reverse(), ...[...reviews].reverse()]
 
-  const handleScroll = () => {
-    if (trackRef.current) {
-      const { scrollLeft, scrollWidth, clientWidth } = trackRef.current
-      setCanScrollLeft(Math.ceil(scrollLeft) > 5)
-      setCanScrollRight(Math.ceil(scrollLeft) < scrollWidth - clientWidth - 5)
-      
-      const scrollAmt = 400
-      setActiveIndex(Math.round(scrollLeft / scrollAmt))
-    }
-  }
-
-  useEffect(() => {
-    handleScroll()
-    window.addEventListener('resize', handleScroll)
-    return () => window.removeEventListener('resize', handleScroll)
-  }, [])
-
-  const scroll = (dir: 'left' | 'right') => {
-    if (trackRef.current) {
-      const scrollAmt = 400
-      trackRef.current.scrollBy({ left: dir === 'left' ? -scrollAmt : scrollAmt, behavior: 'smooth' })
-    }
-  }
-
-  const scrollTo = (index: number) => {
-    if (trackRef.current) {
-      const scrollAmt = 400
-      trackRef.current.scrollTo({ left: index * scrollAmt, behavior: 'smooth' })
-    }
-  }
   return (
     <section className="testimonials-section" id="testimonials" aria-label="Customer reviews">
       <div style={{ maxWidth: 'var(--container)', margin: '0 auto', padding: '0 40px' }}>
-        <div style={{ maxWidth: 600, marginBottom: 16 }}>
+        <div style={{ maxWidth: 600, marginBottom: 40 }}>
           <div className="section-label">
             <span className="gold-line" aria-hidden="true" />
             Customer Love
@@ -61,19 +29,12 @@ export default function Testimonials() {
             <em>Are Saying</em>
           </h2>
         </div>
+      </div>
 
-        <div className="testimonials-track-outer" aria-label="Scrolling customer reviews">
-        <button className={`review-nav-btn prev ${!canScrollLeft ? 'hidden' : ''}`} onClick={() => scroll('left')} aria-label="Previous review">
-          <i className="fas fa-chevron-left" aria-hidden="true" />
-        </button>
-        <button className={`review-nav-btn next ${!canScrollRight ? 'hidden' : ''}`} onClick={() => scroll('right')} aria-label="Next review">
-          <i className="fas fa-chevron-right" aria-hidden="true" />
-        </button>
-
-        <div className="testimonials-track-mask">
-          <div className="testimonials-track" role="list" ref={trackRef} onScroll={handleScroll}>
-            {reviews.map((r, i) => (
-            <div key={i} className="testimonial-card" role="listitem">
+      <div className="testimonials-marquee-container">
+        <div className="testimonials-marquee-track">
+          {row1.map((r, i) => (
+            <div key={`row1-${i}`} className="testimonial-card">
               <div className="testimonial-stars" aria-label={`${r.rating} out of 5 stars`}>
                 {Array.from({ length: r.rating }).map((_, j) => (
                   <span key={j} className="testimonial-star" aria-hidden="true">★</span>
@@ -89,21 +50,29 @@ export default function Testimonials() {
               </div>
             </div>
           ))}
-          </div>
-        </div>
-
-        {/* Dot Pagination */}
-        <div className="testimonials-dots">
-          {reviews.map((_, i) => (
-            <button
-              key={i}
-              className={`dot ${i === activeIndex ? 'active' : ''}`}
-              onClick={() => scrollTo(i)}
-              aria-label={`Go to review ${i + 1}`}
-            />
-          ))}
         </div>
       </div>
+
+      <div className="testimonials-marquee-container" style={{ marginTop: '20px' }}>
+        <div className="testimonials-marquee-track reverse">
+          {row2.map((r, i) => (
+            <div key={`row2-${i}`} className="testimonial-card">
+              <div className="testimonial-stars" aria-label={`${r.rating} out of 5 stars`}>
+                {Array.from({ length: r.rating }).map((_, j) => (
+                  <span key={j} className="testimonial-star" aria-hidden="true">★</span>
+                ))}
+              </div>
+              <p className="testimonial-text">&ldquo;{r.text}&rdquo;</p>
+              <div className="testimonial-author">
+                <div className="testimonial-avatar" aria-hidden="true">{r.init}</div>
+                <div>
+                  <p className="testimonial-name">{r.name}</p>
+                  <p className="testimonial-loc">{r.loc}, Pune</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   )

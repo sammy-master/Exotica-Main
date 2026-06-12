@@ -1,0 +1,818 @@
+[
+  {
+    "id": "r1_2",
+    "name": "TOMMY FRUITY",
+    "price": 40,
+    "image": "/products/rack1_p002.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r1_3",
+    "name": "LIPS STRAWBERRY",
+    "price": 50,
+    "image": "/products/rack1_p003.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r1_4",
+    "name": "MELODY POPS",
+    "price": 75,
+    "image": "/products/rack1_p004.jpg",
+    "category": "Candy",
+    "country": ""
+  },
+  {
+    "id": "r1_5",
+    "name": "MAGIC POPS",
+    "price": 10,
+    "image": "/products/rack1_p005.jpg",
+    "category": "Candy",
+    "country": ""
+  },
+  {
+    "id": "r1_6",
+    "name": "NUTELLA MINI",
+    "price": 99,
+    "image": "/products/rack1_p006.jpg",
+    "category": "Chocolates",
+    "country": ""
+  },
+  {
+    "id": "r1_7",
+    "name": "NESTLE SMARTIES",
+    "price": 130,
+    "image": "/products/rack1_p007.jpg",
+    "category": "Candy",
+    "country": ""
+  },
+  {
+    "id": "r1_8",
+    "name": "FUSEN GUM",
+    "price": 25,
+    "image": "/products/rack1_p008.jpg",
+    "category": "Candy",
+    "country": ""
+  },
+  {
+    "id": "r1_9",
+    "name": "IMPACT MINTS",
+    "price": 150,
+    "image": "/products/rack1_p009.jpg",
+    "category": "Candy",
+    "country": ""
+  },
+  {
+    "id": "r1_10",
+    "name": "COCO COINS",
+    "price": 150,
+    "image": "/products/rack1_p010.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r1_11",
+    "name": "ALPENLIEBE",
+    "price": 100,
+    "image": "/products/rack1_p011.jpg",
+    "category": "Candy",
+    "country": ""
+  },
+  {
+    "id": "r1_12",
+    "name": "RICOLA",
+    "price": 200,
+    "image": "/products/rack1_p012.jpg",
+    "category": "Candy",
+    "country": ""
+  },
+  {
+    "id": "r1_13",
+    "name": "DR MINTS",
+    "price": 450,
+    "image": "/products/rack1_p013.jpg",
+    "category": "Candy",
+    "country": ""
+  },
+  {
+    "id": "r1_14",
+    "name": "MENTOS GRAPE",
+    "price": 50,
+    "image": "/products/rack1_p014.jpg",
+    "category": "Candy",
+    "country": ""
+  },
+  {
+    "id": "r1_15",
+    "name": "MENTOS BERRYGOOD",
+    "price": 100,
+    "image": "/products/rack1_p015.jpg",
+    "category": "Candy",
+    "country": ""
+  },
+  {
+    "id": "r1_16",
+    "name": "MENTOS MINT",
+    "price": 50,
+    "image": "/products/rack1_p016.jpg",
+    "category": "Candy",
+    "country": ""
+  },
+  {
+    "id": "r1_17",
+    "name": "MENTOS BUAH",
+    "price": 50,
+    "image": "/products/rack1_p017.jpg",
+    "category": "Candy",
+    "country": ""
+  },
+  {
+    "id": "r1_18",
+    "name": "MENTOS RAINBOW",
+    "price": 50,
+    "image": "/products/rack1_p018.jpg",
+    "category": "Candy",
+    "country": ""
+  },
+  {
+    "id": "r1_19",
+    "name": "FRUIT-TELLA ORANGE",
+    "price": 100,
+    "image": "/products/rack1_p019.jpg",
+    "category": "Candy",
+    "country": ""
+  },
+  {
+    "id": "r1_20",
+    "name": "FRUIT-TELLA B.CURRENT",
+    "price": 100,
+    "image": "/products/rack1_p020.jpg",
+    "category": "Candy",
+    "country": ""
+  },
+  {
+    "id": "r1_21",
+    "name": "FRUIT-TELLA STRAWBERRY",
+    "price": 100,
+    "image": "/products/rack1_p021.jpg",
+    "category": "Candy",
+    "country": ""
+  },
+  {
+    "id": "r1_22",
+    "name": "BATOOK ORANGE",
+    "price": 20,
+    "image": "/products/rack1_p022.jpg",
+    "category": "Candy",
+    "country": ""
+  },
+  {
+    "id": "r1_23",
+    "name": "BATOOK BANANA",
+    "price": 20,
+    "image": "/products/rack1_p023.jpg",
+    "category": "Candy",
+    "country": ""
+  },
+  {
+    "id": "r1_24",
+    "name": "BATOOK CARDAMOM",
+    "price": 20,
+    "image": "/products/rack1_p024.jpg",
+    "category": "Candy",
+    "country": ""
+  },
+  {
+    "id": "r1_25",
+    "name": "TRIDENT GUM",
+    "price": 120,
+    "image": "/products/rack1_p025.jpg",
+    "category": "Candy",
+    "country": ""
+  },
+  {
+    "id": "r1_26",
+    "name": "COOLMINT",
+    "price": 20,
+    "image": "/products/rack1_p026.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r1_27",
+    "name": "ICE BREAKERS DIA",
+    "price": 30,
+    "image": "/products/rack1_p027.jpg",
+    "category": "Candy",
+    "country": ""
+  },
+  {
+    "id": "r1_28",
+    "name": "ICE BREAKERS ROUND",
+    "price": 250,
+    "image": "/products/rack1_p028.jpg",
+    "category": "Candy",
+    "country": ""
+  },
+  {
+    "id": "r1_29",
+    "name": "ICE BREAKERS ROUND",
+    "price": 250,
+    "image": "/products/rack1_p029.jpg",
+    "category": "Candy",
+    "country": ""
+  },
+  {
+    "id": "r1_30",
+    "name": "HUBBA BUBBA",
+    "price": 200,
+    "image": "/products/rack1_p030.jpg",
+    "category": "Candy",
+    "country": ""
+  },
+  {
+    "id": "r1_31",
+    "name": "SOUR PUNK",
+    "price": 40,
+    "image": "/products/rack1_p031.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r1_32",
+    "name": "ICE BREAKERS COOL",
+    "price": 50,
+    "image": "/products/rack1_p032.jpg",
+    "category": "Candy",
+    "country": ""
+  },
+  {
+    "id": "r1_33",
+    "name": "MENTOS PURE",
+    "price": 150,
+    "image": "/products/rack1_p033.jpg",
+    "category": "Candy",
+    "country": ""
+  },
+  {
+    "id": "r1_34",
+    "name": "AMIRA CANDY",
+    "price": 150,
+    "image": "/products/rack1_p034.jpg",
+    "category": "Candy",
+    "country": ""
+  },
+  {
+    "id": "r1_35",
+    "name": "COCON PACK OF 3",
+    "price": 100,
+    "image": "/products/rack1_p035.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r1_36",
+    "name": "ZAZZY MINI",
+    "price": 20,
+    "image": "/products/rack1_p036.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r1_37",
+    "name": "NESCAFE LATTE",
+    "price": 400,
+    "image": "/products/rack1_p037.jpg",
+    "category": "Drinks",
+    "country": ""
+  },
+  {
+    "id": "r1_38",
+    "name": "NESCAFE CAPPUCCINO",
+    "price": 400,
+    "image": "/products/rack1_p038.jpg",
+    "category": "Drinks",
+    "country": ""
+  },
+  {
+    "id": "r1_39",
+    "name": "NESCAFE CARAMEL LATTE",
+    "price": 400,
+    "image": "/products/rack1_p039.jpg",
+    "category": "Drinks",
+    "country": ""
+  },
+  {
+    "id": "r1_40",
+    "name": "NESCAFE VANILLA LATTE",
+    "price": 400,
+    "image": "/products/rack1_p040.jpg",
+    "category": "Drinks",
+    "country": ""
+  },
+  {
+    "id": "r1_41",
+    "name": "NESCAFE IRISH LATTE",
+    "price": 400,
+    "image": "/products/rack1_p041.jpg",
+    "category": "Drinks",
+    "country": ""
+  },
+  {
+    "id": "r1_42",
+    "name": "ZAZIO DATE SYRUP",
+    "price": 399,
+    "image": "/products/rack1_p042.jpg",
+    "category": "Drinks",
+    "country": ""
+  },
+  {
+    "id": "r1_43",
+    "name": "ZAZIO DATTY NUTTY",
+    "price": 649,
+    "image": "/products/rack1_p043.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r1_44",
+    "name": "CADBURY HOT CHOCO",
+    "price": 500,
+    "image": "/products/rack1_p044.jpg",
+    "category": "Chocolates",
+    "country": ""
+  },
+  {
+    "id": "r1_45",
+    "name": "MILO IMP",
+    "price": 550,
+    "image": "/products/rack1_p045.jpg",
+    "category": "Drinks",
+    "country": ""
+  },
+  {
+    "id": "r1_46",
+    "name": "GALAXY MOCHA",
+    "price": 900,
+    "image": "/products/rack1_p046.jpg",
+    "category": "Chocolates",
+    "country": ""
+  },
+  {
+    "id": "r1_47",
+    "name": "GALAXY CAREMAL",
+    "price": 900,
+    "image": "/products/rack1_p047.jpg",
+    "category": "Chocolates",
+    "country": ""
+  },
+  {
+    "id": "r1_48",
+    "name": "GALAXY CHOCOLATE",
+    "price": 900,
+    "image": "/products/rack1_p048.jpg",
+    "category": "Chocolates",
+    "country": ""
+  },
+  {
+    "id": "r1_49",
+    "name": "NESCAFE 3 IN 1",
+    "price": 700,
+    "image": "/products/rack1_p049.jpg",
+    "category": "Drinks",
+    "country": ""
+  },
+  {
+    "id": "r1_50",
+    "name": "CHIKEN STOCK",
+    "price": 810,
+    "image": "/products/rack1_p050.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r1_51",
+    "name": "VEG STOCK",
+    "price": 700,
+    "image": "/products/rack1_p051.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r1_52",
+    "name": "WEETABIX",
+    "price": 430,
+    "image": "/products/rack1_p052.jpg",
+    "category": "Biscuits",
+    "country": ""
+  },
+  {
+    "id": "r1_53",
+    "name": "REGGIA LASAGNE",
+    "price": 350,
+    "image": "/products/rack1_p053.jpg",
+    "category": "Biscuits",
+    "country": ""
+  },
+  {
+    "id": "r1_54",
+    "name": "TESCO YEAST",
+    "price": 400,
+    "image": "/products/rack1_p054.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r1_55",
+    "name": "TACO SEASON",
+    "price": 200,
+    "image": "/products/rack1_p055.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r1_56",
+    "name": "STARBUST DRINK",
+    "price": 320,
+    "image": "/products/rack1_p056.jpg",
+    "category": "Drinks",
+    "country": ""
+  },
+  {
+    "id": "r1_57",
+    "name": "QUAKE OATS",
+    "price": 349,
+    "image": "/products/rack1_p057.jpg",
+    "category": "Biscuits",
+    "country": ""
+  },
+  {
+    "id": "r1_58",
+    "name": "JOLLY RANCHER DRINK",
+    "price": 320,
+    "image": "/products/rack1_p058.jpg",
+    "category": "Drinks",
+    "country": ""
+  },
+  {
+    "id": "r1_59",
+    "name": "WELCH DRINK",
+    "price": 320,
+    "image": "/products/rack1_p059.jpg",
+    "category": "Drinks",
+    "country": ""
+  },
+  {
+    "id": "r1_60",
+    "name": "MARETTI BRUSCHETTA",
+    "price": 100,
+    "image": "/products/rack1_p060.jpg",
+    "category": "Biscuits",
+    "country": ""
+  },
+  {
+    "id": "r1_61",
+    "name": "MARETTI BRUSCHETTA",
+    "price": 100,
+    "image": "/products/rack1_p061.jpg",
+    "category": "Biscuits",
+    "country": ""
+  },
+  {
+    "id": "r1_62",
+    "name": "MARETTI BRUSCHETTA",
+    "price": 100,
+    "image": "/products/rack1_p062.jpg",
+    "category": "Biscuits",
+    "country": ""
+  },
+  {
+    "id": "r1_63",
+    "name": "TAJIN",
+    "price": 80,
+    "image": "/products/rack1_p063.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r1_64",
+    "name": "YOKOSO NOODLES",
+    "price": 200,
+    "image": "/products/rack1_p064.jpg",
+    "category": "Biscuits",
+    "country": ""
+  },
+  {
+    "id": "r1_65",
+    "name": "SPLENDA SWEETNER",
+    "price": 400,
+    "image": "/products/rack1_p065.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r1_66",
+    "name": "GARLIC",
+    "price": 490,
+    "image": "/products/rack1_p066.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r1_67",
+    "name": "ZAZIO HOTSAUCE",
+    "price": 79,
+    "image": "/products/rack1_p067.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r1_68",
+    "name": "FILIPPO PESTO",
+    "price": 79,
+    "image": "/products/rack1_p068.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r1_69",
+    "name": "FILIPPO PESTO",
+    "price": 79,
+    "image": "/products/rack1_p069.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r1_70",
+    "name": "HELLMANNS",
+    "price": 450,
+    "image": "/products/rack1_p070.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r1_71",
+    "name": "BULDAK",
+    "price": 440,
+    "image": "/products/rack1_p071.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r1_72",
+    "name": "ALMARAI",
+    "price": 450,
+    "image": "/products/rack1_p072.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r1_73",
+    "name": "PUCK STICKS",
+    "price": 550,
+    "image": "/products/rack1_p073.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r1_74",
+    "name": "FRESHO CREAM",
+    "price": 275,
+    "image": "/products/rack1_p074.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r1_75",
+    "name": "KRAFT CHEDDAR",
+    "price": 400,
+    "image": "/products/rack1_p075.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r1_76",
+    "name": "FRESHOS DIJON MUSTARD",
+    "price": 299,
+    "image": "/products/rack1_p076.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r1_77",
+    "name": "US MUSTARD",
+    "price": 240,
+    "image": "/products/rack1_p077.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r1_78",
+    "name": "KARA CREAM",
+    "price": 210,
+    "image": "/products/rack1_p078.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r1_79",
+    "name": "KARA COCONUT MILK",
+    "price": 190,
+    "image": "/products/rack1_p079.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r1_80",
+    "name": "NUTELLA BIG",
+    "price": 399,
+    "image": "/products/rack1_p080.jpg",
+    "category": "Chocolates",
+    "country": ""
+  },
+  {
+    "id": "r1_81",
+    "name": "MOMENTS CREAM",
+    "price": 600,
+    "image": "/products/rack1_p081.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r1_82",
+    "name": "HERSHEYS SYRUP",
+    "price": 300,
+    "image": "/products/rack1_p082.jpg",
+    "category": "Chocolates",
+    "country": ""
+  },
+  {
+    "id": "r1_83",
+    "name": "NERDS SMALL",
+    "price": 200,
+    "image": "/products/rack1_p083.jpg",
+    "category": "Candy",
+    "country": ""
+  },
+  {
+    "id": "r1_84",
+    "name": "NERDS BIG",
+    "price": 350,
+    "image": "/products/rack1_p084.jpg",
+    "category": "Candy",
+    "country": ""
+  },
+  {
+    "id": "r1_85",
+    "name": "HAPPY HIPPO",
+    "price": 400,
+    "image": "/products/rack1_p085.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r1_86",
+    "name": "RAFFAELLO WHITE",
+    "price": 110,
+    "image": "/products/rack1_p086.jpg",
+    "category": "Chocolates",
+    "country": ""
+  },
+  {
+    "id": "r1_87",
+    "name": "FERRERO ROCHER",
+    "price": 169,
+    "image": "/products/rack1_p087.jpg",
+    "category": "Chocolates",
+    "country": ""
+  },
+  {
+    "id": "r1_88",
+    "name": "MILKA LEO",
+    "price": 125,
+    "image": "/products/rack1_p088.jpg",
+    "category": "Chocolates",
+    "country": ""
+  },
+  {
+    "id": "r1_89",
+    "name": "MR BEAST FEASTABLES",
+    "price": 499,
+    "image": "/products/rack1_p089.jpg",
+    "category": "Chocolates",
+    "country": ""
+  },
+  {
+    "id": "r1_90",
+    "name": "CRUNCHY",
+    "price": 350,
+    "image": "/products/rack1_p090.jpg",
+    "category": "Other",
+    "country": ""
+  },
+  {
+    "id": "r1_91",
+    "name": "KITKAT BIG HAZELNUT",
+    "price": 400,
+    "image": "/products/rack1_p091.jpg",
+    "category": "Chocolates",
+    "country": ""
+  },
+  {
+    "id": "r1_92",
+    "name": "GANDOUR SAFARI RICH",
+    "price": 10,
+    "image": "/products/rack1_p092.jpg",
+    "category": "Chocolates",
+    "country": ""
+  },
+  {
+    "id": "r1_93",
+    "name": "BOUNTY",
+    "price": 100,
+    "image": "/products/rack1_p093.jpg",
+    "category": "Chocolates",
+    "country": ""
+  },
+  {
+    "id": "r1_94",
+    "name": "KITKAT COCOA",
+    "price": 150,
+    "image": "/products/rack1_p094.jpg",
+    "category": "Chocolates",
+    "country": ""
+  },
+  {
+    "id": "r1_95",
+    "name": "KITKAT WHITE",
+    "price": 150,
+    "image": "/products/rack1_p095.jpg",
+    "category": "Chocolates",
+    "country": ""
+  },
+  {
+    "id": "r1_96",
+    "name": "SNICKERS NORMAL",
+    "price": 20,
+    "image": "/products/rack1_p096.jpg",
+    "category": "Chocolates",
+    "country": ""
+  },
+  {
+    "id": "r1_97",
+    "name": "SNICKERS IMP",
+    "price": 100,
+    "image": "/products/rack1_p097.jpg",
+    "category": "Chocolates",
+    "country": ""
+  },
+  {
+    "id": "r1_98",
+    "name": "KITKAT NORMAL",
+    "price": 70,
+    "image": "/products/rack1_p098.jpg",
+    "category": "Chocolates",
+    "country": ""
+  },
+  {
+    "id": "r1_99",
+    "name": "MARS BIG",
+    "price": 780,
+    "image": "/products/rack1_p099.jpg",
+    "category": "Chocolates",
+    "country": ""
+  },
+  {
+    "id": "r1_100",
+    "name": "TWIX IMP",
+    "price": 100,
+    "image": "/products/rack1_p100.jpg",
+    "category": "Chocolates",
+    "country": ""
+  },
+  {
+    "id": "r1_101",
+    "name": "MARS IMP",
+    "price": 100,
+    "image": "/products/rack1_p101.jpg",
+    "category": "Chocolates",
+    "country": ""
+  },
+  {
+    "id": "r1_102",
+    "name": "KINDER BUENO",
+    "price": 120,
+    "image": "/products/rack1_p102.jpg",
+    "category": "Chocolates",
+    "country": ""
+  },
+  {
+    "id": "r1_103",
+    "name": "M&M CHOCOLATE",
+    "price": 100,
+    "image": "/products/rack1_p103.jpg",
+    "category": "Chocolates",
+    "country": ""
+  }
+]
