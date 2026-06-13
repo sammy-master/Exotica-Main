@@ -57,28 +57,18 @@ export default function Navbar() {
             className="nav-cart-btn"
             onClick={toggleCart}
             id="nav-cart-btn"
-            aria-label={`Cart - ${totalItems} items`}
-            style={{ flexDirection: 'column', alignItems: 'center', gap: '4px' }}
+            aria-label={`Cart — ${totalItems} item${totalItems !== 1 ? 's' : ''}, ₹${totalPrice.toLocaleString('en-IN')}`}
           >
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <i className="fas fa-shopping-bag" aria-hidden="true" />
-              <span>Cart</span>
-            </div>
+            <i className="fas fa-shopping-bag" aria-hidden="true" />
+            {/* "Cart" text — hidden on mobile via CSS */}
+            <span className="nav-cart-label">Cart</span>
+            {/* Price — hidden on mobile via CSS */}
             {totalItems > 0 && (
-              <span className="nav-cart-total" style={{
-                fontFamily: 'var(--font-serif)',
-                background: 'var(--grad-gold-text)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-                fontSize: '1.25rem',
-                fontWeight: 500,
-                letterSpacing: '0.02em',
-                lineHeight: 1
-              }}>
+              <span className="nav-cart-total">
                 ₹{totalPrice.toLocaleString('en-IN')}
               </span>
             )}
+            {/* Badge count — always shown when items exist */}
             {totalItems > 0 && (
               <span className={`cart-badge${badgePop ? ' pop' : ''}`} aria-live="polite">
                 {totalItems > 99 ? '99+' : totalItems}

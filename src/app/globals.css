@@ -65,6 +65,8 @@ html {
   scroll-padding-top: 80px;
   font-size: 16px;
   overflow-x: hidden;
+  /* Prevent iOS bounce on the root — individual scrollable elements use overflow-y: auto */
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -76,6 +78,8 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Prevent text inflation on iOS landscape */
+  text-size-adjust: 100%;
 }
 
 body.loading   { overflow: hidden; }
@@ -85,6 +89,11 @@ img { display: block; max-width: 100%; }
 a   { text-decoration: none; color: inherit; }
 ul  { list-style: none; }
 button { border: none; outline: none; background: none; font-family: inherit; }
+
+/* ─── Suppress iOS tap blue highlight globally ──────────── */
+a, button, [role="button"], input, select, textarea, label {
+  -webkit-tap-highlight-color: transparent;
+}
 
 /* ─── CUSTOM CURSOR ──────────────────────────────────────── */
 @media (hover: hover) and (pointer: fine) {
@@ -312,6 +321,18 @@ body::before {
   background: rgba(212,168,67,0.05);
 }
 .nav-cart-btn:hover { background: var(--gold-subtle); border-color: var(--gold); color: var(--gold-light); }
+.nav-cart-label { /* shown on desktop, hidden on mobile via media query */ }
+.nav-cart-total {
+  font-family: var(--font-serif);
+  background: var(--grad-gold-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
 
 .cart-badge {
   position: absolute; top: -7px; right: -7px;
@@ -838,67 +859,83 @@ img.brand-redbull {
 .product-card-category { font-size: 0.55rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
 .product-card-name { font-family: var(--font-serif); font-size: 1rem; font-weight: 400; color: var(--text-primary); margin-bottom: 12px; line-height: 1.3; }
 
-.product-card-footer { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.product-card-footer { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 4px; }
 .product-price {
   font-family: var(--font-serif); font-size: 1.15rem; font-weight: 400;
   background: var(--grad-gold-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
 }
-.product-per-unit { font-size: 0.55rem; color: var(--text-faint); }
-.product-qty-wrap { display: flex; align-items: center; gap: 6px; }
-.qty-btn {
-  width: 26px; height: 26px; border: 1px solid var(--border-hover);
-  color: var(--gold); font-size: 0.9rem;
-  display: flex; align-items: center; justify-content: center;
-  transition: background 0.2s, border-color 0.2s; cursor: none;
-  background: transparent;
-}
-.qty-btn:hover { background: var(--gold-subtle); }
-.qty-display { font-size: 0.8rem; font-weight: 500; color: var(--text-primary); min-width: 18px; text-align: center; }
 
-/* Real-time quantity total */
-.product-qty-total {
-  display: flex; align-items: center; gap: 6px;
-  margin-top: 7px;
-  font-size: 0.62rem; color: var(--text-muted);
-  padding: 5px 8px;
-  background: rgba(212,168,67,0.06); border: 1px solid var(--border-gold);
-  border-radius: 1px;
-}
-.product-qty-total i { color: var(--gold); font-size: 0.55rem; }
-.product-qty-total strong { color: var(--gold-light); }
-
-/* Product card badges */
-.product-card-badges { position: absolute; top: 10px; left: 10px; display: flex; flex-direction: column; gap: 4px; }
-.product-card-badge {
-  font-size: 0.5rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase;
-  padding: 4px 9px; line-height: 1.4;
-}
-.badge-limited { background: var(--gold); color: #080610; }
-.badge-incart {
-  background: rgba(0,100,102,0.9); color: #a0f0d0;
-  border: 1px solid rgba(0,180,150,0.3);
-  cursor: pointer; display: flex; align-items: center; gap: 5px;
-  transition: background 0.2s;
-}
-.badge-incart:hover { background: rgba(0,120,110,0.95); }
-
-.add-to-cart-btn {
-  width: 100%; margin-top: 10px; padding: 11px;
-  background: transparent; border: 1px solid var(--border-hover);
-  color: var(--gold);
-  font-size: 0.62rem; font-weight: 500; letter-spacing: 0.28em; text-transform: uppercase;
-  transition: all 0.3s var(--ease); cursor: none;
+/* ── Product card hover hint ── */
+.product-card-view-hint {
+  position: absolute; inset: 0;
   display: flex; align-items: center; justify-content: center; gap: 7px;
-  position: relative; overflow: hidden;
+  background: rgba(8,6,18,0.55);
+  color: var(--gold); font-size: 0.62rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 0.3s var(--ease);
+  backdrop-filter: blur(2px);
+  pointer-events: none;
 }
-.add-to-cart-btn::before {
-  content: ''; position: absolute; inset: 0;
-  background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.12) 50%, transparent 70%);
-  transform: translateX(-120%); transition: transform 0.5s ease;
+.product-card:hover .product-card-view-hint { opacity: 1; }
+
+/* ── Blinkit-style ADD button ── */
+.pc-add-btn {
+  display: flex; align-items: center; gap: 5px;
+  padding: 7px 14px;
+  background: transparent;
+  border: 1.5px solid var(--gold);
+  color: var(--gold);
+  font-size: 0.68rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+  border-radius: 4px;
+  transition: all 0.22s var(--ease);
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
-.add-to-cart-btn:hover::before { transform: translateX(120%); }
-.add-to-cart-btn:hover { background: var(--gold); color: #080610; border-color: var(--gold); }
-.add-to-cart-btn.added { background: #006466; border-color: #006466; color: #fff; }
+.pc-add-btn:hover {
+  background: var(--gold);
+  color: #080610;
+  transform: scale(1.04);
+}
+.pc-add-btn.pc-added {
+  background: #1a6b3a;
+  border-color: #1a6b3a;
+  color: #7fffb2;
+}
+
+/* ── Blinkit-style stepper ── */
+.pc-stepper {
+  display: flex; align-items: center; gap: 0;
+  background: var(--gold);
+  border-radius: 4px;
+  overflow: hidden;
+  flex-shrink: 0;
+  animation: stepperPop 0.22s cubic-bezier(0.22,1,0.36,1);
+}
+@keyframes stepperPop {
+  from { transform: scale(0.85); opacity: 0.6; }
+  to   { transform: scale(1);    opacity: 1; }
+}
+.pc-step-btn {
+  width: 30px; height: 30px;
+  background: transparent;
+  color: #080610;
+  font-size: 0.75rem;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.15s;
+  cursor: pointer;
+  border: none;
+  flex-shrink: 0;
+}
+.pc-step-btn:hover { background: rgba(0,0,0,0.12); }
+.pc-step-btn:active { background: rgba(0,0,0,0.22); transform: scale(0.92); }
+.pc-step-qty {
+  min-width: 26px;
+  text-align: center;
+  font-size: 0.82rem; font-weight: 700;
+  color: #080610;
+  user-select: none;
+}
 
 /* Products section sticky cart bar */
 .products-cart-bar {
@@ -931,6 +968,290 @@ img.brand-redbull {
   transition: all 0.3s; cursor: none;
 }
 .products-cart-bar-btn:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+/* ═══════════════════════════════════════════════
+   QUICK VIEW MODAL
+   ═══════════════════════════════════════════════ */
+.qv-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.82);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  z-index: 2000;
+  display: flex; align-items: center; justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.2s ease both;
+}
+.qv-modal {
+  position: relative;
+  width: 100%; max-width: 920px;
+  height: 82vh;           /* Fixed height — critical for flex children to resolve */
+  max-height: 620px;
+  background: linear-gradient(145deg, #0d0b1e 0%, #08060f 100%);
+  border: 1px solid var(--border-gold);
+  box-shadow: 0 40px 120px rgba(0,0,0,0.9), 0 0 60px rgba(212,168,67,0.08);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;  /* Single row fills entire height */
+  overflow: hidden;
+  animation: slideUp 0.28s cubic-bezier(0.22,1,0.36,1) both;
+}
+@media (max-width: 640px) {
+  .qv-modal {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    height: auto;
+    max-height: 94dvh; /* dvh for mobile browsers with visible toolbars */
+    max-height: 94vh; /* Fallback for older browsers */
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 8px;
+    border-radius: 12px;
+  }
+  /* On mobile, image zone gets an explicit min-height so it's always visible */
+  .qv-gallery { min-height: 300px; flex-shrink: 0; }
+  .qv-img-wrap { min-height: 280px; }
+  /* Always show navigation arrows on touch devices */
+  .qv-arrow { opacity: 1 !important; }
+  /* Zoom hint visible on touch without hover */
+  .qv-img-wrap .qv-zoom-hint { opacity: 1; }
+  /* Tighten close button position on phone */
+  .qv-close { top: 10px; right: 10px; width: 38px; height: 38px; }
+}
+.qv-close {
+  position: absolute; top: 14px; right: 14px;
+  width: 34px; height: 34px; border-radius: 50%;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid var(--border-hover);
+  color: var(--text-muted);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.85rem;
+  z-index: 10;
+  transition: all 0.2s; cursor: pointer;
+}
+.qv-close:hover { background: rgba(255,255,255,0.14); color: var(--text-primary); transform: rotate(90deg); }
+
+/* Gallery column — fills its grid cell, stacks main image above thumb strip */
+.qv-gallery {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #06040e;
+  min-height: 0;          /* Allow flex child to shrink below content size */
+}
+
+.qv-img-wrap {
+  position: relative;
+  overflow: hidden;
+  cursor: zoom-in;
+  flex: 1;                /* Fills remaining space after thumb strip */
+  min-height: 0;          /* Critical: allows shrinking in flex column */
+}
+.qv-img-wrap.zoomed { cursor: zoom-out; }
+.qv-img-skeleton {
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, #111 25%, #1a1a2e 50%, #111 75%);
+  background-size: 200% 200%;
+  animation: shimmer 1.4s linear infinite;
+}
+.qv-img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  display: block;
+  /* transform & transition are set inline via React for pan-zoom */
+  transform-origin: 50% 50%;
+  will-change: transform;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.qv-img.loaded { opacity: 1; }
+/* No static zoomed rule — transform is controlled by React inline styles */
+.qv-zoom-hint {
+  position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%);
+  background: rgba(8,6,18,0.75); backdrop-filter: blur(6px);
+  border: 1px solid var(--border-gold);
+  color: var(--text-muted); font-size: 0.58rem; letter-spacing: 0.15em; text-transform: uppercase;
+  padding: 5px 12px;
+  display: flex; align-items: center; gap: 6px;
+  opacity: 0; transition: opacity 0.3s;
+  white-space: nowrap;
+}
+.qv-img-wrap:hover .qv-zoom-hint { opacity: 1; }
+.qv-country-badge {
+  position: absolute; top: 12px; left: 12px;
+  font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase;
+  background: rgba(8,6,18,0.82); backdrop-filter: blur(8px);
+  border: 1px solid var(--border-gold);
+  color: var(--gold); padding: 4px 10px;
+}
+
+/* Photo label badge (Front / Back / Photo N) */
+.qv-photo-label {
+  position: absolute; top: 12px; right: 12px;
+  font-size: 0.55rem; letter-spacing: 0.2em; text-transform: uppercase;
+  background: rgba(212,168,67,0.18); backdrop-filter: blur(6px);
+  border: 1px solid rgba(212,168,67,0.35);
+  color: var(--gold-light); padding: 4px 10px;
+}
+
+/* Left / Right arrow nav overlaid on image */
+.qv-arrow {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  width: 36px; height: 36px; border-radius: 50%;
+  background: rgba(8,6,18,0.72); backdrop-filter: blur(6px);
+  border: 1px solid var(--border-gold);
+  color: var(--gold);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  z-index: 5;
+  opacity: 0;
+  /* Ensure 44px minimum touch target */
+  min-width: 44px; min-height: 44px;
+}
+.qv-img-wrap:hover .qv-arrow { opacity: 1; }
+/* Always show on touch/coarse-pointer devices */
+@media (pointer: coarse) { .qv-arrow { opacity: 1; } }
+.qv-arrow:hover { background: rgba(212,168,67,0.22); transform: translateY(-50%) scale(1.1); }
+.qv-arrow-left  { left: 8px; }
+.qv-arrow-right { right: 8px; }
+
+/* Thumbnail strip */
+.qv-thumbs {
+  display: flex;
+  gap: 6px;
+  padding: 8px;
+  background: rgba(4,4,10,0.9);
+  border-top: 1px solid var(--border-gold);
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold-dark) transparent;
+  flex-shrink: 0;
+}
+.qv-thumb {
+  position: relative;
+  flex-shrink: 0;
+  width: 64px; height: 64px;
+  /* Enforce 44px min touch target via padding trick */
+  min-width: 44px; min-height: 44px;
+  background: #0d0b1e;
+  border: 1.5px solid var(--border-gold);
+  overflow: hidden;
+  cursor: pointer;
+  transition: border-color 0.2s, transform 0.2s;
+  padding: 0;
+  border-radius: 2px;
+}
+.qv-thumb:hover { border-color: var(--gold); transform: scale(1.06); }
+.qv-thumb.active { border-color: var(--gold); box-shadow: 0 0 0 2px rgba(212,168,67,0.35); }
+.qv-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.qv-thumb-label {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: rgba(4,4,10,0.78);
+  color: var(--gold-light);
+  font-size: 0.42rem; letter-spacing: 0.18em; text-transform: uppercase;
+  text-align: center; padding: 2px 0;
+}
+@media (max-width: 640px) {
+  .qv-thumb { width: 56px; height: 56px; }
+  .qv-thumbs { gap: 5px; padding: 6px; }
+}
+
+/* Image count hint in details panel */
+.qv-img-count-hint {
+  font-size: 0.68rem; color: var(--text-faint);
+  display: flex; align-items: center; gap: 7px;
+  margin-top: 4px;
+}
+.qv-img-count-hint i { color: var(--gold); }
+
+/* Details side */
+.qv-details {
+  padding: 36px 32px;
+  overflow-y: auto;
+  display: flex; flex-direction: column; gap: 14px;
+}
+@media (max-width: 640px) {
+  .qv-details { padding: 24px 20px; }
+}
+.qv-category {
+  font-size: 0.58rem; letter-spacing: 0.35em; text-transform: uppercase;
+  color: var(--gold); margin: 0;
+}
+.qv-name {
+  font-family: var(--font-serif); font-size: 1.7rem; font-weight: 400;
+  color: var(--text-primary); margin: 0; line-height: 1.25;
+}
+.qv-desc {
+  font-size: 0.85rem; color: var(--text-muted); line-height: 1.75; margin: 0;
+}
+
+/* Price + buy row */
+.qv-buy-row {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 16px 0;
+  border-top: 1px solid var(--border-gold);
+  border-bottom: 1px solid var(--border-gold);
+}
+.qv-price {
+  font-family: var(--font-serif); font-size: 2rem; font-weight: 300;
+  background: var(--grad-gold-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.qv-add-btn {
+  display: flex; align-items: center; gap: 8px;
+  padding: 12px 28px;
+  background: var(--gold); color: #080610;
+  font-size: 0.75rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.22s var(--ease);
+}
+.qv-add-btn:hover { background: var(--gold-light); transform: scale(1.04); }
+
+/* Stepper in modal */
+.qv-stepper {
+  display: flex; align-items: center; gap: 0;
+  background: var(--gold);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.qv-step-btn {
+  width: 38px; height: 38px;
+  background: transparent;
+  color: #080610;
+  font-size: 0.9rem;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; border: none;
+  transition: background 0.15s;
+}
+.qv-step-btn:hover { background: rgba(0,0,0,0.12); }
+.qv-step-qty {
+  min-width: 32px;
+  text-align: center;
+  font-size: 1rem; font-weight: 700;
+  color: #080610;
+  user-select: none;
+}
+
+/* Ingredients */
+.qv-ingredients {
+  background: rgba(212,168,67,0.04);
+  border: 1px solid rgba(212,168,67,0.14);
+  border-radius: 4px;
+  padding: 18px 20px;
+  margin-top: 4px;
+}
+.qv-ingredients-title {
+  font-size: 0.65rem; font-weight: 700; letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--gold); margin: 0 0 10px;
+  display: flex; align-items: center; gap: 8px;
+}
+.qv-ingredients-text {
+  font-size: 0.78rem; color: var(--text-muted); line-height: 1.85; margin: 0;
+}
 
 /* ═══════════════════════════════════════════════
    CART TOAST NOTIFICATION
@@ -2067,6 +2388,8 @@ img.brand-redbull {
   .footer-cols-grid { gap: 28px; }
   .gifting-inner { gap: 50px; }
   .exlife-grid { grid-template-rows: repeat(2, 260px); }
+  /* Gifting photo zone — responsive height */
+  .gifting-photo-zone { height: clamp(220px, 28vw, 300px) !important; }
 }
 
 @media (max-width: 1024px) {
@@ -2084,6 +2407,7 @@ img.brand-redbull {
   .gifting-inner { grid-template-columns: 1fr; gap: 40px; }
   .gifting-visual { order: -1; }
   .gifting-visual-inner { max-width: 100%; }
+  .gifting-photo-zone { height: clamp(200px, 35vw, 280px) !important; }
   /* Exotica Life: 2 cols */
   .exlife-grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(3, 220px); }
   .exlife-span-tall { grid-row: span 1; }
@@ -2107,9 +2431,15 @@ img.brand-redbull {
 
   /* ── Nav ── */
   .nav-links { display: none; }
-  .nav-cart-btn span { display: none; }
+  /* On mobile, hide the text label and price — keep icon + badge only */
+  .nav-cart-label { display: none; }
+  .nav-cart-total { display: none; }
+  .nav-cart-btn {
+    padding: 8px 12px;
+    gap: 6px;
+  }
   .hamburger { display: flex; }
-  .nav-container { padding: 0 20px; gap: 16px; }
+  .nav-container { padding: 0 16px; gap: 10px; }
 
   /* ── Global: centre all section headings ── */
   .section-label { justify-content: center; }
@@ -2148,18 +2478,27 @@ img.brand-redbull {
   /* Product card footer: stack price and qty on mobile */
   .product-card-footer { flex-wrap: wrap; gap: 8px; }
   .product-qty-wrap { margin-left: auto; }
-  .category-filters { justify-content: center; flex-wrap: wrap; gap: 6px; padding: 0 16px; }
-  .products-cart-bar-inner { padding: 0 16px; gap: 10px; flex-wrap: wrap; justify-content: center; }
+  .category-filters { justify-content: flex-start; flex-wrap: wrap; gap: 6px; padding: 0 16px; overflow-x: auto; scrollbar-width: none; }
+  .category-filters::-webkit-scrollbar { display: none; }
+  /* Products sticky cart bar — compact on tablet */
+  .products-cart-bar-inner { padding: 0 16px; gap: 10px; flex-wrap: wrap; justify-content: space-between; }
   .products-cart-bar-total { font-size: 0.95rem; }
   /* Search bar */
   .products-search-wrap { padding: 0 16px; }
   .products-results-bar { padding: 0 16px; }
+
+  /* ── QuickView Modal tablet ── */
+  .qv-modal {
+    max-width: calc(100vw - 24px);
+  }
 
   /* ── Testimonials ── */
   .testimonials-section > div { padding-left: 20px !important; padding-right: 20px !important; }
   .testimonials-section > div > div:first-child { text-align: center; }
   .testimonial-card { width: 270px; padding: 20px 18px; }
   .testimonials-dots { margin-top: 20px; }
+  /* iOS momentum scrolling on testimonial track */
+  .testimonials-track { -webkit-overflow-scrolling: touch; }
 
   /* ── Contact ── */
   .contact-inner { padding: 0 20px !important; }
@@ -2181,6 +2520,7 @@ img.brand-redbull {
   /* ── Gifting ── */
   .gifting-inner { padding: 0 20px; gap: 32px; }
   .gifting-visual { order: -1; }
+  .gifting-photo-zone { height: clamp(200px, 55vw, 280px) !important; }
 
   /* ── Exotica Life ── */
   .exlife-inner { padding: 0 20px; }
@@ -2200,19 +2540,48 @@ img.brand-redbull {
   .footer-social { justify-content: center; }
   .footer-bottom { flex-direction: column; text-align: center; gap: 10px; }
 
-  /* ── Cart ── */
-  .cart-drawer { width: 100vw; }
+  /* ── Cart Drawer ── */
+  .cart-drawer {
+    width: 100vw;
+    /* Respect iPhone safe area at bottom */
+    padding-bottom: env(safe-area-inset-bottom);
+  }
   .cart-drawer-head { padding: 18px 16px; }
-  .cart-items { padding: 0 16px; }
-  .cart-drawer-foot { padding: 16px; }
-  .cart-checkout-btn { padding: 16px; font-size: 0.75rem; }
+  .cart-items {
+    padding: 0 16px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .cart-drawer-foot {
+    padding: 16px;
+    padding-bottom: calc(16px + env(safe-area-inset-bottom));
+  }
+  .cart-checkout-btn {
+    padding: 16px;
+    font-size: 0.75rem;
+    /* Ensure 44px touch height */
+    min-height: 52px;
+  }
+  .cart-qty-btn {
+    /* Minimum touch target */
+    min-width: 44px; min-height: 44px;
+  }
+  .cart-item-remove { min-width: 44px; min-height: 44px; }
   .cart-toast { bottom: 84px; font-size: 0.72rem; padding: 10px 18px; }
 
-  /* ── Mobile Cart FAB ── */
-  .mobile-cart-fab { display: flex; }
-  /* Push WA fab and back-to-top up so they don't overlap */
-  .fab-whatsapp { bottom: 90px; right: 16px; }
-  .back-to-top { bottom: 160px; right: 16px; }
+  /* ── Mobile Cart FAB — safe-area-aware ── */
+  .mobile-cart-fab {
+    display: flex;
+    bottom: calc(16px + env(safe-area-inset-bottom));
+  }
+  /* Push WA fab and back-to-top up so they don't overlap with mobile cart FAB */
+  .fab-whatsapp {
+    bottom: calc(90px + env(safe-area-inset-bottom));
+    right: 16px;
+  }
+  .back-to-top {
+    bottom: calc(160px + env(safe-area-inset-bottom));
+    right: 16px;
+  }
 }
 
 /* ═══════════════════════════════════════════════
@@ -2228,8 +2597,10 @@ img.brand-redbull {
 
   /* Gifting */
   .gifting-inner { padding: 0 16px; }
-  .gifting-visual-inner { padding: 30px 16px 24px; }
-  .gifting-stats { gap: 0; }
+  .gifting-visual-inner { padding: 24px 16px 20px; }
+  .gifting-stats { gap: 0; flex-wrap: wrap; }
+  .gifting-stat { flex: 1; min-width: 80px; }
+  .gifting-photo-zone { height: clamp(180px, 60vw, 240px) !important; }
 
   /* ExoticaLife: single col */
   .exlife-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
@@ -2239,6 +2610,7 @@ img.brand-redbull {
   .hero-title { font-size: clamp(2.4rem, 12vw, 3.5rem); letter-spacing: 0.06em; }
   .hero-taglines { font-size: 0.9rem; }
   .hero-stat-num { font-size: clamp(1.5rem, 7vw, 2rem); }
+  .hero-content { padding: 100px 14px 56px; }
 
   /* ── Products: strict 2-col on phones ── */
   .products-grid {
@@ -2246,9 +2618,24 @@ img.brand-redbull {
     gap: 10px;
     padding: 0 12px !important;
   }
-  .category-filters { gap: 4px; padding: 0 12px; }
-  .cat-filter-btn { padding: 6px 10px; font-size: 0.56rem; }
-  .cat-icon { display: none; } /* hide icons in filter pills on very small screens */
+  .category-filters { gap: 4px; padding: 0 12px; overflow-x: auto; flex-wrap: nowrap; scrollbar-width: none; }
+  .category-filters::-webkit-scrollbar { display: none; }
+  .cat-filter-btn { padding: 7px 11px; font-size: 0.56rem; white-space: nowrap; min-height: 36px; }
+  .cat-icon { display: none; }
+
+  /* Products cart bar: fully stacked on phone */
+  .products-cart-bar-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    padding: 0 12px;
+  }
+  .products-cart-bar-right { justify-content: space-between; width: 100%; }
+  .products-cart-bar-btn {
+    flex: 1;
+    justify-content: center;
+    min-height: 44px;
+  }
 
   .testimonial-card { width: calc(100vw - 60px); min-width: 240px; max-width: 320px; }
 
@@ -2257,22 +2644,36 @@ img.brand-redbull {
   .product-card-category { font-size: 0.45rem; margin-bottom: 4px; letter-spacing: 0.2em; }
   .product-card-name { font-size: 0.72rem; margin-bottom: 6px; line-height: 1.25; }
   .product-price { font-size: 0.9rem; }
-  .product-per-unit { display: none; } /* hide /unit text to save space */
-  .add-to-cart-btn { padding: 8px 4px; font-size: 0.48rem; letter-spacing: 0.1em; margin-top: 8px; }
-  .add-to-cart-btn i { display: none; } /* hide icon on add-to-cart to fit 2-col */
-  .qty-btn { width: 24px; height: 24px; font-size: 0.8rem; }
+  .product-per-unit { display: none; }
+  .add-to-cart-btn {
+    padding: 9px 4px;
+    font-size: 0.5rem;
+    letter-spacing: 0.1em;
+    margin-top: 8px;
+    min-height: 38px;
+  }
+  .add-to-cart-btn i { display: none; }
+  .qty-btn { width: 28px; height: 28px; font-size: 0.8rem; min-height: 36px; min-width: 36px; }
   .qty-display { font-size: 0.7rem; min-width: 14px; }
   .product-qty-total { font-size: 0.54rem; padding: 4px 6px; }
   .product-card-badge { font-size: 0.4rem; padding: 2px 5px; letter-spacing: 0.12em; }
   .product-card-country { font-size: 0.42rem; padding: 2px 4px; }
   .product-card-country img { width: 10px; height: 10px; }
 
+  /* ── QuickView on phone ── */
+  .qv-name { font-size: 1.3rem; }
+  .qv-price { font-size: 1.5rem; }
+  .qv-add-btn { padding: 10px 18px; font-size: 0.68rem; min-height: 44px; }
+  .qv-buy-row { flex-wrap: wrap; gap: 10px; }
+  .qv-details { padding: 18px 16px; gap: 10px; }
+
   /* Cart drawer */
   .cart-item { gap: 10px; }
-  .cart-item-img { width: 52px; height: 52px; }
-  .cart-item-name { font-size: 0.8rem; }
-  .cart-item-price { font-size: 0.85rem; }
-  .cart-checkout-btn { font-size: 0.72rem; padding: 14px; }
+  .cart-item-img { width: 56px; height: 56px; border-radius: 4px; }
+  .cart-item-name { font-size: 0.82rem; }
+  .cart-item-price { font-size: 0.9rem; }
+  .cart-checkout-btn { font-size: 0.72rem; padding: 14px; min-height: 52px; }
+  .cart-qty-btn { min-width: 44px; min-height: 44px; }
 
   .contact-item { gap: 10px; }
   .contact-item-body { font-size: 0.88rem; }
@@ -2280,6 +2681,9 @@ img.brand-redbull {
 
   /* Search */
   .products-search-input { font-size: 0.82rem; }
+
+  /* Mobile nav font size smaller on small phones */
+  .mobile-nav-link { font-size: 2rem; gap: 22px; }
 }
 
 /* ═══════════════════════════════════════════════
@@ -2287,11 +2691,14 @@ img.brand-redbull {
    ═══════════════════════════════════════════════ */
 @media (max-width: 375px) {
   .hero-title { font-size: clamp(2rem, 11vw, 3rem); letter-spacing: 0.04em; }
-  .hero-content { padding: 100px 10px 50px; }
+  .hero-content { padding: 96px 10px 48px; }
   .hero-eyebrow { font-size: 0.5rem; letter-spacing: 0.3em; }
   .hero-taglines { font-size: 0.85rem; }
 
-  .nav-container { padding: 0 12px; }
+  .nav-container { padding: 0 12px; gap: 8px; }
+  .nav-logo-brand { font-size: 1.35rem; letter-spacing: 0.28em; }
+  .nav-logo-sub { font-size: 0.38rem; }
+  .nav-cart-btn { padding: 7px 9px; }
 
   /* 2-col products stays, just tighter padding */
   .products-grid { gap: 8px; padding: 0 10px !important; }
@@ -2301,9 +2708,41 @@ img.brand-redbull {
 
   .cat-filter-btn { padding: 5px 8px; font-size: 0.52rem; }
 
+  /* Mobile nav font smaller */
+  .mobile-nav-link { font-size: 1.75rem; }
+  .mobile-nav-inner { gap: 20px; }
+
   /* Make WhatsApp FAB smaller to not cover content */
-  .fab-whatsapp { width: 46px; height: 46px; font-size: 1.1rem; bottom: 86px; right: 12px; }
-  .back-to-top { width: 36px; height: 36px; bottom: 145px; right: 12px; font-size: 0.9rem; }
+  .fab-whatsapp {
+    width: 46px; height: 46px; font-size: 1.1rem;
+    bottom: calc(82px + env(safe-area-inset-bottom));
+    right: 12px;
+  }
+  .back-to-top {
+    width: 36px; height: 36px;
+    bottom: calc(140px + env(safe-area-inset-bottom));
+    right: 12px; font-size: 0.9rem;
+  }
+  .mobile-cart-fab {
+    bottom: calc(12px + env(safe-area-inset-bottom));
+    left: 10px; right: 10px;
+  }
+}
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE — Very Small Mobile (320px)
+   ═══════════════════════════════════════════════ */
+@media (max-width: 320px) {
+  .hero-title { font-size: clamp(1.75rem, 10vw, 2.5rem); }
+  .hero-content { padding: 90px 8px 44px; }
+  .nav-logo-brand { font-size: 1.15rem; letter-spacing: 0.2em; }
+  .products-grid { gap: 6px; padding: 0 8px !important; }
+  .product-card-body { padding: 6px; }
+  .product-card-name { font-size: 0.62rem; }
+  .section-title { font-size: 1.6rem; }
+  .mobile-nav-link { font-size: 1.5rem; }
+  .mobile-cart-fab { font-size: 0.65rem; }
+  .mobile-cart-fab-price { font-size: 0.75rem; }
 }
 
 /* Live Site Marquee Styles */

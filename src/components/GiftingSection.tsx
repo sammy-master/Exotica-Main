@@ -143,29 +143,16 @@ export default function GiftingSection() {
               <span className="gifting-frame-corner gifting-frame-br" />
             </div>
 
-            {/* ═══ FLOAT ZONE — contains central icon and advanced animations ═══ */}
-            <div className="gifting-float-zone" aria-hidden="true" style={{ position: 'relative', height: '260px' }}>
-
-              {/* Advanced animated rings */}
-              <div className="gifting-rings">
-                <div className="gifting-ring gifting-ring-1" />
-                <div className="gifting-ring gifting-ring-2" />
-                <div className="gifting-ring gifting-ring-3" />
-              </div>
-
-              {/* Glowing Orb */}
-              <div className="gifting-glow-orb" />
-
-              {/* Central gift icon */}
-              <div className="gifting-icon-display" aria-label="Premium gift hamper" style={{ position: 'relative', zIndex: 10 }}>
-                <div className="gifting-icon-box">
-                  <span className="gifting-pulse-ring gifting-pulse-ring-1" />
-                  <span className="gifting-pulse-ring gifting-pulse-ring-2" />
-                  <i className="fas fa-gift gifting-main-icon" />
-                </div>
-              </div>
-
-            </div>{/* /gifting-float-zone */}
+            {/* ═══ PHOTO DISPLAY ═══ */}
+            <div className="gifting-photo-zone" aria-hidden="true" style={{ position: 'relative', height: '300px', width: '100%', borderRadius: '16px', overflow: 'hidden', marginBottom: '25px', boxShadow: '0 10px 30px rgba(0,0,0,0.5)' }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img 
+                src="/images/premium_hamper.png" 
+                alt="Exotica Bespoke Hamper" 
+                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} 
+              />
+              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(8,6,18,0.4) 0%, transparent 40%)' }} />
+            </div>
 
             {/* Stats — sits BELOW float zone, never overlapped */}
             <div className="gifting-stats">
