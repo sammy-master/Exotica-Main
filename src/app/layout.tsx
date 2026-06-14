@@ -18,6 +18,7 @@ export const metadata: Metadata = {
 }
 
 import ScrollPath from '@/components/ScrollPath'
+import Cursor     from '@/components/Cursor'
 
 export default function RootLayout({
   children,
@@ -39,6 +40,7 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <Cursor />
         <ScrollPath />
         <CartProvider>
           {children}

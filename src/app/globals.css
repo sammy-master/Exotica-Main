@@ -1,9 +1,9 @@
-/* ═══════════════════════════════════════════════════════════
-   EXOTICA PCMC V3.1 — Premium Luxury Design System
-   ═══════════════════════════════════════════════════════════ */
+﻿/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   EXOTICA PCMC V3.1 â€” Premium Luxury Design System
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 @import "tailwindcss";
 
-/* ─── DESIGN TOKENS ──────────────────────────────────────── */
+/* â”€â”€â”€ DESIGN TOKENS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 :root {
   --bg-primary:    #04040A;
   --bg-secondary:  #070710;
@@ -57,7 +57,7 @@
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-/* ─── RESET ──────────────────────────────────────────────── */
+/* â”€â”€â”€ RESET â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html {
@@ -65,7 +65,7 @@ html {
   scroll-padding-top: 80px;
   font-size: 16px;
   overflow-x: hidden;
-  /* Prevent iOS bounce on the root — individual scrollable elements use overflow-y: auto */
+  /* Prevent iOS bounce on the root â€” individual scrollable elements use overflow-y: auto */
   -webkit-text-size-adjust: 100%;
 }
 
@@ -90,12 +90,12 @@ a   { text-decoration: none; color: inherit; }
 ul  { list-style: none; }
 button { border: none; outline: none; background: none; font-family: inherit; }
 
-/* ─── Suppress iOS tap blue highlight globally ──────────── */
+/* â”€â”€â”€ Suppress iOS tap blue highlight globally â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 a, button, [role="button"], input, select, textarea, label {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* ─── CUSTOM CURSOR ──────────────────────────────────────── */
+/* â”€â”€â”€ CUSTOM CURSOR â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 @media (hover: hover) and (pointer: fine) {
   body, a, button, [role="button"] { cursor: none; }
 }
@@ -131,12 +131,12 @@ a, button, [role="button"], input, select, textarea, label {
 .cursor-ring.hover  { width: 64px; height: 64px; border-color: var(--gold-light); opacity: 0.4; }
 .cursor-ring.click  { width: 28px; height: 28px; }
 
-/* ─── SCROLLBAR ──────────────────────────────────────────── */
+/* â”€â”€â”€ SCROLLBAR â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 ::-webkit-scrollbar { width: 3px; }
 ::-webkit-scrollbar-track { background: var(--bg-primary); }
 ::-webkit-scrollbar-thumb { background: var(--gold-dark); border-radius: 2px; }
 
-/* ─── NOISE GRAIN ────────────────────────────────────────── */
+/* â”€â”€â”€ NOISE GRAIN â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 body::before {
   content: '';
   position: fixed; inset: 0;
@@ -144,7 +144,7 @@ body::before {
   pointer-events: none; z-index: 9990; opacity: 0.5;
 }
 
-/* ─── LOADER ─────────────────────────────────────────────── */
+/* â”€â”€â”€ LOADER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .loader {
   position: fixed; inset: 0;
   background: var(--bg-primary);
@@ -181,7 +181,7 @@ body::before {
 .loader-bar      { height: 100%; background: var(--grad-gold); width: 0; animation: loadBar 1.5s 0.85s var(--ease) forwards; }
 .loader-sub      { font-size: 0.6rem; letter-spacing: 0.5em; text-transform: uppercase; color: var(--text-faint); opacity: 0; animation: fadeIn 0.5s 1.1s ease forwards; }
 
-/* ─── GOLD TEXT ──────────────────────────────────────────── */
+/* â”€â”€â”€ GOLD TEXT â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .gold-text {
   background: var(--grad-gold-text);
   -webkit-background-clip: text;
@@ -190,14 +190,14 @@ body::before {
 }
 .gold-line { display: inline-block; width: 36px; height: 1px; background: var(--gold); flex-shrink: 0; }
 
-/* ─── SECTION LABEL ──────────────────────────────────────── */
+/* â”€â”€â”€ SECTION LABEL â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .section-label {
   display: flex; align-items: center; gap: 12px;
   font-size: 0.6rem; letter-spacing: 0.5em; text-transform: uppercase; color: var(--gold);
   margin-bottom: 14px;
 }
 
-/* ─── SECTION TITLE ──────────────────────────────────────── */
+/* â”€â”€â”€ SECTION TITLE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .section-title {
   font-family: var(--font-serif);
   font-size: clamp(2rem, 4.5vw, 3.8rem);
@@ -205,7 +205,7 @@ body::before {
 }
 .section-title em { font-style: italic; color: var(--gold-light); }
 
-/* ─── REVEAL ANIMATIONS ──────────────────────────────────── */
+/* â”€â”€â”€ REVEAL ANIMATIONS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .reveal       { opacity: 0; transform: translateY(28px); transition: opacity 0.85s cubic-bezier(0.16,1,0.3,1), transform 0.85s cubic-bezier(0.16,1,0.3,1); }
 .reveal-left  { opacity: 0; transform: translateX(-28px); transition: opacity 0.85s var(--ease), transform 0.85s var(--ease); }
 .reveal-right { opacity: 0; transform: translateX(28px);  transition: opacity 0.85s var(--ease), transform 0.85s var(--ease); }
@@ -216,7 +216,7 @@ body::before {
 .rd4 { transition-delay: 0.32s; }
 .rd5 { transition-delay: 0.40s; }
 
-/* ─── BUTTONS ────────────────────────────────────────────── */
+/* â”€â”€â”€ BUTTONS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .btn-gold {
   display: inline-flex; align-items: center; gap: 10px;
   padding: 15px 40px;
@@ -260,9 +260,9 @@ body::before {
 }
 .btn-ghost:hover { color: var(--gold-light); gap: 14px; }
 
-/* ═══════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    NAVBAR
-   ═══════════════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 .navbar {
   position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
   padding: 22px 0;
@@ -375,9 +375,9 @@ body::before {
 .mobile-nav-link:nth-child(5) { transition-delay: 0.20s; }
 .mobile-nav-link:nth-child(6) { transition-delay: 0.24s; }
 
-/* ═══════════════════════════════════════════════
-   HERO — Fullscreen Cinematic Background
-   ═══════════════════════════════════════════════ */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   HERO â€” Fullscreen Cinematic Background
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 .hero {
   min-height: clamp(600px, 100vh, 1000px);
   display: flex;
@@ -512,9 +512,9 @@ body::before {
   animation: scrollPulseVertical 2.5s ease-in-out infinite;
 }
 
-/* ═══════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    BRAND MARQUEE
-   ═══════════════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 .marquee-section {
   position: relative; overflow: hidden;
   border-top: 1px solid var(--border-gold);
@@ -531,7 +531,7 @@ body::before {
   overflow: hidden;
   position: relative; /* needed for pseudo-element fade overlays */
 }
-/* Fade edges via pseudo-elements — Safari-safe alternative to mask-image */
+/* Fade edges via pseudo-elements â€” Safari-safe alternative to mask-image */
 .marquee-track-outer::before,
 .marquee-track-outer::after {
   content: '';
@@ -558,7 +558,7 @@ body::before {
   /* Safari needs explicit pixel width OR translateZ to GPU-composite correctly.
      width: max-content works on Chrome/FF; on Safari we rely on the flex layout. */
   width: max-content;
-  /* translateZ(0) forces GPU compositing layer — prevents iOS mid-scroll disappear */
+  /* translateZ(0) forces GPU compositing layer â€” prevents iOS mid-scroll disappear */
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   will-change: transform;
@@ -602,7 +602,7 @@ body::before {
 
 .marquee-sep { color: rgba(212,168,67,0.4); font-size: 0.4rem; }
 
-/* Second row — scrolls right */
+/* Second row â€” scrolls right */
 .marquee-row2 { border-top: 1px solid var(--border-gold); }
 .marquee-track-reverse {
   -webkit-animation: marqueeScrollReverse 52s linear infinite;
@@ -612,7 +612,7 @@ body::before {
   .marquee-track-reverse:hover { animation-play-state: paused; }
 }
 
-/* ── Marquee responsive ── */
+/* â”€â”€ Marquee responsive â”€â”€ */
 @media (max-width: 1024px) {
   .marquee-item { gap: 32px; padding: 0 32px; }
 }
@@ -712,9 +712,9 @@ img.brand-redbull {
 .brand-rani      { color: #FF6B00; font-family: 'Arial Black', sans-serif; }
 
 
-/* ═══════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    PRODUCTS / SHOP
-   ═══════════════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 .products-section {
   padding: var(--section-pad);
   background: linear-gradient(180deg, #04040A 0%, #060616 100%);
@@ -735,7 +735,7 @@ img.brand-redbull {
   margin-bottom: 32px; gap: 28px;
 }
 
-/* ─── Search Bar ───────────────────────────────── */
+/* â”€â”€â”€ Search Bar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .products-search-wrap {
   width: 100%; max-width: 560px;
 }
@@ -764,14 +764,14 @@ img.brand-redbull {
 .products-search-input::placeholder { color: var(--text-faint); }
 .products-search-clear {
   position: absolute; right: 12px;
-  background: none; border: none; cursor: pointer;
+  background: none; border: none; cursor: none;
   color: var(--text-faint); font-size: 0.75rem;
   width: 28px; height: 28px; display: flex; align-items: center; justify-content: center;
   transition: color 0.2s;
 }
 .products-search-clear:hover { color: var(--gold); }
 
-/* ─── Results Bar ──────────────────────────────── */
+/* â”€â”€â”€ Results Bar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .products-results-bar {
   max-width: var(--container); margin: 0 auto 20px;
   padding: 0 40px;
@@ -799,7 +799,7 @@ img.brand-redbull {
 .cat-filter-btn.active { background: var(--gold); color: #080610; border-color: var(--gold); }
 .cat-filter-btn.active .cat-icon { opacity: 1; filter: none; }
 
-/* ─── No Results ───────────────────────────────── */
+/* â”€â”€â”€ No Results â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .products-no-results {
   grid-column: 1 / -1;
   display: flex; flex-direction: column; align-items: center; justify-content: center;
@@ -838,7 +838,7 @@ img.brand-redbull {
   transition: transform 0.65s var(--ease);
 }
 .product-card:hover .product-card-img { transform: scale(1.08); }
-/* On mobile, show full product — don't crop */
+/* On mobile, show full product â€” don't crop */
 @media (max-width: 768px) {
   .product-card-img-wrap { aspect-ratio: 4/5; }
   .product-card-img { object-fit: contain; padding: 8px; }
@@ -874,7 +874,7 @@ img.brand-redbull {
   background: var(--grad-gold-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
 }
 
-/* ── Product card hover hint ── */
+/* â”€â”€ Product card hover hint â”€â”€ */
 .product-card-view-hint {
   position: absolute; inset: 0;
   display: flex; align-items: center; justify-content: center; gap: 7px;
@@ -887,7 +887,7 @@ img.brand-redbull {
 }
 .product-card:hover .product-card-view-hint { opacity: 1; }
 
-/* ── Blinkit-style ADD button ── */
+/* â”€â”€ Blinkit-style ADD button â”€â”€ */
 .pc-add-btn {
   display: flex; align-items: center; gap: 5px;
   padding: 7px 14px;
@@ -897,7 +897,7 @@ img.brand-redbull {
   font-size: 0.68rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
   border-radius: 4px;
   transition: all 0.22s var(--ease);
-  cursor: pointer;
+  cursor: none;
   white-space: nowrap;
   flex-shrink: 0;
 }
@@ -912,7 +912,7 @@ img.brand-redbull {
   color: #7fffb2;
 }
 
-/* ── Blinkit-style stepper ── */
+/* â”€â”€ Blinkit-style stepper â”€â”€ */
 .pc-stepper {
   display: flex; align-items: center; gap: 0;
   background: var(--gold);
@@ -932,7 +932,7 @@ img.brand-redbull {
   font-size: 0.75rem;
   display: flex; align-items: center; justify-content: center;
   transition: background 0.15s;
-  cursor: pointer;
+  cursor: none;
   border: none;
   flex-shrink: 0;
 }
@@ -978,9 +978,9 @@ img.brand-redbull {
 }
 .products-cart-bar-btn:hover { background: var(--gold-light); transform: translateY(-1px); }
 
-/* ═══════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    QUICK VIEW MODAL
-   ═══════════════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 .qv-overlay {
   position: fixed; inset: 0;
   background: rgba(0,0,0,0.82);
@@ -993,7 +993,7 @@ img.brand-redbull {
 .qv-modal {
   position: relative;
   width: 100%; max-width: 920px;
-  height: 82vh;           /* Fixed height — critical for flex children to resolve */
+  height: 82vh;           /* Fixed height â€” critical for flex children to resolve */
   max-height: 620px;
   background: linear-gradient(145deg, #0d0b1e 0%, #08060f 100%);
   border: 1px solid var(--border-gold);
@@ -1004,10 +1004,10 @@ img.brand-redbull {
   overflow: hidden;
   animation: slideUp 0.28s cubic-bezier(0.22,1,0.36,1) both;
 }
-/* ════════════════════════════════════════════════
-   QUICK VIEW — MOBILE (≤640px) — Bottom-Sheet
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   QUICK VIEW â€” MOBILE (â‰¤640px) â€” Bottom-Sheet
    Image-first layout like Amazon / Blinkit
-   ════════════════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 @media (max-width: 640px) {
 
   /* Overlay sits at the bottom */
@@ -1036,7 +1036,7 @@ img.brand-redbull {
     animation: slideUpSheet 0.32s cubic-bezier(0.22,1,0.36,1) both;
   }
 
-  /* ── Drag handle pill ── */
+  /* â”€â”€ Drag handle pill â”€â”€ */
   .qv-modal::before {
     content: '';
     position: absolute;
@@ -1048,7 +1048,7 @@ img.brand-redbull {
     z-index: 30;
   }
 
-  /* ── Close button: always on top of everything ── */
+  /* â”€â”€ Close button: always on top of everything â”€â”€ */
   .qv-close {
     top: 12px;
     right: 12px;
@@ -1059,7 +1059,7 @@ img.brand-redbull {
     color: var(--gold);
   }
 
-  /* ── Gallery: BIG explicit height — product always fully visible ── */
+  /* â”€â”€ Gallery: BIG explicit height â€” product always fully visible â”€â”€ */
   .qv-gallery {
     height: 65vw;       /* Responsive: scales with screen width */
     min-height: 300px;  /* Never smaller than 300px */
@@ -1073,7 +1073,7 @@ img.brand-redbull {
     border-bottom: 1px solid var(--border-gold);
   }
 
-  /* ── Main image: fills gallery minus thumb strip ── */
+  /* â”€â”€ Main image: fills gallery minus thumb strip â”€â”€ */
   .qv-img-wrap {
     flex: 1;
     min-height: 0;
@@ -1089,7 +1089,7 @@ img.brand-redbull {
     height: 100% !important;
   }
 
-  /* ── Thumbnail strip: fixed 68px at bottom of gallery ── */
+  /* â”€â”€ Thumbnail strip: fixed 68px at bottom of gallery â”€â”€ */
   .qv-thumbs {
     flex-shrink: 0;
     height: 68px;
@@ -1116,7 +1116,7 @@ img.brand-redbull {
     object-fit: contain;
   }
 
-  /* ── Navigation arrows: always visible, bigger touch targets ── */
+  /* â”€â”€ Navigation arrows: always visible, bigger touch targets â”€â”€ */
   .qv-arrow {
     opacity: 1 !important;
     width: 40px; height: 40px;
@@ -1127,7 +1127,7 @@ img.brand-redbull {
   /* Zoom hint hidden on mobile (handled in JSX with isMobile check) */
   .qv-zoom-hint { display: none !important; }
 
-  /* ── Details: scrollable zone below the gallery ── */
+  /* â”€â”€ Details: scrollable zone below the gallery â”€â”€ */
   .qv-details {
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
@@ -1152,11 +1152,11 @@ img.brand-redbull {
   display: flex; align-items: center; justify-content: center;
   font-size: 0.85rem;
   z-index: 10;
-  transition: all 0.2s; cursor: pointer;
+  transition: all 0.2s; cursor: none;
 }
 .qv-close:hover { background: rgba(255,255,255,0.14); color: var(--text-primary); transform: rotate(90deg); }
 
-/* Gallery column — fills its grid cell, stacks main image above thumb strip */
+/* Gallery column â€” fills its grid cell, stacks main image above thumb strip */
 .qv-gallery {
   display: flex;
   flex-direction: column;
@@ -1192,7 +1192,7 @@ img.brand-redbull {
   -webkit-user-select: none;
 }
 .qv-img.loaded { opacity: 1; }
-/* No static zoomed rule — transform is controlled by React inline styles */
+/* No static zoomed rule â€” transform is controlled by React inline styles */
 .qv-zoom-hint {
   position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%);
   background: rgba(8,6,18,0.75); backdrop-filter: blur(6px);
@@ -1205,7 +1205,7 @@ img.brand-redbull {
 }
 .qv-img-wrap:hover .qv-zoom-hint { opacity: 1; }
 .qv-country-badge {
-  position: absolute; bottom: 12px; left: 12px; /* bottom-left — away from everything */
+  position: absolute; bottom: 12px; left: 12px; /* bottom-left â€” away from everything */
   font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase;
   background: rgba(8,6,18,0.82); backdrop-filter: blur(8px);
   border: 1px solid var(--border-gold);
@@ -1241,7 +1241,7 @@ img.brand-redbull {
   color: var(--gold);
   display: flex; align-items: center; justify-content: center;
   font-size: 0.8rem;
-  cursor: pointer;
+  cursor: none;
   transition: all 0.2s;
   z-index: 5;
   opacity: 0;
@@ -1276,7 +1276,7 @@ img.brand-redbull {
   background: #0d0b1e;
   border: 1.5px solid var(--border-gold);
   overflow: hidden;
-  cursor: pointer;
+  cursor: none;
   transition: border-color 0.2s, transform 0.2s;
   padding: 0;
   border-radius: 2px;
@@ -1304,7 +1304,7 @@ img.brand-redbull {
 }
 .qv-img-count-hint i { color: var(--gold); }
 
-/* ── Mobile: dot navigation indicators ── */
+/* â”€â”€ Mobile: dot navigation indicators â”€â”€ */
 .qv-mobile-dots {
   display: flex; align-items: center; justify-content: center;
   gap: 6px; padding: 6px 0 4px;
@@ -1313,7 +1313,7 @@ img.brand-redbull {
 .qv-dot {
   width: 6px; height: 6px; border-radius: 50%;
   background: rgba(212,168,67,0.25);
-  border: none; padding: 0; cursor: pointer;
+  border: none; padding: 0; cursor: none;
   transition: all 0.2s;
   /* 44px touch target via padding trick */
   padding: 10px;
@@ -1325,7 +1325,7 @@ img.brand-redbull {
   transform: scale(1.4);
 }
 
-/* ── Mobile: gesture hint (auto-fades after 3s) ── */
+/* â”€â”€ Mobile: gesture hint (auto-fades after 3s) â”€â”€ */
 .qv-mobile-gesture-hint {
   position: absolute;
   bottom: 80px; /* above thumbnail strip */
@@ -1343,7 +1343,7 @@ img.brand-redbull {
 .qv-mobile-gesture-hint i { color: var(--gold); margin-right: 4px; }
 @keyframes hintFadeOut { 0%,60% { opacity: 1; } 100% { opacity: 0; } }
 
-/* ── Mobile: country + label meta row in details ── */
+/* â”€â”€ Mobile: country + label meta row in details â”€â”€ */
 .qv-mobile-meta {
   display: flex; align-items: center; justify-content: space-between;
   padding-bottom: 8px;
@@ -1401,7 +1401,7 @@ img.brand-redbull {
   font-size: 0.75rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
   border-radius: 4px;
   border: none;
-  cursor: pointer;
+  cursor: none;
   transition: all 0.22s var(--ease);
 }
 .qv-add-btn:hover { background: var(--gold-light); transform: scale(1.04); }
@@ -1419,7 +1419,7 @@ img.brand-redbull {
   color: #080610;
   font-size: 0.9rem;
   display: flex; align-items: center; justify-content: center;
-  cursor: pointer; border: none;
+  cursor: none; border: none;
   transition: background 0.15s;
 }
 .qv-step-btn:hover { background: rgba(0,0,0,0.12); }
@@ -1448,9 +1448,9 @@ img.brand-redbull {
   font-size: 0.78rem; color: var(--text-muted); line-height: 1.85; margin: 0;
 }
 
-/* ═══════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    CART TOAST NOTIFICATION
-   ═══════════════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 .cart-toast {
   position: fixed; bottom: 28px; left: 50%; transform: translateX(-50%) translateY(20px);
   background: rgba(8,6,18,0.96); border: 1px solid var(--border-gold);
@@ -1472,9 +1472,9 @@ img.brand-redbull {
 .cart-toast i { color: var(--gold); font-size: 0.9rem; }
 .cart-toast strong { color: var(--gold-light); }
 
-/* ═══════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    MOBILE CART FAB (bottom-right, mobile only)
-   ═══════════════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 .mobile-cart-fab {
   display: none; /* shown via media query below */
   position: fixed; bottom: 20px; left: 16px;
@@ -1484,7 +1484,7 @@ img.brand-redbull {
   color: var(--text-primary);
   padding: 13px 18px;
   align-items: center; gap: 12px;
-  cursor: pointer;
+  cursor: none;
   box-shadow: 0 8px 32px rgba(0,0,0,0.7), 0 0 0 1px rgba(212,168,67,0.08);
   transition: transform 0.3s var(--ease), box-shadow 0.3s;
   animation: fabFloat 3s ease-in-out infinite;
@@ -1517,9 +1517,9 @@ img.brand-redbull {
 }
 .mobile-cart-fab-arrow { font-size: 0.72rem; color: var(--gold); opacity: 0.7; }
 
-/* ═══════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    CART DRAWER
-   ═══════════════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 .cart-overlay {
   position: fixed; inset: 0;
   background: rgba(0,0,0,0.75); backdrop-filter: blur(5px);
@@ -1726,9 +1726,9 @@ img.brand-redbull {
 }
 .cart-clear-btn:hover { background: rgba(255,68,68,0.07); border-color: rgba(255,68,68,0.45); color: #ff4444; }
 
-/* ═══════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    WHY EXOTICA
-   ═══════════════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 .why-section {
   padding: 80px 0;
   background: linear-gradient(180deg, #060616 0%, #04040A 100%);
@@ -1771,9 +1771,9 @@ img.brand-redbull {
 .why-card h3 { font-family: var(--font-serif); font-size: 1rem; font-weight: 400; color: var(--text-primary); margin-bottom: 6px; }
 .why-card p  { font-size: 0.72rem; color: var(--text-muted); line-height: 1.6; }
 
-/* ═══════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    GLOBAL ORIGINS
-   ═══════════════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 .world-section { padding: var(--section-pad); background: #04040A; overflow: hidden; }
 .world-inner { max-width: var(--container); margin: 0 auto; padding: 0 40px; }
 
@@ -1816,9 +1816,9 @@ img.brand-redbull {
   position: absolute; bottom: 0; left: 0; right: 0; padding: 32px 24px;
 }
 
-/* ═══════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    ABOUT US
-   ═══════════════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 .about-section {
   position: relative; overflow: hidden;
   padding: var(--section-pad);
@@ -1853,7 +1853,7 @@ img.brand-redbull {
   pointer-events: none;
 }
 
-/* ── Story two-col ── */
+/* â”€â”€ Story two-col â”€â”€ */
 .about-story {
   display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
   margin-bottom: 80px;
@@ -1889,7 +1889,7 @@ img.brand-redbull {
 .about-chip i { color: var(--gold); font-size: 0.7rem; }
 .about-chip:hover { border-color: var(--border-gold); color: var(--text-primary); }
 
-/* ── Stat panel ── */
+/* â”€â”€ Stat panel â”€â”€ */
 .about-stat-panel { display: flex; align-items: stretch; }
 .about-stat-panel-inner {
   position: relative; width: 100%;
@@ -1942,7 +1942,7 @@ img.brand-redbull {
 }
 .about-cta-btn { width: 100%; justify-content: center; }
 
-/* ── Pillars row ── */
+/* â”€â”€ Pillars row â”€â”€ */
 .about-pillars {
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
   border: 1px solid var(--border-subtle);
@@ -1978,9 +1978,9 @@ img.brand-redbull {
   font-size: 0.78rem; color: var(--text-muted); line-height: 1.75;
 }
 
-/* ═══════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    TESTIMONIALS
-   ═══════════════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 .testimonials-section { padding: var(--section-pad); background: linear-gradient(180deg, #060616 0%, #04040A 100%); overflow: hidden; }
 .testimonials-inner { max-width: var(--container); margin: 0 auto; padding: 0 40px; }
 .testimonials-marquee-container {
@@ -2054,9 +2054,9 @@ img.brand-redbull {
 .testimonial-name { font-size: 0.8rem; font-weight: 500; color: var(--text-primary); }
 .testimonial-loc  { font-size: 0.65rem; color: var(--text-faint); letter-spacing: 0.1em; }
 
-/* ═══════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    CONTACT
-   ═══════════════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 .contact-section { padding: var(--section-pad); background: #04040A; }
 .contact-inner   { max-width: var(--container); margin: 0 auto; padding: 0 40px; }
 .contact-grid    { display: grid; grid-template-columns: 1fr 1.4fr; gap: 60px; align-items: start; margin-top: 56px; }
@@ -2087,9 +2087,9 @@ img.brand-redbull {
 .map-open-link  { font-size: 0.6rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); transition: color 0.3s; }
 .map-open-link:hover { color: var(--gold-light); }
 
-/* ═══════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    FOOTER
-   ═══════════════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 .footer { padding: 80px 0 0; background: #030309; border-top: 1px solid var(--border-gold); position: relative; overflow: hidden; }
 .footer-glow { position: absolute; top: -80px; left: 50%; transform: translateX(-50%); width: 600px; height: 200px; background: radial-gradient(ellipse, rgba(212,168,67,0.06), transparent 70%); pointer-events: none; }
 .footer-inner { max-width: var(--container); margin: 0 auto; padding: 0 40px; }
@@ -2128,7 +2128,7 @@ img.brand-redbull {
 .footer-bottom { padding: 22px 0; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
 .footer-bottom p { font-size: 0.68rem; color: var(--text-faint); letter-spacing: 0.08em; }
 
-/* ─── FAB & BACK TO TOP ──────────────────────────────── */
+/* â”€â”€â”€ FAB & BACK TO TOP â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .fab-whatsapp {
   position: fixed; bottom: 28px; right: 28px; z-index: 500;
   width: 58px; height: 58px; border-radius: 50%;
@@ -2153,9 +2153,9 @@ img.brand-redbull {
 .back-to-top.show { opacity: 1; visibility: visible; pointer-events: all; }
 .back-to-top:hover { background: var(--gold-subtle); border-color: var(--gold); transform: translateY(-2px); }
 
-/* ═══════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    TRUST BAR
-   ═══════════════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 .trust-bar {
   background: linear-gradient(180deg, #06060F 0%, #04040A 100%);
   border-top: 1px solid var(--border-gold);
@@ -2207,9 +2207,9 @@ img.brand-redbull {
   font-size: 0.65rem; color: var(--text-faint); line-height: 1.5;
 }
 
-/* ═══════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    GIFTING SECTION
-   ═══════════════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 .gifting-section {
   padding: var(--section-pad);
   background: linear-gradient(160deg, #06060F 0%, #080618 50%, #04040A 100%);
@@ -2254,7 +2254,7 @@ img.brand-redbull {
 .gifting-type-desc { font-size: 0.68rem; color: var(--text-faint); line-height: 1.5; }
 .gifting-cta { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
 
-/* — Visual right side — */
+/* â€” Visual right side â€” */
 .gifting-visual { position: relative; display: flex; align-items: center; justify-content: center; }
 .gifting-visual-inner {
   position: relative; width: 100%; max-width: 440px;
@@ -2344,7 +2344,7 @@ img.brand-redbull {
   animation: shimmer 3s ease-in-out infinite;
 }
 
-/* ─── Float zone: clipping container ─────────────────────────── */
+/* â”€â”€â”€ Float zone: clipping container â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .gifting-float-zone {
   position: relative;
   width: 100%; height: 260px;
@@ -2394,7 +2394,7 @@ img.brand-redbull {
 .gifting-pulse-ring-1 { animation-delay: 0s; }
 .gifting-pulse-ring-2 { animation-delay: 1.2s; }
 
-/* Floating product images — inside gifting-float-zone */
+/* Floating product images â€” inside gifting-float-zone */
 .gifting-float-img {
   position: absolute;
   object-fit: contain;
@@ -2438,9 +2438,9 @@ img.brand-redbull {
   color: var(--gold); display: flex; align-items: center; justify-content: center; gap: 8px;
 }
 
-/* ═══════════════════════════════════════════════
-   EXOTICA LIFE — INSTAGRAM WALL
-   ═══════════════════════════════════════════════ */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   EXOTICA LIFE â€” INSTAGRAM WALL
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 .exlife-section {
   padding: 20px 0 var(--section-pad);
   background: #05050D;
@@ -2551,9 +2551,9 @@ img.brand-redbull {
   display: flex; justify-content: center; margin-top: 44px;
 }
 
-/* ═══════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    KEYFRAMES
-   ═══════════════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 @keyframes letterDrop    { to { opacity: 1; transform: translateY(0); } }
 @keyframes loadBar       { to { width: 100%; } }
 @keyframes fadeIn        { to { opacity: 1; } }
@@ -2577,19 +2577,19 @@ img.brand-redbull {
 @keyframes slowZoom      { from { transform:scale(1.0); } to { transform:scale(1.08); } }
 @keyframes floatChip     { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-8px); } }
 
-/* ═══════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    RESPONSIVE
-   ═══════════════════════════════════════════════ */
-/* ═══════════════════════════════════════════════
-   RESPONSIVE — iPad Pro / Large Tablet (1024px)
-   ═══════════════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   RESPONSIVE â€” iPad Pro / Large Tablet (1024px)
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 @media (max-width: 1200px) {
   .products-grid { grid-template-columns: repeat(3, 1fr); }
   .footer-top { gap: 40px; }
   .footer-cols-grid { gap: 28px; }
   .gifting-inner { gap: 50px; }
   .exlife-grid { grid-template-rows: repeat(2, 260px); }
-  /* Gifting photo zone — responsive height */
+  /* Gifting photo zone â€” responsive height */
   .gifting-photo-zone { height: clamp(220px, 28vw, 300px) !important; }
 }
 
@@ -2615,13 +2615,13 @@ img.brand-redbull {
   .exlife-span-wide { grid-column: span 1; }
 }
 
-/* ═══════════════════════════════════════════════
-   RESPONSIVE — Tablet / Large Mobile (768px)
-   ═══════════════════════════════════════════════ */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   RESPONSIVE â€” Tablet / Large Mobile (768px)
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 @media (max-width: 768px) {
   :root { --section-pad: 64px 0; }
 
-  /* ── About ── */
+  /* â”€â”€ About â”€â”€ */
   .about-story { grid-template-columns: 1fr; gap: 40px; margin-bottom: 48px; }
   .about-pillars { grid-template-columns: repeat(2, 1fr); }
   .about-chips { flex-direction: column; }
@@ -2630,7 +2630,7 @@ img.brand-redbull {
   .about-stats-grid { grid-template-columns: 1fr 1fr; }
   .about-stat-num { font-size: 1.5rem; }
 
-  /* ── Nav ── */
+  /* â”€â”€ Nav â”€â”€ */
   .nav-links { display: none; }
   /* On mobile: hide "Cart" text label, but SHOW the price below the icon */
   .nav-cart-label { display: none; }
@@ -2657,11 +2657,11 @@ img.brand-redbull {
   .hamburger { display: flex; }
   .nav-container { padding: 0 16px; gap: 10px; }
 
-  /* ── Global: centre all section headings ── */
+  /* â”€â”€ Global: centre all section headings â”€â”€ */
   .section-label { justify-content: center; }
   .section-title { text-align: center; font-size: clamp(1.8rem, 7vw, 2.8rem); }
 
-  /* ── HERO ── */
+  /* â”€â”€ HERO â”€â”€ */
   .hero { overflow: hidden; }
   .hero-content {
     padding: 110px 16px 60px;
@@ -2683,7 +2683,7 @@ img.brand-redbull {
   .hero-actions .btn-gold, .hero-actions .btn-ghost { width: 100%; justify-content: center; }
   .hero-scroll { display: none; }
 
-  /* ── Products ── */
+  /* â”€â”€ Products â”€â”€ */
   .products-section { padding: 52px 0; }
   .products-header { padding: 0 16px !important; flex-direction: column; align-items: center; text-align: center; margin-bottom: 24px; }
   .products-grid {
@@ -2696,19 +2696,19 @@ img.brand-redbull {
   .product-qty-wrap { margin-left: auto; }
   .category-filters { justify-content: flex-start; flex-wrap: wrap; gap: 6px; padding: 0 16px; overflow-x: auto; scrollbar-width: none; }
   .category-filters::-webkit-scrollbar { display: none; }
-  /* Products sticky cart bar — compact on tablet */
+  /* Products sticky cart bar â€” compact on tablet */
   .products-cart-bar-inner { padding: 0 16px; gap: 10px; flex-wrap: wrap; justify-content: space-between; }
   .products-cart-bar-total { font-size: 0.95rem; }
   /* Search bar */
   .products-search-wrap { padding: 0 16px; }
   .products-results-bar { padding: 0 16px; }
 
-  /* ── QuickView Modal tablet ── */
+  /* â”€â”€ QuickView Modal tablet â”€â”€ */
   .qv-modal {
     max-width: calc(100vw - 24px);
   }
 
-  /* ── Testimonials ── */
+  /* â”€â”€ Testimonials â”€â”€ */
   .testimonials-section > div { padding-left: 20px !important; padding-right: 20px !important; }
   .testimonials-section > div > div:first-child { text-align: center; }
   .testimonial-card { width: 270px; padding: 20px 18px; }
@@ -2716,7 +2716,7 @@ img.brand-redbull {
   /* iOS momentum scrolling on testimonial track */
   .testimonials-track { -webkit-overflow-scrolling: touch; }
 
-  /* ── Contact ── */
+  /* â”€â”€ Contact â”€â”€ */
   .contact-inner { padding: 0 20px !important; }
   .contact-inner > div:first-child { text-align: center; }
   .contact-inner > div:first-child .section-label { justify-content: center; }
@@ -2726,25 +2726,25 @@ img.brand-redbull {
   .contact-cta-row a { justify-content: center; text-align: center; }
   .map-wrap iframe { height: 260px; }
 
-  /* ── Trust Bar ── */
+  /* â”€â”€ Trust Bar â”€â”€ */
   .trust-bar-inner { grid-template-columns: 1fr 1fr; }
   .trust-badge-card { padding: 20px 18px; gap: 12px; }
   .trust-badge-card { border-bottom: 1px solid var(--border-subtle); }
   .trust-badge-card:nth-child(2n) { border-right: none; }
   .trust-badge-card:nth-child(n+3) { border-bottom: none; }
 
-  /* ── Gifting ── */
+  /* â”€â”€ Gifting â”€â”€ */
   .gifting-inner { padding: 0 20px; gap: 32px; }
   .gifting-visual { order: -1; }
   .gifting-photo-zone { height: clamp(200px, 55vw, 280px) !important; }
 
-  /* ── Exotica Life ── */
+  /* â”€â”€ Exotica Life â”€â”€ */
   .exlife-inner { padding: 0 20px; }
   .exlife-grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(3, 180px); }
   .exlife-span-tall { grid-row: span 1; }
   .exlife-span-wide { grid-column: span 1; }
 
-  /* ── Footer ── */
+  /* â”€â”€ Footer â”€â”€ */
   .footer-inner { padding: 0 20px !important; }
   .footer-top { grid-template-columns: 1fr; gap: 32px; }
   .footer-brand { align-items: center; text-align: center; }
@@ -2756,7 +2756,7 @@ img.brand-redbull {
   .footer-social { justify-content: center; }
   .footer-bottom { flex-direction: column; text-align: center; gap: 10px; }
 
-  /* ── Cart Drawer ── */
+  /* â”€â”€ Cart Drawer â”€â”€ */
   .cart-drawer {
     width: 100vw;
     /* Respect iPhone safe area at bottom */
@@ -2784,7 +2784,7 @@ img.brand-redbull {
   .cart-item-remove { min-width: 44px; min-height: 44px; }
   .cart-toast { bottom: 84px; font-size: 0.72rem; padding: 10px 18px; }
 
-  /* ── Mobile Cart FAB — safe-area-aware ── */
+  /* â”€â”€ Mobile Cart FAB â€” safe-area-aware â”€â”€ */
   .mobile-cart-fab {
     display: flex;
     bottom: calc(16px + env(safe-area-inset-bottom));
@@ -2800,9 +2800,9 @@ img.brand-redbull {
   }
 }
 
-/* ═══════════════════════════════════════════════
-   RESPONSIVE — Mobile (480px)
-   ═══════════════════════════════════════════════ */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   RESPONSIVE â€” Mobile (480px)
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 @media (max-width: 480px) {
   :root { --section-pad: 52px 0; }
 
@@ -2828,7 +2828,7 @@ img.brand-redbull {
   .hero-stat-num { font-size: clamp(1.5rem, 7vw, 2rem); }
   .hero-content { padding: 100px 14px 56px; }
 
-  /* ── Products: strict 2-col on phones ── */
+  /* â”€â”€ Products: strict 2-col on phones â”€â”€ */
   .products-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
@@ -2876,7 +2876,7 @@ img.brand-redbull {
   .product-card-country { font-size: 0.42rem; padding: 2px 4px; }
   .product-card-country img { width: 10px; height: 10px; }
 
-  /* ── QuickView on phone ── */
+  /* â”€â”€ QuickView on phone â”€â”€ */
   .qv-name { font-size: 1.3rem; }
   .qv-price { font-size: 1.5rem; }
   .qv-add-btn { padding: 10px 18px; font-size: 0.68rem; min-height: 44px; }
@@ -2902,9 +2902,9 @@ img.brand-redbull {
   .mobile-nav-link { font-size: 2rem; gap: 22px; }
 }
 
-/* ═══════════════════════════════════════════════
-   RESPONSIVE — Small Mobile (375px)
-   ═══════════════════════════════════════════════ */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   RESPONSIVE â€” Small Mobile (375px)
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 @media (max-width: 375px) {
   .hero-title { font-size: clamp(2rem, 11vw, 3rem); letter-spacing: 0.04em; }
   .hero-content { padding: 96px 10px 48px; }
@@ -2946,9 +2946,9 @@ img.brand-redbull {
   }
 }
 
-/* ═══════════════════════════════════════════════
-   RESPONSIVE — Very Small Mobile (320px)
-   ═══════════════════════════════════════════════ */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   RESPONSIVE â€” Very Small Mobile (320px)
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 @media (max-width: 320px) {
   .hero-title { font-size: clamp(1.75rem, 10vw, 2.5rem); }
   .hero-content { padding: 90px 8px 44px; }
@@ -2988,3 +2988,334 @@ img.brand-redbull {
 .brand-snickers { color: #7b4f2c; font-family: Impact, sans-serif; }
 .brand-twix { color: #c8952a; font-family: Arial Black, sans-serif; }
 .brand-skittles { color: #ef3e42; font-family: Helvetica Neue, sans-serif; font-weight: 900; }
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   PRODUCT DETAIL PAGE  (/products/[id])
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+.pdp-root {
+  min-height: 100dvh;
+  background: linear-gradient(160deg, #08060f 0%, #0d0b1e 60%, #080610 100%);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+}
+
+/* â”€â”€ Top bar â”€â”€ */
+.pdp-topbar {
+  position: sticky; top: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 20px;
+  height: 56px;
+  background: rgba(8,6,15,0.92);
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-gold);
+}
+.pdp-back {
+  display: flex; align-items: center; gap: 8px;
+  color: var(--gold); font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase;
+  background: none; border: none; cursor: none;
+  padding: 10px 0;
+  transition: opacity 0.2s;
+}
+.pdp-back:hover { opacity: 0.75; }
+.pdp-back i { font-size: 0.85rem; }
+.pdp-topbar-brand {
+  font-family: var(--font-serif); font-size: 1rem; font-weight: 300;
+  background: var(--grad-gold-text); -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; background-clip: text;
+  letter-spacing: 0.08em;
+}
+.pdp-topbar-right { min-width: 80px; display: flex; justify-content: flex-end; }
+.pdp-cart-badge {
+  font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase;
+  background: rgba(212,168,67,0.15); border: 1px solid var(--border-gold);
+  color: var(--gold); padding: 3px 10px;
+}
+
+/* â”€â”€ Page layout â”€â”€ */
+.pdp-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: calc(100dvh - 56px);
+}
+
+/* â”€â”€ Gallery (left column) â”€â”€ */
+.pdp-gallery {
+  position: sticky; top: 56px;
+  height: calc(100dvh - 56px);
+  display: flex; flex-direction: column;
+  background: #06040e;
+  border-right: 1px solid var(--border-subtle);
+  overflow: hidden;
+}
+
+/* Main image wrap â€” portrait, takes most of the gallery height */
+.pdp-img-wrap {
+  flex: 1;
+  min-height: 0;
+  position: relative;
+  overflow: hidden;
+  background: #06040e;
+  display: flex; align-items: center; justify-content: center;
+}
+.pdp-img-wrap.zoomed { cursor: zoom-out; }
+
+.pdp-img-skeleton {
+  position: absolute; inset: 0;
+  background: linear-gradient(90deg, #0d0b1e 25%, #1a1530 50%, #0d0b1e 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.6s infinite;
+}
+
+.pdp-img {
+  width: 100%; height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  display: block;
+  transform-origin: 50% 50%;
+  will-change: transform;
+  user-select: none; -webkit-user-select: none;
+}
+.pdp-img.loaded { opacity: 1; }
+
+/* Zoom hint */
+.pdp-zoom-hint {
+  position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%);
+  font-size: 0.55rem; letter-spacing: 0.12em; text-transform: uppercase;
+  color: rgba(240,236,228,0.5);
+  background: rgba(0,0,0,0.5); padding: 4px 12px; border-radius: 20px;
+  pointer-events: none; white-space: nowrap;
+  opacity: 0; transition: opacity 0.2s;
+}
+.pdp-img-wrap:hover .pdp-zoom-hint { opacity: 1; }
+
+/* Arrow buttons */
+.pdp-arrow {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  width: 38px; height: 38px; border-radius: 50%;
+  background: rgba(8,6,18,0.72); backdrop-filter: blur(6px);
+  border: 1px solid var(--border-gold);
+  color: var(--gold);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.8rem; cursor: none;
+  opacity: 0; transition: all 0.2s; z-index: 5;
+}
+.pdp-arrow-left  { left: 10px; }
+.pdp-arrow-right { right: 10px; }
+.pdp-img-wrap:hover .pdp-arrow,
+.pdp-gallery:hover .pdp-arrow { opacity: 1; }
+@media (pointer: coarse) { .pdp-arrow { opacity: 1 !important; } }
+
+/* Dot indicators */
+.pdp-dots {
+  display: flex; align-items: center; justify-content: center;
+  gap: 6px; padding: 8px 0 4px;
+  flex-shrink: 0;
+}
+.pdp-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: rgba(212,168,67,0.2); border: none;
+  cursor: none; transition: all 0.2s;
+  /* Large touch target */
+  padding: 9px; background-clip: content-box;
+}
+.pdp-dot.active { background-color: var(--gold); background-clip: content-box; transform: scale(1.3); }
+
+/* Thumbnail strip */
+.pdp-thumbs {
+  display: flex; gap: 6px; padding: 8px 12px;
+  overflow-x: auto; overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; flex-shrink: 0;
+  border-top: 1px solid var(--border-subtle);
+  background: rgba(4,4,10,0.97);
+}
+.pdp-thumbs::-webkit-scrollbar { display: none; }
+.pdp-thumb {
+  flex-shrink: 0; width: 64px;
+  display: flex; flex-direction: column; align-items: center; gap: 3px;
+  background: rgba(255,255,255,0.03); border: 1px solid var(--border-subtle);
+  cursor: none; transition: all 0.2s; padding: 4px;
+}
+.pdp-thumb.active { border-color: var(--gold); background: rgba(212,168,67,0.08); }
+.pdp-thumb img { width: 100%; aspect-ratio: 1; object-fit: contain; }
+.pdp-thumb span { font-size: 0.45rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); }
+
+/* â”€â”€ Details (right column) â”€â”€ */
+.pdp-details {
+  padding: 40px 40px 80px;
+  overflow-y: auto;
+  display: flex; flex-direction: column; gap: 20px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-gold) transparent;
+}
+.pdp-details::-webkit-scrollbar { width: 4px; }
+.pdp-details::-webkit-scrollbar-thumb { background: var(--border-gold); border-radius: 2px; }
+
+.pdp-meta-row {
+  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+}
+.pdp-category {
+  font-size: 0.62rem; letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--gold); opacity: 0.8;
+}
+.pdp-country-badge {
+  font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase;
+  background: rgba(212,168,67,0.1); border: 1px solid rgba(212,168,67,0.25);
+  color: var(--gold-light); padding: 3px 10px;
+}
+
+.pdp-name {
+  font-family: var(--font-serif);
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  font-weight: 300; line-height: 1.25;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.pdp-desc {
+  font-size: 0.9rem; line-height: 1.7;
+  color: var(--text-secondary); margin: 0;
+}
+
+.pdp-price-row {
+  display: flex; align-items: baseline; gap: 10px;
+}
+.pdp-price {
+  font-family: var(--font-serif);
+  font-size: 2rem; font-weight: 300; letter-spacing: 0.04em;
+  background: var(--grad-gold-text); -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; background-clip: text;
+}
+.pdp-price-note {
+  font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+/* Cart */
+.pdp-cart-section { display: flex; align-items: center; }
+.pdp-add-btn {
+  display: flex; align-items: center; gap: 10px;
+  padding: 14px 32px;
+  background: var(--gold); color: #080610;
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;
+  border: none; cursor: none; transition: all 0.3s;
+  width: 100%;  justify-content: center;
+}
+.pdp-add-btn:hover { background: var(--gold-light); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(212,168,67,0.3); }
+.pdp-stepper {
+  display: flex; align-items: center; gap: 0;
+  border: 1px solid var(--border-gold);
+  width: 100%;
+}
+.pdp-step-btn {
+  width: 52px; height: 52px; flex-shrink: 0;
+  background: rgba(212,168,67,0.08); border: none;
+  color: var(--gold); font-size: 0.9rem; cursor: none;
+  transition: background 0.2s;
+  display: flex; align-items: center; justify-content: center;
+}
+.pdp-step-btn:hover { background: rgba(212,168,67,0.18); }
+.pdp-step-qty {
+  flex: 1; text-align: center;
+  font-family: var(--font-serif); font-size: 1.2rem; font-weight: 300;
+  color: var(--text-primary);
+  border-left: 1px solid var(--border-gold);
+  border-right: 1px solid var(--border-gold);
+  line-height: 52px;
+}
+
+.pdp-divider {
+  height: 1px; background: var(--border-subtle); margin: 0;
+}
+
+/* Ingredients */
+.pdp-ingredients { display: flex; flex-direction: column; gap: 8px; }
+.pdp-section-title {
+  font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--gold); display: flex; align-items: center; gap: 8px; margin: 0;
+  font-weight: 400;
+}
+.pdp-section-title i { opacity: 0.8; }
+.pdp-ingredients-text {
+  font-size: 0.78rem; line-height: 1.65;
+  color: var(--text-muted); margin: 0;
+}
+
+/* Info pills */
+.pdp-info-pills {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;
+}
+.pdp-info-pill {
+  display: flex; align-items: center; gap: 10px;
+  padding: 12px 14px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border-subtle);
+}
+.pdp-info-pill > i { color: var(--gold); font-size: 0.9rem; flex-shrink: 0; }
+.pdp-info-pill > div { display: flex; flex-direction: column; gap: 2px; }
+.pdp-pill-label { font-size: 0.5rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-faint); }
+.pdp-pill-value { font-size: 0.72rem; color: var(--text-secondary); }
+
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   PDP â€” MOBILE (portrait, single-column, scroll the page)
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+@media (max-width: 768px) {
+  .pdp-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    min-height: auto;
+  }
+
+  /* Gallery: NOT sticky on mobile â€” scrolls with page */
+  .pdp-gallery {
+    position: relative; top: 0;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  /* Portrait image: tall enough to dominate the screen */
+  .pdp-img-wrap {
+    height: 78vw;    /* Portrait ratio */
+    min-height: 320px;
+    max-height: 520px;
+    flex-shrink: 0;
+  }
+
+  /* Details: no sticky, natural page scroll */
+  .pdp-details {
+    padding: 24px 20px calc(80px + env(safe-area-inset-bottom));
+    gap: 16px;
+    overflow-y: visible; /* Let the page scroll naturally */
+  }
+
+  .pdp-name { font-size: clamp(1.2rem, 5vw, 1.6rem); }
+
+  .pdp-info-pills {
+    grid-template-columns: 1fr 1fr;
+  }
+  .pdp-info-pills .pdp-info-pill:last-child {
+    grid-column: 1 / -1;
+  }
+
+  /* Thumb strip slightly smaller */
+  .pdp-thumb { width: 54px; }
+
+  /* Topbar slightly more compact */
+  .pdp-topbar { height: 50px; }
+}
+
+@media (max-width: 400px) {
+  .pdp-img-wrap {
+    height: 88vw;
+    min-height: 280px;
+  }
+  .pdp-details { padding: 20px 16px 80px; }
+  .pdp-info-pills { grid-template-columns: 1fr; }
+  .pdp-info-pills .pdp-info-pill:last-child { grid-column: auto; }
+}
+
+

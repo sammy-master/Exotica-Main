@@ -1,4 +1,4 @@
-import Cursor          from '@/components/Cursor'
+
 import Loader           from '@/components/Loader'
 import Navbar           from '@/components/Navbar'
 import Hero             from '@/components/Hero'
@@ -17,9 +17,6 @@ import BackToTop        from '@/components/BackToTop'
 export default function Home() {
   return (
     <>
-      {/* Custom cursor */}
-      <Cursor />
-
       {/* Cinematic loader */}
       <Loader />
 
