@@ -109,6 +109,12 @@ function QuickViewModal({ product, onClose }: QuickViewProps) {
   const inCart = items.find(i => i.id === product.id)
   const inCartQty = inCart?.quantity ?? 0
 
+  // Detect touch/mobile — used to suppress zoom hint and adjust layout
+  const [isMobile, setIsMobile] = useState(false)
+  useEffect(() => {
+    setIsMobile(window.matchMedia('(pointer: coarse)').matches || window.innerWidth <= 640)
+  }, [])
+
   // Build the full image list: main image first, then any extra images
   const allImages = [product.image, ...(product.images ?? [])].filter(Boolean) as string[]
   const [activeIdx, setActiveIdx] = useState(0)
@@ -234,12 +240,14 @@ function QuickViewModal({ product, onClose }: QuickViewProps) {
               }}
             />
 
-            {/* Badges */}
-            <span className="qv-photo-label">{imgLabel}</span>
+            {/* Country badge — always bottom-left */}
             <span className="qv-country-badge">{product.country}</span>
 
-            {/* Zoom hint */}
-            {!isDragging && (
+            {/* Photo label (FRONT/BACK) — on desktop: top-right; on mobile: bottom-right above country */}
+            <span className={`qv-photo-label${isMobile ? ' qv-photo-label-mobile' : ''}`}>{imgLabel}</span>
+
+            {/* Zoom hint — desktop only, hidden on touch devices */}
+            {!isMobile && !isDragging && (
               <div className="qv-zoom-hint">
                 <i className={`fas fa-${zoomed ? 'compress-alt' : 'search-plus'}`} />
                 {zoomed ? 'Click to zoom out · Drag to pan' : 'Click anywhere to zoom in'}
