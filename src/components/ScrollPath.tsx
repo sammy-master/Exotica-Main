@@ -4,9 +4,15 @@ import { useEffect, useState, useRef } from 'react'
 
 export default function ScrollPath() {
   const [scrollProgress, setScrollProgress] = useState(0)
+  const [isTouchDevice, setIsTouchDevice] = useState(false)
   const pathRef1 = useRef<SVGPathElement>(null)
   const pathRef2 = useRef<SVGPathElement>(null)
   const [lengths, setLengths] = useState({ len1: 0, len2: 0 })
+
+  // Detect touch/mobile on mount
+  useEffect(() => {
+    setIsTouchDevice(window.matchMedia('(pointer: coarse)').matches)
+  }, [])
 
   useEffect(() => {
     // Initial measure
@@ -58,6 +64,9 @@ export default function ScrollPath() {
   // so it never overlaps or interferes with reading text on narrow mobile screens.
   const path1 = "M 5,0 C 15,20 20,35 8,55 C 2,75 12,90 5,100"
   const path2 = "M 10,0 C 0,25 5,45 18,65 C 25,85 2,95 10,100"
+
+  // Don't render on touch/mobile devices — not useful and wastes performance
+  if (isTouchDevice) return null
 
   return (
     <div
