@@ -109,64 +109,134 @@ function QuickViewModal({ product, onClose }: QuickViewProps) {
   const inCart = items.find(i => i.id === product.id)
   const inCartQty = inCart?.quantity ?? 0
 
-  // Detect touch/mobile — used to suppress zoom hint and adjust layout
+  // Detect touch/mobile
   const [isMobile, setIsMobile] = useState(false)
   useEffect(() => {
     setIsMobile(window.matchMedia('(pointer: coarse)').matches || window.innerWidth <= 640)
   }, [])
 
-  // Build the full image list: main image first, then any extra images
+  // Image list
   const allImages = [product.image, ...(product.images ?? [])].filter(Boolean) as string[]
   const [activeIdx, setActiveIdx] = useState(0)
   const [imgLoaded, setImgLoaded] = useState(false)
 
-  // ── Zoom + Pan state ──
+  // ── Desktop: click-to-zoom + drag-to-pan ──
   const ZOOM_SCALE = 2.5
   const [zoomed, setZoomed]       = useState(false)
-  const [origin, setOrigin]       = useState('50% 50%')   // transform-origin for zoom point
+  const [origin, setOrigin]       = useState('50% 50%')
   const [pan, setPan]             = useState({ x: 0, y: 0 })
   const [isDragging, setIsDragging] = useState(false)
   const dragRef = useRef({ startX: 0, startY: 0, startPanX: 0, startPanY: 0, moved: false })
+
+  // ── Mobile: pinch-to-zoom + swipe navigation ──
+  const [mobileScale, setMobileScale] = useState(1)
+  const [mobilePan,   setMobilePan]   = useState({ x: 0, y: 0 })
+  const touchRef = useRef<{
+    touches: React.Touch[]
+    startDist: number
+    startScale: number
+    startX: number
+    startY: number
+    startPanX: number
+    startPanY: number
+    lastTap: number
+    isPinching: boolean
+  }>({
+    touches: [], startDist: 0, startScale: 1,
+    startX: 0, startY: 0, startPanX: 0, startPanY: 0,
+    lastTap: 0, isPinching: false
+  })
   const wrapRef = useRef<HTMLDivElement>(null)
 
-  // Reset when switching photos
+  const resetMobileZoom = () => { setMobileScale(1); setMobilePan({ x: 0, y: 0 }) }
+
   const handleSetActive = (idx: number) => {
     if (idx === activeIdx) return
-    setZoomed(false)
-    setPan({ x: 0, y: 0 })
-    setImgLoaded(false)
-    setActiveIdx(idx)
+    setZoomed(false); setPan({ x: 0, y: 0 })
+    resetMobileZoom()
+    setImgLoaded(false); setActiveIdx(idx)
   }
 
-  // Click on image: zoom in at exact click point, or zoom out
-  const handleImageClick = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (dragRef.current.moved) return   // was a drag, not a click
-    const wrap = wrapRef.current
-    if (!wrap) return
+  const getDist = (t: React.TouchList) => {
+    const dx = t[0].clientX - t[1].clientX
+    const dy = t[0].clientY - t[1].clientY
+    return Math.sqrt(dx * dx + dy * dy)
+  }
 
-    if (zoomed) {
-      // Zoom out — reset
-      setZoomed(false)
-      setPan({ x: 0, y: 0 })
-      setOrigin('50% 50%')
-    } else {
-      // Zoom in at exact click point
-      const rect = wrap.getBoundingClientRect()
-      const xPct = ((e.clientX - rect.left) / rect.width)  * 100
-      const yPct = ((e.clientY - rect.top)  / rect.height) * 100
-      setOrigin(`${xPct.toFixed(1)}% ${yPct.toFixed(1)}%`)
-      setZoomed(true)
+  // ── Mobile touch handlers ──
+  const onTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    const t = touchRef.current
+    if (e.touches.length === 1) {
+      t.startX    = e.touches[0].clientX
+      t.startY    = e.touches[0].clientY
+      t.startPanX = mobilePan.x
+      t.startPanY = mobilePan.y
+      t.isPinching = false
+      // Double-tap to zoom
+      const now = Date.now()
+      if (now - t.lastTap < 280) {
+        if (mobileScale > 1) resetMobileZoom()
+        else { setMobileScale(2.5); setMobilePan({ x: 0, y: 0 }) }
+      }
+      t.lastTap = now
+    } else if (e.touches.length === 2) {
+      t.isPinching  = true
+      t.startDist   = getDist(e.touches)
+      t.startScale  = mobileScale
     }
   }
 
-  // Pointer drag handlers (unified mouse + touch)
+  const onTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+    const t = touchRef.current
+    if (e.touches.length === 2 && t.isPinching) {
+      e.preventDefault()
+      const newDist = getDist(e.touches)
+      const ratio   = newDist / t.startDist
+      const next    = Math.min(Math.max(t.startScale * ratio, 1), 5)
+      setMobileScale(next)
+    } else if (e.touches.length === 1 && mobileScale > 1.05) {
+      // Pan when zoomed in
+      e.preventDefault()
+      const dx = e.touches[0].clientX - t.startX
+      const dy = e.touches[0].clientY - t.startY
+      setMobilePan({ x: t.startPanX + dx, y: t.startPanY + dy })
+    }
+  }
+
+  const onTouchEnd = (e: React.TouchEvent<HTMLDivElement>) => {
+    const t = touchRef.current
+    if (t.isPinching) { t.isPinching = false; return }
+    // Swipe to navigate — only when not zoomed
+    if (mobileScale <= 1.05 && e.changedTouches.length === 1) {
+      const dx = e.changedTouches[0].clientX - t.startX
+      const dy = e.changedTouches[0].clientY - t.startY
+      if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 45) {
+        if (dx < 0) handleSetActive((activeIdx + 1) % allImages.length)   // swipe left → next
+        else        handleSetActive((activeIdx - 1 + allImages.length) % allImages.length) // swipe right → prev
+      }
+    }
+    // Snap scale to 1 if pinched below threshold
+    if (mobileScale < 1.15) resetMobileZoom()
+  }
+
+  // ── Desktop pointer handlers ──
+  const handleImageClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (dragRef.current.moved || isMobile) return
+    const wrap = wrapRef.current
+    if (!wrap) return
+    if (zoomed) { setZoomed(false); setPan({ x: 0, y: 0 }); setOrigin('50% 50%') }
+    else {
+      const rect = wrap.getBoundingClientRect()
+      setOrigin(`${((e.clientX - rect.left) / rect.width * 100).toFixed(1)}% ${((e.clientY - rect.top) / rect.height * 100).toFixed(1)}%`)
+      setZoomed(true)
+    }
+  }
   const onPointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
-    if (!zoomed) return
+    if (!zoomed || isMobile) return
     e.currentTarget.setPointerCapture(e.pointerId)
     dragRef.current = { startX: e.clientX, startY: e.clientY, startPanX: pan.x, startPanY: pan.y, moved: false }
     setIsDragging(true)
   }
-
   const onPointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
     if (!isDragging) return
     const dx = e.clientX - dragRef.current.startX
@@ -174,34 +244,32 @@ function QuickViewModal({ product, onClose }: QuickViewProps) {
     if (Math.abs(dx) > 3 || Math.abs(dy) > 3) dragRef.current.moved = true
     setPan({ x: dragRef.current.startPanX + dx, y: dragRef.current.startPanY + dy })
   }
+  const onPointerUp = () => { setIsDragging(false); setTimeout(() => { dragRef.current.moved = false }, 0) }
 
-  const onPointerUp = () => {
-    setIsDragging(false)
-    setTimeout(() => { dragRef.current.moved = false }, 0)
-  }
-
-  // Keyboard navigation
+  // Keyboard nav
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape')     { onClose() }
+      if (e.key === 'Escape')     onClose()
       if (e.key === 'ArrowRight') handleSetActive((activeIdx + 1) % allImages.length)
       if (e.key === 'ArrowLeft')  handleSetActive((activeIdx - 1 + allImages.length) % allImages.length)
     }
     window.addEventListener('keydown', onKey)
     document.body.style.overflow = 'hidden'
-    return () => {
-      window.removeEventListener('keydown', onKey)
-      document.body.style.overflow = ''
-    }
+    return () => { window.removeEventListener('keydown', onKey); document.body.style.overflow = '' }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [onClose, activeIdx, allImages.length])
 
   const imgLabel = activeIdx === 0 ? 'Front' : activeIdx === 1 ? 'Back' : `Photo ${activeIdx + 1}`
 
-  // Image transform: scale at origin + translate for pan
-  const imgTransform = zoomed
+  // Desktop transform
+  const desktopTransform = zoomed
     ? `scale(${ZOOM_SCALE}) translate(${pan.x / ZOOM_SCALE}px, ${pan.y / ZOOM_SCALE}px)`
     : 'scale(1) translate(0,0)'
+
+  // Mobile transform
+  const mobileTransform = mobileScale !== 1 || mobilePan.x !== 0 || mobilePan.y !== 0
+    ? `scale(${mobileScale}) translate(${mobilePan.x / mobileScale}px, ${mobilePan.y / mobileScale}px)`
+    : undefined
 
   return (
     <div className="qv-overlay" onClick={onClose} role="dialog" aria-modal="true" aria-label={product.name}>
@@ -211,7 +279,7 @@ function QuickViewModal({ product, onClose }: QuickViewProps) {
           <i className="fas fa-times" />
         </button>
 
-        {/* ── Image Gallery Side ── */}
+        {/* ── Image Gallery ── */}
         <div className="qv-gallery">
           {/* Main image */}
           <div
@@ -222,7 +290,16 @@ function QuickViewModal({ product, onClose }: QuickViewProps) {
             onPointerMove={onPointerMove}
             onPointerUp={onPointerUp}
             onPointerCancel={onPointerUp}
-            style={{ cursor: zoomed ? (isDragging ? 'grabbing' : 'grab') : 'zoom-in' }}
+            onTouchStart={isMobile ? onTouchStart : undefined}
+            onTouchMove={isMobile ? onTouchMove : undefined}
+            onTouchEnd={isMobile ? onTouchEnd : undefined}
+            style={{
+              cursor: isMobile
+                ? (mobileScale > 1 ? 'grab' : 'default')
+                : (zoomed ? (isDragging ? 'grabbing' : 'grab') : 'zoom-in'),
+              touchAction: isMobile ? 'none' : undefined,
+              overflow: 'hidden',
+            }}
           >
             {!imgLoaded && <div className="qv-img-skeleton" />}
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -234,23 +311,25 @@ function QuickViewModal({ product, onClose }: QuickViewProps) {
               draggable={false}
               onLoad={() => setImgLoaded(true)}
               style={{
-                transformOrigin: origin,
-                transform: imgTransform,
-                transition: isDragging ? 'none' : 'opacity 0.4s ease, transform 0.4s cubic-bezier(0.22,1,0.36,1)',
+                transformOrigin: isMobile ? '50% 50%' : origin,
+                transform: isMobile ? mobileTransform : desktopTransform,
+                transition: (isDragging || (isMobile && mobileScale > 1))
+                  ? 'opacity 0.3s ease'
+                  : 'opacity 0.4s ease, transform 0.35s cubic-bezier(0.22,1,0.36,1)',
               }}
             />
 
-            {/* Country badge — always bottom-left */}
-            <span className="qv-country-badge">{product.country}</span>
+            {/* Country badge — desktop only, bottom-left */}
+            {!isMobile && <span className="qv-country-badge">{product.country}</span>}
 
-            {/* Photo label (FRONT/BACK) — on desktop: top-right; on mobile: bottom-right above country */}
-            <span className={`qv-photo-label${isMobile ? ' qv-photo-label-mobile' : ''}`}>{imgLabel}</span>
+            {/* Photo label — desktop only (top-left, away from close btn) */}
+            {!isMobile && <span className="qv-photo-label">{imgLabel}</span>}
 
-            {/* Zoom hint — desktop only, hidden on touch devices */}
+            {/* Zoom hint — desktop only */}
             {!isMobile && !isDragging && (
               <div className="qv-zoom-hint">
                 <i className={`fas fa-${zoomed ? 'compress-alt' : 'search-plus'}`} />
-                {zoomed ? 'Click to zoom out · Drag to pan' : 'Click anywhere to zoom in'}
+                {zoomed ? 'Click to zoom out · Drag to pan' : 'Click to zoom in'}
               </div>
             )}
 
@@ -275,7 +354,7 @@ function QuickViewModal({ product, onClose }: QuickViewProps) {
             )}
           </div>
 
-          {/* Thumbnail strip — only if multiple images */}
+          {/* Thumbnail strip */}
           {allImages.length > 1 && (
             <div className="qv-thumbs">
               {allImages.map((src, idx) => (
@@ -294,10 +373,38 @@ function QuickViewModal({ product, onClose }: QuickViewProps) {
               ))}
             </div>
           )}
+
+          {/* Mobile: image counter dots */}
+          {isMobile && allImages.length > 1 && (
+            <div className="qv-mobile-dots">
+              {allImages.map((_, idx) => (
+                <button
+                  key={idx}
+                  className={`qv-dot${activeIdx === idx ? ' active' : ''}`}
+                  onClick={() => handleSetActive(idx)}
+                  aria-label={`Go to photo ${idx + 1}`}
+                />
+              ))}
+            </div>
+          )}
+
+          {/* Mobile: gesture hint (shows once, fades) */}
+          {isMobile && (
+            <div className="qv-mobile-gesture-hint">
+              <i className="fas fa-hand-pointer" /> Swipe to browse · Pinch to zoom · Double-tap to zoom
+            </div>
+          )}
         </div>
 
         {/* ── Details Side ── */}
         <div className="qv-details">
+          {/* Mobile: country + current image label shown here cleanly */}
+          {isMobile && (
+            <div className="qv-mobile-meta">
+              <span className="qv-mobile-country">{product.country}</span>
+              <span className="qv-mobile-label">{imgLabel}</span>
+            </div>
+          )}
           <p className="qv-category">{product.category}</p>
           <h2 className="qv-name">{product.name}</h2>
           {product.description && <p className="qv-desc">{product.description}</p>}
@@ -330,13 +437,6 @@ function QuickViewModal({ product, onClose }: QuickViewProps) {
               </h3>
               <p className="qv-ingredients-text">{product.ingredients}</p>
             </div>
-          )}
-
-          {/* Image count helper */}
-          {allImages.length > 1 && (
-            <p className="qv-img-count-hint">
-              <i className="fas fa-images" /> {allImages.length} photos · Use arrows or thumbnails to browse
-            </p>
           )}
         </div>
       </div>

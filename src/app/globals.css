@@ -1304,6 +1304,64 @@ img.brand-redbull {
 }
 .qv-img-count-hint i { color: var(--gold); }
 
+/* ── Mobile: dot navigation indicators ── */
+.qv-mobile-dots {
+  display: flex; align-items: center; justify-content: center;
+  gap: 6px; padding: 6px 0 4px;
+  background: rgba(4,4,10,0.97);
+}
+.qv-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: rgba(212,168,67,0.25);
+  border: none; padding: 0; cursor: pointer;
+  transition: all 0.2s;
+  /* 44px touch target via padding trick */
+  padding: 10px;
+  background-clip: content-box;
+}
+.qv-dot.active {
+  background-color: var(--gold);
+  background-clip: content-box;
+  transform: scale(1.4);
+}
+
+/* ── Mobile: gesture hint (auto-fades after 3s) ── */
+.qv-mobile-gesture-hint {
+  position: absolute;
+  bottom: 80px; /* above thumbnail strip */
+  left: 50%; transform: translateX(-50%);
+  background: rgba(0,0,0,0.72); backdrop-filter: blur(6px);
+  border: 1px solid rgba(212,168,67,0.2);
+  color: rgba(240,236,228,0.75);
+  font-size: 0.52rem; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 5px 12px; border-radius: 20px;
+  white-space: nowrap;
+  pointer-events: none;
+  animation: hintFadeOut 3.5s ease 0.5s forwards;
+  z-index: 5;
+}
+.qv-mobile-gesture-hint i { color: var(--gold); margin-right: 4px; }
+@keyframes hintFadeOut { 0%,60% { opacity: 1; } 100% { opacity: 0; } }
+
+/* ── Mobile: country + label meta row in details ── */
+.qv-mobile-meta {
+  display: flex; align-items: center; justify-content: space-between;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+.qv-mobile-country {
+  font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--gold); opacity: 0.85;
+}
+.qv-mobile-label {
+  font-size: 0.58rem; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--text-muted);
+  background: rgba(212,168,67,0.1);
+  border: 1px solid rgba(212,168,67,0.2);
+  padding: 2px 8px;
+}
+
+
 /* Details side */
 .qv-details {
   padding: 36px 32px;
