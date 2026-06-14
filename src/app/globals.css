@@ -1004,70 +1004,125 @@ img.brand-redbull {
   overflow: hidden;
   animation: slideUp 0.28s cubic-bezier(0.22,1,0.36,1) both;
 }
+/* ════════════════════════════════════════════════
+   QUICK VIEW — MOBILE (≤640px) — Bottom-Sheet Style
+   Like Amazon / Blinkit: image always visible on top
+   ════════════════════════════════════════════════ */
 @media (max-width: 640px) {
-  /* ── Full mobile QuickView redesign ── */
+  /* Overlay: align to bottom so the sheet slides up from below */
   .qv-overlay {
+    align-items: flex-end;
     padding: 0;
-    align-items: flex-end; /* Sheet slides up from bottom */
+    background: rgba(0,0,0,0.75);
   }
+
+  /* Modal: full-width bottom sheet */
   .qv-modal {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr; /* image row auto, details fills rest */
-    height: 96dvh;
-    height: 96vh; /* fallback */
-    max-height: none;
     width: 100%;
+    max-width: 100%;
     margin: 0;
     border-radius: 20px 20px 0 0;
-    overflow: hidden;
     border-left: none;
     border-right: none;
     border-bottom: none;
-    animation: slideUp 0.32s cubic-bezier(0.22,1,0.36,1) both;
-  }
-  /* Gallery: fixed height block at the top */
-  .qv-gallery {
-    min-height: unset;
+    /* Single column — image on top, details below */
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    /* Let it grow naturally up to ~95% screen height */
+    max-height: 95dvh;
+    max-height: 95vh;
     height: auto;
-    flex-shrink: 0;
-    overflow: visible;
+    /* Details panel scrolls, image stays fixed */
+    overflow: hidden;
+    animation: slideUpSheet 0.32s cubic-bezier(0.22,1,0.36,1) both;
   }
-  /* Main image area: explicit height so absolute-positioned img can fill it */
+
+  /* ── Image gallery ── explicit height, never collapses */
+  .qv-gallery {
+    /* Fixed height: big enough to see the product clearly */
+    height: 52vw;
+    min-height: 240px;
+    max-height: 320px;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+    background: #06040e;
+    /* Remove the flex:column behaviour inherited from desktop */
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Main image area fills gallery height minus thumb strip */
   .qv-img-wrap {
-    height: clamp(260px, 60vw, 340px);
-    min-height: unset;
-    flex: unset;
+    flex: 1;
+    min-height: 0; /* allow shrink inside flex */
     position: relative;
     overflow: hidden;
     cursor: zoom-in;
-    background: #06040e;
   }
-  .qv-img-wrap.zoomed { cursor: zoom-out; }
-  /* The img is position:absolute inset:0 — now the parent has a real height */
-  .qv-img { object-fit: contain; }
-  /* Details: scrollable */
+
+  /* Thumb strip sits at the bottom of the gallery */
+  .qv-thumbs {
+    flex-shrink: 0;
+    height: 62px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    display: flex;
+    align-items: center;
+    padding: 4px 8px;
+    gap: 5px;
+    background: rgba(4,4,10,0.95);
+    border-top: 1px solid var(--border-gold);
+  }
+  .qv-thumbs::-webkit-scrollbar { display: none; }
+  .qv-thumb { width: 48px; height: 48px; min-width: 44px; }
+
+  /* Details panel: scrollable */
   .qv-details {
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     padding: 20px 18px;
     padding-bottom: calc(20px + env(safe-area-inset-bottom));
+    gap: 12px;
+    /* Ensure it can scroll up to the remaining space */
+    max-height: calc(95dvh - 52vw);
+    max-height: calc(95vh - 52vw);
+    min-height: 200px;
   }
-  /* Always show arrows on mobile */
-  .qv-arrow { opacity: 1 !important; }
-  /* Thumbnails: slightly smaller on phone */
-  .qv-thumbs { padding: 8px 10px; gap: 6px; flex-shrink: 0; }
-  .qv-thumb { width: 54px; height: 54px; }
-  /* Close button: top-right, above the image */
-  .qv-close {
-    top: 12px; right: 12px;
+
+  /* Always show navigation arrows on touch */
+  .qv-arrow {
+    opacity: 1 !important;
     width: 36px; height: 36px;
-    background: rgba(8,6,18,0.85);
-    backdrop-filter: blur(8px);
+    min-width: 44px; min-height: 44px;
+  }
+
+  /* Zoom hint always visible on mobile */
+  .qv-img-wrap .qv-zoom-hint { opacity: 1; font-size: 0.5rem; }
+
+  /* Close button — pill style at top of sheet */
+  .qv-close {
+    top: 12px;
+    right: 14px;
+    width: 34px; height: 34px;
     z-index: 20;
   }
-  /* Make zoom hint always visible */
-  .qv-img-wrap .qv-zoom-hint { opacity: 1; font-size: 0.55rem; }
+
+  /* Drag handle indicator at very top of sheet */
+  .qv-modal::before {
+    content: '';
+    position: absolute;
+    top: 8px; left: 50%;
+    transform: translateX(-50%);
+    width: 36px; height: 4px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 2px;
+    z-index: 20;
+  }
 }
+
 .qv-close {
   position: absolute; top: 14px; right: 14px;
   width: 34px; height: 34px; border-radius: 50%;
@@ -2414,6 +2469,7 @@ img.brand-redbull {
 @keyframes loadBar       { to { width: 100%; } }
 @keyframes fadeIn        { to { opacity: 1; } }
 @keyframes slideUp       { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes slideUpSheet  { from { transform: translateY(100%); } to { transform: translateY(0); } }
 @keyframes shimmer       { 0%,100% { filter: brightness(1); } 50% { filter: brightness(1.18); } }
 /* Safari requires -webkit- prefix for keyframes used with -webkit-animation */
 @-webkit-keyframes marqueeScroll { from { -webkit-transform: translateX(0); } to { -webkit-transform: translateX(-50%); } }
@@ -2683,42 +2739,12 @@ img.brand-redbull {
   .hero-stat-num { font-size: clamp(1.5rem, 7vw, 2rem); }
   .hero-content { padding: 100px 14px 56px; }
 
-  /* ── Products: single column on phones for bigger, visible images ── */
+  /* ── Products: strict 2-col on phones ── */
   .products-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     padding: 0 12px !important;
   }
-  /* Horizontal card layout: image on left, content on right */
-  .product-card {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    min-height: 110px;
-  }
-  .product-card-img-wrap {
-    aspect-ratio: unset;
-    width: 110px;
-    min-width: 110px;
-    flex-shrink: 0;
-    border-radius: 0;
-  }
-  .product-card-img {
-    object-fit: contain;
-    padding: 6px;
-    width: 100%;
-    height: 100%;
-  }
-  .product-card-body {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 10px 12px;
-    min-width: 0;
-  }
-  /* View hint not useful in row layout */
-  .product-card-view-hint { display: none; }
   .category-filters { gap: 4px; padding: 0 12px; overflow-x: auto; flex-wrap: nowrap; scrollbar-width: none; }
   .category-filters::-webkit-scrollbar { display: none; }
   .cat-filter-btn { padding: 7px 11px; font-size: 0.56rem; white-space: nowrap; min-height: 36px; }
@@ -2740,26 +2766,25 @@ img.brand-redbull {
 
   .testimonial-card { width: calc(100vw - 60px); min-width: 240px; max-width: 320px; }
 
-  /* Product card internals for horizontal row layout */
-  .product-card-category { font-size: 0.5rem; margin-bottom: 3px; letter-spacing: 0.2em; }
-  .product-card-name { font-size: 0.85rem; margin-bottom: 6px; line-height: 1.3; font-weight: 400; }
-  .product-price { font-size: 1rem; }
+  /* Scale down product card internals for 2-col grid */
+  .product-card-body { padding: 10px; }
+  .product-card-category { font-size: 0.45rem; margin-bottom: 4px; letter-spacing: 0.2em; }
+  .product-card-name { font-size: 0.72rem; margin-bottom: 6px; line-height: 1.25; }
+  .product-price { font-size: 0.9rem; }
   .product-per-unit { display: none; }
-  .product-card-footer { flex-wrap: wrap; gap: 6px; margin-top: 4px; }
   .add-to-cart-btn {
-    padding: 8px 14px;
-    font-size: 0.55rem;
-    letter-spacing: 0.12em;
-    min-height: 36px;
+    padding: 9px 4px;
+    font-size: 0.5rem;
+    letter-spacing: 0.1em;
+    margin-top: 8px;
+    min-height: 38px;
   }
-  /* Show icon in horizontal layout since there's space */
-  .add-to-cart-btn i { display: inline; }
-  .qty-btn { width: 30px; height: 30px; font-size: 0.85rem; min-height: 36px; min-width: 36px; }
-  .qty-display { font-size: 0.78rem; min-width: 18px; }
-  .product-qty-total { font-size: 0.6rem; padding: 4px 8px; }
-  /* Badges positioned inside the image area */
-  .product-card-badge { font-size: 0.42rem; padding: 2px 5px; letter-spacing: 0.12em; top: 6px; left: 6px; }
-  .product-card-country { font-size: 0.44rem; padding: 2px 5px; bottom: 6px; right: 6px; }
+  .add-to-cart-btn i { display: none; }
+  .qty-btn { width: 28px; height: 28px; font-size: 0.8rem; min-height: 36px; min-width: 36px; }
+  .qty-display { font-size: 0.7rem; min-width: 14px; }
+  .product-qty-total { font-size: 0.54rem; padding: 4px 6px; }
+  .product-card-badge { font-size: 0.4rem; padding: 2px 5px; letter-spacing: 0.12em; }
+  .product-card-country { font-size: 0.42rem; padding: 2px 4px; }
   .product-card-country img { width: 10px; height: 10px; }
 
   /* ── QuickView on phone ── */
@@ -2803,12 +2828,11 @@ img.brand-redbull {
   .nav-cart-btn { padding: 5px 8px; min-width: 46px; }
   .nav-cart-total { font-size: 0.72rem; }
 
-  /* Horizontal product card: tighter at 375px */
+  /* 2-col products stays, just tighter padding */
   .products-grid { gap: 8px; padding: 0 10px !important; }
-  .product-card-img-wrap { width: 95px; min-width: 95px; }
-  .product-card-body { padding: 8px 10px; }
-  .product-card-name { font-size: 0.78rem; }
-  .add-to-cart-btn { padding: 7px 10px; font-size: 0.5rem; }
+  .product-card-body { padding: 8px; }
+  .product-card-name { font-size: 0.68rem; }
+  .add-to-cart-btn { padding: 7px 2px; font-size: 0.44rem; }
 
   .cat-filter-btn { padding: 5px 8px; font-size: 0.52rem; }
 
