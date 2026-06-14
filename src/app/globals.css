@@ -1005,26 +1005,68 @@ img.brand-redbull {
   animation: slideUp 0.28s cubic-bezier(0.22,1,0.36,1) both;
 }
 @media (max-width: 640px) {
+  /* ── Full mobile QuickView redesign ── */
+  .qv-overlay {
+    padding: 0;
+    align-items: flex-end; /* Sheet slides up from bottom */
+  }
   .qv-modal {
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto 1fr; /* image row auto, details fills rest */
+    height: 96dvh;
+    height: 96vh; /* fallback */
+    max-height: none;
+    width: 100%;
+    margin: 0;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    animation: slideUp 0.32s cubic-bezier(0.22,1,0.36,1) both;
+  }
+  /* Gallery: fixed height block at the top */
+  .qv-gallery {
+    min-height: unset;
     height: auto;
-    max-height: 94dvh; /* dvh for mobile browsers with visible toolbars */
-    max-height: 94vh; /* Fallback for older browsers */
+    flex-shrink: 0;
+    overflow: visible;
+  }
+  /* Main image area: explicit height so absolute-positioned img can fill it */
+  .qv-img-wrap {
+    height: clamp(260px, 60vw, 340px);
+    min-height: unset;
+    flex: unset;
+    position: relative;
+    overflow: hidden;
+    cursor: zoom-in;
+    background: #06040e;
+  }
+  .qv-img-wrap.zoomed { cursor: zoom-out; }
+  /* The img is position:absolute inset:0 — now the parent has a real height */
+  .qv-img { object-fit: contain; }
+  /* Details: scrollable */
+  .qv-details {
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
-    margin: 0 8px;
-    border-radius: 12px;
+    padding: 20px 18px;
+    padding-bottom: calc(20px + env(safe-area-inset-bottom));
   }
-  /* On mobile, image zone gets an explicit min-height so it's always visible */
-  .qv-gallery { min-height: 300px; flex-shrink: 0; }
-  .qv-img-wrap { min-height: 280px; }
-  /* Always show navigation arrows on touch devices */
+  /* Always show arrows on mobile */
   .qv-arrow { opacity: 1 !important; }
-  /* Zoom hint visible on touch without hover */
-  .qv-img-wrap .qv-zoom-hint { opacity: 1; }
-  /* Tighten close button position on phone */
-  .qv-close { top: 10px; right: 10px; width: 38px; height: 38px; }
+  /* Thumbnails: slightly smaller on phone */
+  .qv-thumbs { padding: 8px 10px; gap: 6px; flex-shrink: 0; }
+  .qv-thumb { width: 54px; height: 54px; }
+  /* Close button: top-right, above the image */
+  .qv-close {
+    top: 12px; right: 12px;
+    width: 36px; height: 36px;
+    background: rgba(8,6,18,0.85);
+    backdrop-filter: blur(8px);
+    z-index: 20;
+  }
+  /* Make zoom hint always visible */
+  .qv-img-wrap .qv-zoom-hint { opacity: 1; font-size: 0.55rem; }
 }
 .qv-close {
   position: absolute; top: 14px; right: 14px;
@@ -2641,12 +2683,42 @@ img.brand-redbull {
   .hero-stat-num { font-size: clamp(1.5rem, 7vw, 2rem); }
   .hero-content { padding: 100px 14px 56px; }
 
-  /* ── Products: strict 2-col on phones ── */
+  /* ── Products: single column on phones for bigger, visible images ── */
   .products-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 10px;
     padding: 0 12px !important;
   }
+  /* Horizontal card layout: image on left, content on right */
+  .product-card {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    min-height: 110px;
+  }
+  .product-card-img-wrap {
+    aspect-ratio: unset;
+    width: 110px;
+    min-width: 110px;
+    flex-shrink: 0;
+    border-radius: 0;
+  }
+  .product-card-img {
+    object-fit: contain;
+    padding: 6px;
+    width: 100%;
+    height: 100%;
+  }
+  .product-card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 12px;
+    min-width: 0;
+  }
+  /* View hint not useful in row layout */
+  .product-card-view-hint { display: none; }
   .category-filters { gap: 4px; padding: 0 12px; overflow-x: auto; flex-wrap: nowrap; scrollbar-width: none; }
   .category-filters::-webkit-scrollbar { display: none; }
   .cat-filter-btn { padding: 7px 11px; font-size: 0.56rem; white-space: nowrap; min-height: 36px; }
@@ -2668,25 +2740,26 @@ img.brand-redbull {
 
   .testimonial-card { width: calc(100vw - 60px); min-width: 240px; max-width: 320px; }
 
-  /* Scale down product card internals for 2-col grid */
-  .product-card-body { padding: 10px; }
-  .product-card-category { font-size: 0.45rem; margin-bottom: 4px; letter-spacing: 0.2em; }
-  .product-card-name { font-size: 0.72rem; margin-bottom: 6px; line-height: 1.25; }
-  .product-price { font-size: 0.9rem; }
+  /* Product card internals for horizontal row layout */
+  .product-card-category { font-size: 0.5rem; margin-bottom: 3px; letter-spacing: 0.2em; }
+  .product-card-name { font-size: 0.85rem; margin-bottom: 6px; line-height: 1.3; font-weight: 400; }
+  .product-price { font-size: 1rem; }
   .product-per-unit { display: none; }
+  .product-card-footer { flex-wrap: wrap; gap: 6px; margin-top: 4px; }
   .add-to-cart-btn {
-    padding: 9px 4px;
-    font-size: 0.5rem;
-    letter-spacing: 0.1em;
-    margin-top: 8px;
-    min-height: 38px;
+    padding: 8px 14px;
+    font-size: 0.55rem;
+    letter-spacing: 0.12em;
+    min-height: 36px;
   }
-  .add-to-cart-btn i { display: none; }
-  .qty-btn { width: 28px; height: 28px; font-size: 0.8rem; min-height: 36px; min-width: 36px; }
-  .qty-display { font-size: 0.7rem; min-width: 14px; }
-  .product-qty-total { font-size: 0.54rem; padding: 4px 6px; }
-  .product-card-badge { font-size: 0.4rem; padding: 2px 5px; letter-spacing: 0.12em; }
-  .product-card-country { font-size: 0.42rem; padding: 2px 4px; }
+  /* Show icon in horizontal layout since there's space */
+  .add-to-cart-btn i { display: inline; }
+  .qty-btn { width: 30px; height: 30px; font-size: 0.85rem; min-height: 36px; min-width: 36px; }
+  .qty-display { font-size: 0.78rem; min-width: 18px; }
+  .product-qty-total { font-size: 0.6rem; padding: 4px 8px; }
+  /* Badges positioned inside the image area */
+  .product-card-badge { font-size: 0.42rem; padding: 2px 5px; letter-spacing: 0.12em; top: 6px; left: 6px; }
+  .product-card-country { font-size: 0.44rem; padding: 2px 5px; bottom: 6px; right: 6px; }
   .product-card-country img { width: 10px; height: 10px; }
 
   /* ── QuickView on phone ── */
@@ -2730,11 +2803,12 @@ img.brand-redbull {
   .nav-cart-btn { padding: 5px 8px; min-width: 46px; }
   .nav-cart-total { font-size: 0.72rem; }
 
-  /* 2-col products stays, just tighter padding */
+  /* Horizontal product card: tighter at 375px */
   .products-grid { gap: 8px; padding: 0 10px !important; }
-  .product-card-body { padding: 8px; }
-  .product-card-name { font-size: 0.68rem; }
-  .add-to-cart-btn { padding: 7px 2px; font-size: 0.44rem; }
+  .product-card-img-wrap { width: 95px; min-width: 95px; }
+  .product-card-body { padding: 8px 10px; }
+  .product-card-name { font-size: 0.78rem; }
+  .add-to-cart-btn { padding: 7px 10px; font-size: 0.5rem; }
 
   .cat-filter-btn { padding: 5px 8px; font-size: 0.52rem; }
 
